@@ -1,0 +1,23 @@
+{
+  "name": "coral-fountain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stnkvld/coral-fountain.git"
+  },
+  "author": "stnkvld",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stnkvld/coral-fountain/issues"
+  },
+  "homepage": "https://github.com/stnkvld/coral-fountain#readme",
+  "dependencies": {
+    "js-datepicker": "^4.0.10",
+    "normalize.css": "^8.0.1"
+  }
+}
