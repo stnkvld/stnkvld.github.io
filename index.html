@@ -92,20 +92,6 @@
 		</section>
 	</main>
 	<footer></footer>
-	<script src="node_modules/js-datepicker/dist/datepicker.min.js"></script>
-	<script>
-		window.onload = function() {
-			const bookingPicker = datepicker('.booking-form__datepicker', {
-				customDays: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-				customMonths: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-				startDay: 1,
-				minDate: new Date(),
-				formatter: (input, date, instance) => {
-					const value = date.toLocaleDateString()
-					input.value = value
-				}
-			})
-		}
-	</script>
+	<script src="dest/js/script.min.js"></script>
 </body>
 </html>
