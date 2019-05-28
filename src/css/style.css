@@ -1,0 +1,262 @@
+@font-face {
+    font-family: "Fira Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+
+    src: url("../fonts/Fira_Sans/FiraSans-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+
+    src: url("../fonts/Fira_Sans/FiraSans-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+
+    src: url("../fonts/Fira_Sans/FiraSans-Medium.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+
+    src: url("../fonts/Fira_Sans/FiraSans-Bold.ttf") format('truetype');
+}
+
+* {
+	font-family: 'Fira Sans', 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+button {
+	cursor: pointer;
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+.sr-only {
+	overflow: hidden;
+	position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0,0,0,0);
+    clip-path: inset(100%);
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: transparent;
+	padding: 40px 0;
+}
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu__list {
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu__item {
+	position: relative;
+}
+
+.menu__item--active:after {
+	content: '';
+	width: 100%;
+	position: absolute;
+	bottom: -8px;
+	border-bottom: 1px solid #fff;
+}
+
+.menu__item:not(:last-child) {
+	margin-right: 30px;
+}
+
+.menu__link {
+	font-size: 18px;
+	font-weight: 300;
+	color: #fff;
+	text-decoration: none;
+}
+
+.phone {
+	position: relative;
+	font-size: 18px;
+	line-height: 25px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.phone:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -30px;
+	width: 25px;
+	height: 25px;
+	background-image: url('../svg/call.svg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.intro {
+	height: 100vh;	
+	background-image: url('../images/main-bg.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 150px;
+	box-sizing: border-box;
+}
+
+.booking-form {
+	display: flex;
+	align-items: center;
+	width: 100%;	
+	background-color: #fff;
+	box-shadow: 0 0 40px rgba(0,0,0,0.12);
+	border-radius: 3px;
+	padding: 20px 25px;
+	margin-bottom: 50px;
+	box-sizing: border-box;
+}
+
+.booking-form__element {
+	padding-right: 20px;
+}
+
+.booking-form__element:not(:last-child) {
+	border-right: 1px solid #e7e7e7;
+	margin-right: 30px;
+}
+
+.booking-form__control {
+	font-weight: 300;
+	border: 0;
+	background-color: transparent;
+}
+
+.booking-form__wrapper {
+	position: relative;
+	padding-left: 30px;
+}
+
+.booking-form__wrapper:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.booking-form__wrapper--datepicker:before {
+	background-image: url('../svg/calendar.svg');
+}
+
+.booking-form__wrapper--room:before {
+	background-image: url('../svg/family.svg');
+}
+
+.booking-form__submit {
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 0.8px;
+	color: #fff;
+	background-color: #04aaae;
+	background-color: #0096ff;
+	border: 0;
+	border-radius: 3px;
+	padding: 12px 20px;
+	margin-left: auto;
+}
+
+.main__title {
+	font-size: 42px;
+	font-weight: 500;
+	color: #fff;
+	margin-top: 0;
+	margin-bottom: 25px;
+}
+
+.intro__text {
+	width: 520px;
+	font-size: 18px;
+	line-height: 1.25;
+	color: #fff;
+	margin: 0;
+}
+
+.socials {
+	display: flex;
+	float: right;
+	align-items: center;
+	margin-top: 200px;
+}
+
+.socials__label {
+	font-size: 20px;
+	color: #fff;
+	margin-right: 20px;
+}
+
+.social-list {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social-list__item {
+	margin-right: 15px;
+}
+
+.social-list__link {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+}
+
+.social-list__icon {
+	width: 100%;
+	height: 100%;
+}
