@@ -54,29 +54,32 @@
 							<option value="6">6</option>
 						</select>
 					</div>
-					<button class="booking-form__submit" type="submit">Забронировать</button>
+					<button class="booking-form__submit btn" type="submit">Забронировать</button>
 				</form>
 				<h1 class="main__title">Главный заголовок</h1>
 				<p class="intro__text">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 					Beatae voluptates deleniti quis illum illo molestias, laboriosam velit, quo, distinctio maxime nobis 
 					esse expedita quibusdam! Quae ipsum impedit reiciendis neque quos.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+					Beatae voluptates deleniti quis illum illo molestias, laboriosam velit, quo, distinctio maxime nobis 
+					esse expedita quibusdam! Quae ipsum impedit reiciendis neque quos.
 				</p>
 				<ul class="social-list intro__social-list">
 					<li class="social-list__item">
-						<a class="social-list__link" href="https://vk.com" target="_blank" title="Наш Вконтакте">
+						<a class="social-list__link" href="https://vk.com" target="_blank" rel="nofollow" title="Наш Вконтакте">
 							<span class="sr-only">Вконтакте</span>
 							<img src="dest/svg/vk.svg" alt="Вконтакте">
 						</a>
 					</li>
 					<li class="social-list__item">
-						<a class="social-list__link" href="#" target="_blank" title="Наш Инстаграм">
+						<a class="social-list__link" href="#" target="_blank" rel="nofollow" title="Наш Инстаграм">
 							<span class="sr-only">Интсаграм</span>
 							<img src="dest/svg/instagram.svg" alt="Инстаграм">
 						</a>
 					</li>
 					<li class="social-list__item">
-						<a class="social-list__link" href="#" target="_blank" title="Наш Вотсапп">
+						<a class="social-list__link" href="#" target="_blank" rel="nofollow" title="Наш Вотсапп">
 							<span class="sr-only">Вотсапп</span>
 							<img src="dest/svg/whatsapp.svg" alt="Вотсапп">
 						</a>
@@ -89,7 +92,18 @@
 				<h2 class="main__subtitle visually-hidden">Наши преимущества</h2>
 			</div>
 		</section>
-		<section class="transfer">
+		<section class="section--standart">
+			<h2 class="main__subtitle visually-hidden">Что у нас есть?</h2>
+			<div class="half-wrapper">
+				<section class="meal half-wrapper__part">
+					<h2 class="main__subtitle">Питание</h2>
+				</section>
+				<section class="pasttime half-wrapper__part">
+					<h2 class="main__subtitle">Времяпрепровождение</h2>
+				</section>
+			</div>
+		</section>
+		<section class="transfer section--standart">
 			<div class="container">
 				<h2 class="main__subtitle">Трансфер от аэропорта</h2>
 				<div class="transfer__content">
@@ -99,9 +113,174 @@
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla in tempore quibusdam earum totam consequuntur sequi, aliquam, alias eum sed voluptatibus, nesciunt similique ullam ab a blanditiis delectus ipsum quam.
 					</p>
 					<div class="transfer__map">
-						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A49ec7c82c0c400f56c4398d27f54991ec89f4d9c72b5698832584a4b204ce74b&amp;source=constructor" width="100%" height="400px" frameborder="0"></iframe>
+						<script src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A49ec7c82c0c400f56c4398d27f54991ec89f4d9c72b5698832584a4b204ce74b&amp;width=100%25&amp;height=350&amp;lang=ru_RU&amp;scroll=false" async></script>
 					</div>
 				</div>
+			</div>
+		</section>
+		<section class="reviews section--standart">
+			<div class="container">
+				<h2 class="main__subtitle">Отзывы о нас</h2>
+				<ul class="reviews__list">
+					<li class="reviews__item">
+						<picture>
+							<source 
+								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+								data-srcset="dest/images/review@1x.webp, dest/images/review@2x.webp 2x" 
+								type="image/webp">
+							<img class="reviews__photo lazyload" 
+								 src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+								 data-src="dest/images/review@1x.jpg" 
+								 data-srcset="dest/images/review@2x.jpg 2x" 
+								 data-expand="-50"
+								 alt="Алексей Афанасьев">
+						</picture>
+						<blockquote class="reviews__blockquote">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi impedit, sequi nulla dolores et iure rem odio, quidem perferendis aliquid quis eum. Maxime facere nisi amet quasi nemo. Dignissimos!
+							<footer class="reviews__by-who">
+								- <a href="#" class="reviews__link" rel="nofollow">Алексей Афанасьев</a>
+							</footer>
+						</blockquote>
+					</li>
+					<li class="reviews__item">
+						<picture>
+							<source 
+								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+								data-srcset="dest/images/review@1x.webp, dest/images/review@2x.webp 2x" 
+								type="image/webp">
+							<img class="reviews__photo lazyload" 
+							src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+								 data-src="dest/images/review@1x.jpg" 
+								 data-srcset="dest/images/review@2x.jpg 2x" 
+								 data-expand="-50"
+								 alt="Алексей Афанасьев">
+						</picture>
+						<blockquote class="reviews__blockquote">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi impedit, sequi nulla dolores et iure rem odio, quidem perferendis aliquid quis eum. Maxime facere nisi amet quasi nemo. Dignissimos!
+							<footer class="reviews__by-who">
+								- <a href="#" class="reviews__link" rel="nofollow">Алексей Афанасьев</a>
+							</footer>
+						</blockquote>
+					</li>
+					<li class="reviews__item">
+						<picture>
+							<source 
+								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+								data-srcset="dest/images/review@1x.webp, dest/images/review@2x.webp 2x" 
+								type="image/webp">
+							<img class="reviews__photo lazyload" 
+							src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+								 data-src="dest/images/review@1x.jpg" 
+								 data-srcset="dest/images/review@2x.jpg 2x" 
+								 data-expand="-50"
+								 alt="Алексей Афанасьев">
+						</picture>
+						<blockquote class="reviews__blockquote">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi impedit, sequi nulla dolores et iure rem odio, quidem perferendis aliquid quis eum. Maxime facere nisi amet quasi nemo. Dignissimos!
+							<footer class="reviews__by-who">
+								- <a href="#" class="reviews__link" rel="nofollow">Алексей Афанасьев</a>
+							</footer>
+						</blockquote>
+					</li>
+					<li class="reviews__item">
+						<picture>
+							<source 
+								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+								data-srcset="dest/images/review@1x.webp, dest/images/review@2x.webp 2x" 
+								type="image/webp">
+							<img class="reviews__photo lazyload" 
+							src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+								 data-src="dest/images/review@1x.jpg" 
+								 data-srcset="dest/images/review@2x.jpg 2x" 
+								 data-expand="-50"
+								 alt="Алексей Афанасьев">
+						</picture>
+						<blockquote class="reviews__blockquote">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi impedit, sequi nulla dolores et iure rem odio, quidem perferendis aliquid quis eum. Maxime facere nisi amet quasi nemo. Dignissimos!
+							<footer class="reviews__by-who">
+								- <a href="#" class="reviews__link" rel="nofollow">Алексей Афанасьев</a>
+							</footer>
+						</blockquote>
+					</li>
+				</ul>
+				<a class="reviews__more btn" href="#">Больше эмоций</a>
+			</div>
+		</section>
+		<section class="news section--standart">
+			<div class="container">
+				<h2 class="main__subtitle">Новости</h2>
+				<ul class="news__list">
+					<li class="news__item">
+						<article class="news__article">
+							<figure class="news__figure">
+								<picture>
+									<source 
+										srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+										data-srcset="dest/images/news@1x.webp, dest/images/news@2x.webp 2x" 
+										type="image/webp">
+									<img class="news__photo lazyload" 
+										src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+										data-src="dest/images/news@1x.jpg" 
+										data-srcset="dest/images/news@2x.jpg 2x" 
+										data-expand="-50"
+										alt="Новость 1">
+								</picture>
+								<figcaption class="news__figcaption">
+									<h3 class="news__title">Новость 1</h3>
+									<p class="news__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, similique sapiente! Autem delectus voluptas voluptatem saepe harum ducimus beatae nihil. Officia atque voluptatem perspiciatis voluptates assumenda pariatur non ipsum beatae!</p>
+									<a class="news__more link--icon-right" href="#">Подробнее</a>
+								</figcaption>
+							</figure>
+						</article>
+					</li>
+					<li class="news__item">
+						<article class="news__article">
+							<figure class="news__figure">
+								<picture>
+									<source 
+										srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+										data-srcset="dest/images/news@1x.webp, dest/images/news@2x.webp 2x" 
+										type="image/webp">
+									<img class="news__photo lazyload" 
+										src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+										data-src="dest/images/news@1x.jpg" 
+										data-srcset="dest/images/news@2x.jpg 2x" 
+										data-expand="-50"
+										alt="Новость 1">
+								</picture>
+								<figcaption class="news__figcaption">
+									<h3 class="news__title">Новость 1</h3>
+									<p class="news__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, similique sapiente! Autem delectus voluptas voluptatem saepe harum ducimus beatae nihil. Officia atque voluptatem perspiciatis voluptates assumenda pariatur non ipsum beatae!</p>
+									<a class="news__more link--icon-right" href="#">Подробнее</a>
+								</figcaption>
+							</figure>
+						</article>
+					</li>
+					<li class="news__item">
+						<article class="news__article">
+							<figure class="news__figure">
+								<picture>
+									<source 
+										srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+										data-srcset="dest/images/news@1x.webp, dest/images/news@2x.webp 2x" 
+										type="image/webp">
+									<img class="news__photo lazyload" 
+										src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+										data-src="dest/images/news@1x.jpg" 
+										data-srcset="dest/images/news@2x.jpg 2x" 
+										data-expand="-50"
+										alt="Новость 1">
+								</picture>
+								<figcaption class="news__figcaption">
+									<h3 class="news__title">Новость 1</h3>
+									<p class="news__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, similique sapiente! Autem delectus voluptas voluptatem saepe harum ducimus beatae nihil. Officia atque voluptatem perspiciatis voluptates assumenda pariatur non ipsum beatae!</p>
+									<a class="news__more link--icon-right" href="#">Подробнее</a>
+								</figcaption>
+							</figure>
+						</article>
+					</li>
+				</ul>
+				<a class="news__another btn" href="#">Читать другие новости</a>
 			</div>
 		</section>
 	</main>
