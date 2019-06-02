@@ -10,10 +10,11 @@
 <body>
 	<header class="header">
 		<div class="container header__container">
+			<button class="header__mobile" type="button"></button>
 			<a href="#" class="logo">
 				<img class="logo__image" src="dest/images/logo.jpg" alt="Логотип Коралловый фонтан">
 			</a>
-			<nav class="menu">
+			<nav class="menu header__menu">
 				<ul class="menu__list">
 					<li class="menu__item menu__item--active">
 						<a class="menu__link" href="#">Главная</a>
@@ -43,7 +44,10 @@
 			<div class="container intro__container">
 				<form class="booking-form">
 					<div class="booking-form__element booking-form__wrapper booking-form__wrapper--datepicker">
-						<input class="booking-form__control booking-form__datepicker" type="text" name="date" placeholder="Желаемая дата">	
+						<input class="booking-form__control booking-form__datepicker" type="text" name="start-date" placeholder="Дата заезда">	
+					</div>
+					<div class="booking-form__element booking-form__wrapper booking-form__wrapper--datepicker">
+						<input class="booking-form__control booking-form__datepicker" type="text" name="end-date" placeholder="Дата выезда">	
 					</div>
 					<div class="booking-form__element booking-form__wrapper booking-form__wrapper--room">
 						<select class="booking-form__control booking-form__room" name="room">
@@ -87,20 +91,81 @@
 				</ul>
 			</div>
 		</section>
-		<section class="advantages">
+		<section class="advantages section--standart">
 			<div class="container">
 				<h2 class="main__subtitle visually-hidden">Наши преимущества</h2>
-			</div>
-		</section>
-		<section class="section--standart">
-			<h2 class="main__subtitle visually-hidden">Что у нас есть?</h2>
-			<div class="half-wrapper">
-				<section class="meal half-wrapper__part">
-					<h2 class="main__subtitle">Питание</h2>
-				</section>
-				<section class="pasttime half-wrapper__part">
-					<h2 class="main__subtitle">Времяпрепровождение</h2>
-				</section>
+				<div class="tabs">
+					<nav class="tabs__control">
+						<button class="tabs__switch tabs__switch--active" type="button" data-tab-id="tab-1">Преимущество 1</button>
+						<button class="tabs__switch" type="button" data-tab-id="tab-2">Преимущество 2</button>
+						<button class="tabs__switch" type="button" data-tab-id="tab-3">Преимущество 3</button>
+					</nav>
+					<ul class="tabs__content-list">
+						<li class="tabs__item tabs__item--active" data-tab-id="tab-1">
+							<div class="tabs__visual-info">
+								<picture>
+									<source 
+										srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+										data-srcset="dest/images/advantage-1@1x.webp, dest/images/advantage-1@2x.webp 2x" 
+										type="image/webp">
+									<img class="tabs__image lazyload" 
+										src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+										data-src="dest/images/advantage-1@1x.jpg" 
+										data-srcset="dest/images/advantage-1@2x.jpg 2x" 
+										alt="Преимущество 1">
+								</picture>
+							</div>
+							<div class="tabs__text-info">
+								<h3 class="tabs__title">Заголовок преимущества 1</h3>
+								<p class="tabs__text">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, quo architecto eos repellendus nam praesentium eveniet doloribus? Eaque, beatae labore ab qui eius quis provident. Nisi atque delectus repellendus sit?
+								</p>
+							</div>
+						</li>
+						<li class="tabs__item" data-tab-id="tab-2">
+							<div class="tabs__visual-info">
+								<picture>
+									<source 
+										srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+										data-srcset="dest/images/advantage-1@1x.webp, dest/images/advantage-1@2x.webp 2x" 
+										type="image/webp">
+									<img class="tabs__image lazyload" 
+										src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+										data-src="dest/images/advantage-1@1x.jpg" 
+										data-srcset="dest/images/advantage-1@2x.jpg 2x" 
+										alt="Преимущество 2">
+								</picture>
+							</div>
+							<div class="tabs__text-info">
+								<h3 class="tabs__title">Заголовок преимущества 2</h3>
+								<p class="tabs__text">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, quo architecto eos repellendus nam praesentium eveniet doloribus? Eaque, beatae labore ab qui eius quis provident. Nisi atque delectus repellendus sit?
+								</p>
+							</div>
+						</li>
+						<li class="tabs__item" data-tab-id="tab-3">
+							<div class="tabs__visual-info">
+								<picture>
+									<source 
+										srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+										data-srcset="dest/images/advantage-1@1x.webp, dest/images/advantage-1@2x.webp 2x" 
+										type="image/webp">
+									<img class="tabs__image lazyload" 
+										src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+										data-src="dest/images/advantage-1@1x.jpg" 
+										data-srcset="dest/images/advantage-1@2x.jpg 2x" 
+										alt="Преимущество 3">
+								</picture>
+							</div>
+							<div class="tabs__text-info">
+								<h3 class="tabs__title">Заголовок преимущества 3</h3>
+								<p class="tabs__text">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, quo architecto eos repellendus nam praesentium eveniet doloribus? Eaque, beatae labore ab qui eius quis provident. Nisi atque delectus repellendus sit?
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</section>
 		<section class="transfer section--standart">
@@ -112,28 +177,98 @@
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla in tempore quibusdam earum totam consequuntur sequi, aliquam, alias eum sed voluptatibus, nesciunt similique ullam ab a blanditiis delectus ipsum quam.
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla in tempore quibusdam earum totam consequuntur sequi, aliquam, alias eum sed voluptatibus, nesciunt similique ullam ab a blanditiis delectus ipsum quam.
 					</p>
-					<div class="transfer__map">
-						
-					</div>
+					<picture>
+						<source 
+							srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+							data-srcset="dest/images/transfer@1x.webp, dest/images/transfer@2x.webp 2x" 
+							type="image/webp">
+						<img class="transfer__image animate lazyload" 
+							src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+							data-src="dest/images/transfer@1x.png" 
+							data-srcset="dest/images/transfer@2x.png 2x" 
+							data-expand="-50"
+							data-animation="short-from-right"
+							alt="Трансфер">
+					</picture>
 				</div>
 			</div>
+		</section>
+		<section class="meal-and-pasttime section--standart">
+			<section class="meal">
+				<div class="container half-wrapper">
+					<div class="half-wrapper__part half-wrapper__part--image">
+						<picture>
+							<source 
+								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+								data-srcset="dest/images/advantage-1@1x.webp, dest/images/advantage-1@2x.webp 2x" 
+								type="image/webp">
+							<img class="tabs__image half-wrapper__image lazyload" 
+								src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+								data-src="dest/images/advantage-1@1x.jpg" 
+								data-srcset="dest/images/advantage-1@2x.jpg 2x" 
+								alt="Преимущество 1">
+						</picture>
+					</div>
+					<div class="half-wrapper__part">
+						<h2 class="main__subtitle meal__subtitle">Питание</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab natus sit ratione sunt harum! Totam voluptate eius eum, aperiam vel nesciunt hic, ducimus quas fugit, illum ipsam natus qui cum.
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab natus sit ratione sunt harum! Totam voluptate eius eum, aperiam vel nesciunt hic, ducimus quas fugit, illum ipsam natus qui cum.
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab natus sit ratione sunt harum! Totam voluptate eius eum, aperiam vel nesciunt hic, ducimus quas fugit, illum ipsam natus qui cum.
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="pasttime">
+				<div class="container half-wrapper">
+					<div class="half-wrapper__part">	
+						<h2 class="main__subtitle pasttime__title">Чем заняться в свободное время?</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab natus sit ratione sunt harum! Totam voluptate eius eum, aperiam vel nesciunt hic, ducimus quas fugit, illum ipsam natus qui cum.
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab natus sit ratione sunt harum! Totam voluptate eius eum, aperiam vel nesciunt hic, ducimus quas fugit, illum ipsam natus qui cum.
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab natus sit ratione sunt harum! Totam voluptate eius eum, aperiam vel nesciunt hic, ducimus quas fugit, illum ipsam natus qui cum.
+						</p>
+					</div>
+					<div class="half-wrapper__part half-wrapper__part--image half-wrapper__part--image-right">
+						<picture>
+							<source 
+								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+								data-srcset="dest/images/advantage-1@1x.webp, dest/images/advantage-1@2x.webp 2x" 
+								type="image/webp">
+							<img class="tabs__image half-wrapper__image lazyload" 
+								src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+								data-src="dest/images/advantage-1@1x.jpg" 
+								data-srcset="dest/images/advantage-1@2x.jpg 2x" 
+								alt="Преимущество 1">
+						</picture>
+					</div>
+				</div>
+			</section>
 		</section>
 		<section class="reviews section--standart">
 			<div class="container">
 				<h2 class="main__subtitle">Отзывы о нас</h2>
 				<ul class="reviews__list">
 					<li class="reviews__item">
-						<picture>
+						<picture class="reviews__picture">
 							<source 
 								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
 								data-srcset="dest/images/review@1x.webp, dest/images/review@2x.webp 2x" 
 								type="image/webp">
 							<img class="reviews__photo lazyload" 
-								 src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								 data-src="dest/images/review@1x.jpg" 
-								 data-srcset="dest/images/review@2x.jpg 2x" 
-								 data-expand="-50"
-								 alt="Алексей Афанасьев">
+								src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+								data-src="dest/images/review@1x.jpg" 
+								data-srcset="dest/images/review@2x.jpg 2x" 
+								data-expand="-50"
+								alt="Алексей Афанасьев">
 						</picture>
 						<blockquote class="reviews__blockquote">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi impedit, sequi nulla dolores et iure rem odio, quidem perferendis aliquid quis eum. Maxime facere nisi amet quasi nemo. Dignissimos!
@@ -143,17 +278,17 @@
 						</blockquote>
 					</li>
 					<li class="reviews__item">
-						<picture>
+						<picture class="reviews__picture">
 							<source 
 								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
 								data-srcset="dest/images/review@1x.webp, dest/images/review@2x.webp 2x" 
 								type="image/webp">
 							<img class="reviews__photo lazyload" 
 							src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								 data-src="dest/images/review@1x.jpg" 
-								 data-srcset="dest/images/review@2x.jpg 2x" 
-								 data-expand="-50"
-								 alt="Алексей Афанасьев">
+								data-src="dest/images/review@1x.jpg" 
+								data-srcset="dest/images/review@2x.jpg 2x" 
+								data-expand="-50"
+								alt="Алексей Афанасьев">
 						</picture>
 						<blockquote class="reviews__blockquote">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi impedit, sequi nulla dolores et iure rem odio, quidem perferendis aliquid quis eum. Maxime facere nisi amet quasi nemo. Dignissimos!
@@ -163,17 +298,17 @@
 						</blockquote>
 					</li>
 					<li class="reviews__item">
-						<picture>
+						<picture class="reviews__picture">
 							<source 
 								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
 								data-srcset="dest/images/review@1x.webp, dest/images/review@2x.webp 2x" 
 								type="image/webp">
 							<img class="reviews__photo lazyload" 
-							src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								 data-src="dest/images/review@1x.jpg" 
-								 data-srcset="dest/images/review@2x.jpg 2x" 
-								 data-expand="-50"
-								 alt="Алексей Афанасьев">
+								src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
+								data-src="dest/images/review@1x.jpg" 
+								data-srcset="dest/images/review@2x.jpg 2x" 
+								data-expand="-50"
+								alt="Алексей Афанасьев">
 						</picture>
 						<blockquote class="reviews__blockquote">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi impedit, sequi nulla dolores et iure rem odio, quidem perferendis aliquid quis eum. Maxime facere nisi amet quasi nemo. Dignissimos!
@@ -183,17 +318,17 @@
 						</blockquote>
 					</li>
 					<li class="reviews__item">
-						<picture>
+						<picture class="reviews__picture">
 							<source 
 								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
 								data-srcset="dest/images/review@1x.webp, dest/images/review@2x.webp 2x" 
 								type="image/webp">
 							<img class="reviews__photo lazyload" 
 							src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								 data-src="dest/images/review@1x.jpg" 
-								 data-srcset="dest/images/review@2x.jpg 2x" 
-								 data-expand="-50"
-								 alt="Алексей Афанасьев">
+								data-src="dest/images/review@1x.jpg" 
+								data-srcset="dest/images/review@2x.jpg 2x" 
+								data-expand="-50"
+								alt="Алексей Афанасьев">
 						</picture>
 						<blockquote class="reviews__blockquote">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi impedit, sequi nulla dolores et iure rem odio, quidem perferendis aliquid quis eum. Maxime facere nisi amet quasi nemo. Dignissimos!
@@ -284,7 +419,74 @@
 			</div>
 		</section>
 	</main>
-	<footer></footer>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__top">
+				<div class="footer__social">
+					<a class="footer__logo" href="#">
+						<img class="logo__image" src="dest/images/logo.jpg" alt="Логотип Коралловый фонтан">
+					</a>
+					<ul class="social-list footer__social-list">
+						<li class="social-list__item">
+							<a class="social-list__link" href="https://vk.com" target="_blank" rel="nofollow" title="Наш Вконтакте">
+								<span class="sr-only">Вконтакте</span>
+								<img src="dest/svg/vk.svg" alt="Вконтакте">
+							</a>
+						</li>
+						<li class="social-list__item">
+							<a class="social-list__link" href="#" target="_blank" rel="nofollow" title="Наш Инстаграм">
+								<span class="sr-only">Интсаграм</span>
+								<img src="dest/svg/instagram.svg" alt="Инстаграм">
+							</a>
+						</li>
+						<li class="social-list__item">
+							<a class="social-list__link" href="#" target="_blank" rel="nofollow" title="Наш Вотсапп">
+								<span class="sr-only">Вотсапп</span>
+								<img src="dest/svg/whatsapp.svg" alt="Вотсапп">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<nav class="menu footer__menu">
+					<ul class="menu__list">
+						<li class="menu__item menu__item--active">
+							<a class="menu__link" href="#">Главная</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#">Услуги</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#">Цены</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#">Новости</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#">Фотографии</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="footer__bottom">
+				<nav class="support-menu">
+					<ul class="support-menu__list">
+						<li class="support-menu__item">
+							<a class="support-menu__link" href="#">Политика конфиденциальности</a>
+						</li>
+						<div class="support-menu__item">
+							<a class="support-menu__link" href="#">Отказ от ответственности</a>
+						</div>
+						<li class="support-menu__item">
+							<a class="support-menu__link" href="#">Согласие на обработку персональных данных</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</footer>
 	<script src="dest/js/script.min.js"></script>
 </body>
 </html>
