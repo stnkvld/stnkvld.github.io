@@ -10,7 +10,7 @@
 <body>
 	<header class="header">
 		<div class="container header__container">
-			<button class="header__mobile" type="button"></button>
+			<button class="header__mobile" type="button" title="Открыть меню"></button>
 			<a href="#" class="logo">
 				<img class="logo__image" src="dest/images/logo.jpg" alt="Логотип Коралловый фонтан">
 			</a>
@@ -44,13 +44,16 @@
 			<div class="container intro__container">
 				<form class="booking-form">
 					<div class="booking-form__element booking-form__wrapper booking-form__wrapper--datepicker">
-						<input class="booking-form__control booking-form__datepicker" type="text" name="start-date" placeholder="Дата заезда">	
+						<label for="start-date" class="visually-hidden">Дата заезда</label>
+						<input class="booking-form__control booking-form__datepicker" type="text" id="start-date" name="start-date" placeholder="Дата заезда">	
 					</div>
 					<div class="booking-form__element booking-form__wrapper booking-form__wrapper--datepicker">
-						<input class="booking-form__control booking-form__datepicker" type="text" name="end-date" placeholder="Дата выезда">	
+						<label for="end-date" class="visually-hidden">Дата заезда</label>
+						<input class="booking-form__control booking-form__datepicker" type="text" id="end-date" name="end-date" placeholder="Дата выезда">	
 					</div>
 					<div class="booking-form__element booking-form__wrapper booking-form__wrapper--room">
-						<select class="booking-form__control booking-form__room" name="room">
+						<label for="room" class="visually-hidden">Количество человек</label>
+						<select class="booking-form__control booking-form__room" id="room" name="room">
 							<option selected disabled>Кол-во человек</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
@@ -194,6 +197,7 @@
 			</div>
 		</section>
 		<section class="meal-and-pasttime section--standart">
+			<h2 class="visually-hidden">Питание и времяпрепровождение</h2>
 			<section class="meal">
 				<div class="container half-wrapper">
 					<div class="half-wrapper__part half-wrapper__part--image">
@@ -476,9 +480,9 @@
 						<li class="support-menu__item">
 							<a class="support-menu__link" href="#">Политика конфиденциальности</a>
 						</li>
-						<div class="support-menu__item">
+						<li class="support-menu__item">
 							<a class="support-menu__link" href="#">Отказ от ответственности</a>
-						</div>
+						</li>
 						<li class="support-menu__item">
 							<a class="support-menu__link" href="#">Согласие на обработку персональных данных</a>
 						</li>
