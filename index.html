@@ -1,496 +1,301 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="dest/css/style.min.css">
-	<title>Коралловый фонтан</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barionyx</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
 </head>
+
 <body>
-	<header class="header">
-		<div class="container header__container">
-			<button class="header__mobile" type="button" title="Открыть меню"></button>
-			<a href="#" class="logo">
-				<img class="logo__image" src="dest/images/logo.jpg" alt="Логотип Коралловый фонтан">
-			</a>
-			<nav class="menu header__menu">
-				<ul class="menu__list">
-					<li class="menu__item menu__item--active">
-						<a class="menu__link" href="#">Главная</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#">Услуги</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#">Цены</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#">Новости</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#">Фотографии</a>
-					</li>
-					<li class="menu__item">
-						<a class="menu__link" href="#">Контакты</a>
-					</li>
-				</ul>
-			</nav>
-			<a class="phone header__phone" href="tel:79992154776">+7 (999) 215-47-76</a>
-		</div>
-	</header>
-	<main class="main">
-		<section class="intro">
-			<div class="container intro__container">
-				<form class="booking-form">
-					<div class="booking-form__element booking-form__wrapper booking-form__wrapper--datepicker">
-						<label for="start-date" class="visually-hidden">Дата заезда</label>
-						<input class="booking-form__control booking-form__datepicker" type="text" id="start-date" name="start-date" placeholder="Дата заезда">	
-					</div>
-					<div class="booking-form__element booking-form__wrapper booking-form__wrapper--datepicker">
-						<label for="end-date" class="visually-hidden">Дата заезда</label>
-						<input class="booking-form__control booking-form__datepicker" type="text" id="end-date" name="end-date" placeholder="Дата выезда">	
-					</div>
-					<div class="booking-form__element booking-form__wrapper booking-form__wrapper--room">
-						<label for="room" class="visually-hidden">Количество человек</label>
-						<select class="booking-form__control booking-form__room" id="room" name="room">
-							<option selected disabled>Кол-во человек</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-						</select>
-					</div>
-					<button class="booking-form__submit btn" type="submit">Забронировать</button>
-				</form>
-				<h1 class="main__title">Главный заголовок</h1>
-				<p class="intro__text">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-					Beatae voluptates deleniti quis illum illo molestias, laboriosam velit, quo, distinctio maxime nobis 
-					esse expedita quibusdam! Quae ipsum impedit reiciendis neque quos.
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-					Beatae voluptates deleniti quis illum illo molestias, laboriosam velit, quo, distinctio maxime nobis 
-					esse expedita quibusdam! Quae ipsum impedit reiciendis neque quos.
-				</p>
-				<ul class="social-list intro__social-list">
-					<li class="social-list__item">
-						<a class="social-list__link" href="https://vk.com" target="_blank" rel="nofollow" title="Наш Вконтакте">
-							<span class="sr-only">Вконтакте</span>
-							<img src="dest/svg/vk.svg" alt="Вконтакте">
-						</a>
-					</li>
-					<li class="social-list__item">
-						<a class="social-list__link" href="#" target="_blank" rel="nofollow" title="Наш Инстаграм">
-							<span class="sr-only">Интсаграм</span>
-							<img src="dest/svg/instagram.svg" alt="Инстаграм">
-						</a>
-					</li>
-					<li class="social-list__item">
-						<a class="social-list__link" href="#" target="_blank" rel="nofollow" title="Наш Вотсапп">
-							<span class="sr-only">Вотсапп</span>
-							<img src="dest/svg/whatsapp.svg" alt="Вотсапп">
-						</a>
-					</li>
-				</ul>
-			</div>
-		</section>
-		<section class="advantages section--standart">
-			<div class="container">
-				<h2 class="main__subtitle visually-hidden">Наши преимущества</h2>
-				<div class="tabs">
-					<nav class="tabs__control">
-						<button class="tabs__switch tabs__switch--active" type="button" data-tab-id="tab-1">Преимущество 1</button>
-						<button class="tabs__switch" type="button" data-tab-id="tab-2">Преимущество 2</button>
-						<button class="tabs__switch" type="button" data-tab-id="tab-3">Преимущество 3</button>
-					</nav>
-					<ul class="tabs__content-list">
-						<li class="tabs__item tabs__item--active" data-tab-id="tab-1">
-							<div class="tabs__visual-info">
-								<picture>
-									<source 
-										srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-										data-srcset="dest/images/advantage-1@1x.webp, dest/images/advantage-1@2x.webp 2x" 
-										type="image/webp">
-									<img class="tabs__image lazyload" 
-										src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-										data-src="dest/images/advantage-1@1x.jpg" 
-										data-srcset="dest/images/advantage-1@2x.jpg 2x" 
-										alt="Преимущество 1">
-								</picture>
-							</div>
-							<div class="tabs__text-info">
-								<h3 class="tabs__title">Заголовок преимущества 1</h3>
-								<p class="tabs__text">
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, quo architecto eos repellendus nam praesentium eveniet doloribus? Eaque, beatae labore ab qui eius quis provident. Nisi atque delectus repellendus sit?
-								</p>
-							</div>
-						</li>
-						<li class="tabs__item" data-tab-id="tab-2">
-							<div class="tabs__visual-info">
-								<picture>
-									<source 
-										srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-										data-srcset="dest/images/advantage-1@1x.webp, dest/images/advantage-1@2x.webp 2x" 
-										type="image/webp">
-									<img class="tabs__image lazyload" 
-										src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-										data-src="dest/images/advantage-1@1x.jpg" 
-										data-srcset="dest/images/advantage-1@2x.jpg 2x" 
-										alt="Преимущество 2">
-								</picture>
-							</div>
-							<div class="tabs__text-info">
-								<h3 class="tabs__title">Заголовок преимущества 2</h3>
-								<p class="tabs__text">
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, quo architecto eos repellendus nam praesentium eveniet doloribus? Eaque, beatae labore ab qui eius quis provident. Nisi atque delectus repellendus sit?
-								</p>
-							</div>
-						</li>
-						<li class="tabs__item" data-tab-id="tab-3">
-							<div class="tabs__visual-info">
-								<picture>
-									<source 
-										srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-										data-srcset="dest/images/advantage-1@1x.webp, dest/images/advantage-1@2x.webp 2x" 
-										type="image/webp">
-									<img class="tabs__image lazyload" 
-										src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-										data-src="dest/images/advantage-1@1x.jpg" 
-										data-srcset="dest/images/advantage-1@2x.jpg 2x" 
-										alt="Преимущество 3">
-								</picture>
-							</div>
-							<div class="tabs__text-info">
-								<h3 class="tabs__title">Заголовок преимущества 3</h3>
-								<p class="tabs__text">
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, quo architecto eos repellendus nam praesentium eveniet doloribus? Eaque, beatae labore ab qui eius quis provident. Nisi atque delectus repellendus sit?
-								</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-		<section class="transfer section--standart">
-			<div class="container">
-				<h2 class="main__subtitle">Трансфер от аэропорта</h2>
-				<div class="transfer__content">
-					<p class="transfer__text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla in tempore quibusdam earum totam consequuntur sequi, aliquam, alias eum sed voluptatibus, nesciunt similique ullam ab a blanditiis delectus ipsum quam.
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla in tempore quibusdam earum totam consequuntur sequi, aliquam, alias eum sed voluptatibus, nesciunt similique ullam ab a blanditiis delectus ipsum quam.
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla in tempore quibusdam earum totam consequuntur sequi, aliquam, alias eum sed voluptatibus, nesciunt similique ullam ab a blanditiis delectus ipsum quam.
-					</p>
-					<picture>
-						<source 
-							srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-							data-srcset="dest/images/transfer@1x.webp, dest/images/transfer@2x.webp 2x" 
-							type="image/webp">
-						<img class="transfer__image animate lazyload" 
-							src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-							data-src="dest/images/transfer@1x.png" 
-							data-srcset="dest/images/transfer@2x.png 2x" 
-							data-expand="-50"
-							data-animation="short-from-right"
-							alt="Трансфер">
-					</picture>
-				</div>
-			</div>
-		</section>
-		<section class="meal-and-pasttime section--standart">
-			<h2 class="visually-hidden">Питание и времяпрепровождение</h2>
-			<section class="meal">
-				<div class="container half-wrapper">
-					<div class="half-wrapper__part half-wrapper__part--image">
-						<picture>
-							<source 
-								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								data-srcset="dest/images/advantage-1@1x.webp, dest/images/advantage-1@2x.webp 2x" 
-								type="image/webp">
-							<img class="tabs__image half-wrapper__image lazyload" 
-								src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								data-src="dest/images/advantage-1@1x.jpg" 
-								data-srcset="dest/images/advantage-1@2x.jpg 2x" 
-								alt="Преимущество 1">
-						</picture>
-					</div>
-					<div class="half-wrapper__part">
-						<h2 class="main__subtitle meal__subtitle">Питание</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab natus sit ratione sunt harum! Totam voluptate eius eum, aperiam vel nesciunt hic, ducimus quas fugit, illum ipsam natus qui cum.
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab natus sit ratione sunt harum! Totam voluptate eius eum, aperiam vel nesciunt hic, ducimus quas fugit, illum ipsam natus qui cum.
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab natus sit ratione sunt harum! Totam voluptate eius eum, aperiam vel nesciunt hic, ducimus quas fugit, illum ipsam natus qui cum.
-						</p>
-					</div>
-				</div>
-			</section>
-			<section class="pasttime">
-				<div class="container half-wrapper">
-					<div class="half-wrapper__part">	
-						<h2 class="main__subtitle pasttime__title">Чем заняться в свободное время?</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab natus sit ratione sunt harum! Totam voluptate eius eum, aperiam vel nesciunt hic, ducimus quas fugit, illum ipsam natus qui cum.
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab natus sit ratione sunt harum! Totam voluptate eius eum, aperiam vel nesciunt hic, ducimus quas fugit, illum ipsam natus qui cum.
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab natus sit ratione sunt harum! Totam voluptate eius eum, aperiam vel nesciunt hic, ducimus quas fugit, illum ipsam natus qui cum.
-						</p>
-					</div>
-					<div class="half-wrapper__part half-wrapper__part--image half-wrapper__part--image-right">
-						<picture>
-							<source 
-								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								data-srcset="dest/images/advantage-1@1x.webp, dest/images/advantage-1@2x.webp 2x" 
-								type="image/webp">
-							<img class="tabs__image half-wrapper__image lazyload" 
-								src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								data-src="dest/images/advantage-1@1x.jpg" 
-								data-srcset="dest/images/advantage-1@2x.jpg 2x" 
-								alt="Преимущество 1">
-						</picture>
-					</div>
-				</div>
-			</section>
-		</section>
-		<section class="reviews section--standart">
-			<div class="container">
-				<h2 class="main__subtitle">Отзывы о нас</h2>
-				<ul class="reviews__list">
-					<li class="reviews__item">
-						<picture class="reviews__picture">
-							<source 
-								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								data-srcset="dest/images/review@1x.webp, dest/images/review@2x.webp 2x" 
-								type="image/webp">
-							<img class="reviews__photo lazyload" 
-								src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								data-src="dest/images/review@1x.jpg" 
-								data-srcset="dest/images/review@2x.jpg 2x" 
-								data-expand="-50"
-								alt="Алексей Афанасьев">
-						</picture>
-						<blockquote class="reviews__blockquote">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi impedit, sequi nulla dolores et iure rem odio, quidem perferendis aliquid quis eum. Maxime facere nisi amet quasi nemo. Dignissimos!
-							<footer class="reviews__by-who">
-								- <a href="#" class="reviews__link" rel="nofollow">Алексей Афанасьев</a>
-							</footer>
-						</blockquote>
-					</li>
-					<li class="reviews__item">
-						<picture class="reviews__picture">
-							<source 
-								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								data-srcset="dest/images/review@1x.webp, dest/images/review@2x.webp 2x" 
-								type="image/webp">
-							<img class="reviews__photo lazyload" 
-							src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								data-src="dest/images/review@1x.jpg" 
-								data-srcset="dest/images/review@2x.jpg 2x" 
-								data-expand="-50"
-								alt="Алексей Афанасьев">
-						</picture>
-						<blockquote class="reviews__blockquote">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi impedit, sequi nulla dolores et iure rem odio, quidem perferendis aliquid quis eum. Maxime facere nisi amet quasi nemo. Dignissimos!
-							<footer class="reviews__by-who">
-								- <a href="#" class="reviews__link" rel="nofollow">Алексей Афанасьев</a>
-							</footer>
-						</blockquote>
-					</li>
-					<li class="reviews__item">
-						<picture class="reviews__picture">
-							<source 
-								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								data-srcset="dest/images/review@1x.webp, dest/images/review@2x.webp 2x" 
-								type="image/webp">
-							<img class="reviews__photo lazyload" 
-								src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								data-src="dest/images/review@1x.jpg" 
-								data-srcset="dest/images/review@2x.jpg 2x" 
-								data-expand="-50"
-								alt="Алексей Афанасьев">
-						</picture>
-						<blockquote class="reviews__blockquote">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi impedit, sequi nulla dolores et iure rem odio, quidem perferendis aliquid quis eum. Maxime facere nisi amet quasi nemo. Dignissimos!
-							<footer class="reviews__by-who">
-								- <a href="#" class="reviews__link" rel="nofollow">Алексей Афанасьев</a>
-							</footer>
-						</blockquote>
-					</li>
-					<li class="reviews__item">
-						<picture class="reviews__picture">
-							<source 
-								srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								data-srcset="dest/images/review@1x.webp, dest/images/review@2x.webp 2x" 
-								type="image/webp">
-							<img class="reviews__photo lazyload" 
-							src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-								data-src="dest/images/review@1x.jpg" 
-								data-srcset="dest/images/review@2x.jpg 2x" 
-								data-expand="-50"
-								alt="Алексей Афанасьев">
-						</picture>
-						<blockquote class="reviews__blockquote">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe excepturi impedit, sequi nulla dolores et iure rem odio, quidem perferendis aliquid quis eum. Maxime facere nisi amet quasi nemo. Dignissimos!
-							<footer class="reviews__by-who">
-								- <a href="#" class="reviews__link" rel="nofollow">Алексей Афанасьев</a>
-							</footer>
-						</blockquote>
-					</li>
-				</ul>
-				<a class="reviews__more btn" href="#">Больше эмоций</a>
-			</div>
-		</section>
-		<section class="news section--standart">
-			<div class="container">
-				<h2 class="main__subtitle">Новости</h2>
-				<ul class="news__list">
-					<li class="news__item">
-						<article class="news__article">
-							<figure class="news__figure">
-								<picture>
-									<source 
-										srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-										data-srcset="dest/images/news@1x.webp, dest/images/news@2x.webp 2x" 
-										type="image/webp">
-									<img class="news__photo lazyload" 
-										src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-										data-src="dest/images/news@1x.jpg" 
-										data-srcset="dest/images/news@2x.jpg 2x" 
-										data-expand="-50"
-										alt="Новость 1">
-								</picture>
-								<figcaption class="news__figcaption">
-									<h3 class="news__title">Новость 1</h3>
-									<p class="news__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, similique sapiente! Autem delectus voluptas voluptatem saepe harum ducimus beatae nihil. Officia atque voluptatem perspiciatis voluptates assumenda pariatur non ipsum beatae!</p>
-									<a class="news__more link--icon-right" href="#">Подробнее</a>
-								</figcaption>
-							</figure>
-						</article>
-					</li>
-					<li class="news__item">
-						<article class="news__article">
-							<figure class="news__figure">
-								<picture>
-									<source 
-										srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-										data-srcset="dest/images/news@1x.webp, dest/images/news@2x.webp 2x" 
-										type="image/webp">
-									<img class="news__photo lazyload" 
-										src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-										data-src="dest/images/news@1x.jpg" 
-										data-srcset="dest/images/news@2x.jpg 2x" 
-										data-expand="-50"
-										alt="Новость 1">
-								</picture>
-								<figcaption class="news__figcaption">
-									<h3 class="news__title">Новость 1</h3>
-									<p class="news__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, similique sapiente! Autem delectus voluptas voluptatem saepe harum ducimus beatae nihil. Officia atque voluptatem perspiciatis voluptates assumenda pariatur non ipsum beatae!</p>
-									<a class="news__more link--icon-right" href="#">Подробнее</a>
-								</figcaption>
-							</figure>
-						</article>
-					</li>
-					<li class="news__item">
-						<article class="news__article">
-							<figure class="news__figure">
-								<picture>
-									<source 
-										srcset="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-										data-srcset="dest/images/news@1x.webp, dest/images/news@2x.webp 2x" 
-										type="image/webp">
-									<img class="news__photo lazyload" 
-										src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%20675'%2F%3E" 
-										data-src="dest/images/news@1x.jpg" 
-										data-srcset="dest/images/news@2x.jpg 2x" 
-										data-expand="-50"
-										alt="Новость 1">
-								</picture>
-								<figcaption class="news__figcaption">
-									<h3 class="news__title">Новость 1</h3>
-									<p class="news__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, similique sapiente! Autem delectus voluptas voluptatem saepe harum ducimus beatae nihil. Officia atque voluptatem perspiciatis voluptates assumenda pariatur non ipsum beatae!</p>
-									<a class="news__more link--icon-right" href="#">Подробнее</a>
-								</figcaption>
-							</figure>
-						</article>
-					</li>
-				</ul>
-				<a class="news__another btn" href="#">Читать другие новости</a>
-			</div>
-		</section>
-	</main>
-	<footer class="footer">
-		<div class="container">
-			<div class="footer__top">
-				<div class="footer__social">
-					<a class="footer__logo" href="#">
-						<img class="logo__image" src="dest/images/logo.jpg" alt="Логотип Коралловый фонтан">
-					</a>
-					<ul class="social-list footer__social-list">
-						<li class="social-list__item">
-							<a class="social-list__link" href="https://vk.com" target="_blank" rel="nofollow" title="Наш Вконтакте">
-								<span class="sr-only">Вконтакте</span>
-								<img src="dest/svg/vk.svg" alt="Вконтакте">
-							</a>
-						</li>
-						<li class="social-list__item">
-							<a class="social-list__link" href="#" target="_blank" rel="nofollow" title="Наш Инстаграм">
-								<span class="sr-only">Интсаграм</span>
-								<img src="dest/svg/instagram.svg" alt="Инстаграм">
-							</a>
-						</li>
-						<li class="social-list__item">
-							<a class="social-list__link" href="#" target="_blank" rel="nofollow" title="Наш Вотсапп">
-								<span class="sr-only">Вотсапп</span>
-								<img src="dest/svg/whatsapp.svg" alt="Вотсапп">
-							</a>
-						</li>
-					</ul>
-				</div>
-				<nav class="menu footer__menu">
-					<ul class="menu__list">
-						<li class="menu__item menu__item--active">
-							<a class="menu__link" href="#">Главная</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="#">Услуги</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="#">Цены</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="#">Новости</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="#">Фотографии</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link" href="#">Контакты</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-			<div class="footer__bottom">
-				<nav class="support-menu">
-					<ul class="support-menu__list">
-						<li class="support-menu__item">
-							<a class="support-menu__link" href="#">Политика конфиденциальности</a>
-						</li>
-						<li class="support-menu__item">
-							<a class="support-menu__link" href="#">Отказ от ответственности</a>
-						</li>
-						<li class="support-menu__item">
-							<a class="support-menu__link" href="#">Согласие на обработку персональных данных</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</footer>
-	<script src="dest/js/script.min.js"></script>
+    <header class="header">
+        <div class="container header__container">
+            <picture>
+                <source type="image/svg+xml" srcset="svg/logo.svg">
+                <img class="logo header__logo" src="images/logo.png" alt="Логотип Barionyx">
+            </picture>
+            <p class="info-item address header__address">
+                Санкт-Петербург, ул. Автовская, д. 35
+            </p>
+            <a class="info-item mail header__mail" href="mailto:info@barionyx.ru">info@barionyx.ru</a>
+            <a class="info-item phone header__phone" href="tel:+78124050505">+7 (812) 405-05-05</a>
+        </div>
+    </header>
+    <main class="main">
+        <section class="intro swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide intro__slide intro__slide--first">
+                    <div class="container intro__slide-container">
+                        <h2 class="intro__title">Все под контролем!</h2>
+                        <button class="btn intro__btn" type="button" data-modal-id="application">Заказать подключение</button>
+                    </div>
+                </div>
+                <div class="swiper-slide intro__slide intro__slide--second">
+                    <div class="container intro__slide-container">
+                        <h2 class="intro__title intro__title--top-border intro__title--green">Бесплатный месяц<br>обслуживания</h2>
+                        <p class="intro__text">при переподключении другого сервиса</p>
+                        <button class="btn intro__btn" type="button" data-modal-id="application">Заказать подключение</button>
+                    </div>
+                </div>
+                <div class="swiper-slide intro__slide intro__slide--third">
+                    <div class="container intro__slide-container">
+                        <h2 class="intro__title">Подключи друга -<br>получи скидку</h2>
+                        <button class="btn intro__btn" type="button" data-modal-id="application">Заказать подключение</button>
+                    </div>
+                </div>
+                <div class="swiper-slide intro__slide intro__slide--fourth">
+                    <div class="container intro__slide-container">
+                        <p class="intro__text">При покупке годового обслуживания -</p>
+                        <h2 class="intro__title">30 дней в подарок!</h2>
+                        <button class="btn intro__btn" type="button" data-modal-id="application">Заказать подключение</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container intro__switcher-container">
+                <button type="button" class="intro__switcher intro__switcher--prev">
+                    <span class="sr-only">Предыдущий слайд</span>
+                </button>
+                <button type="button" class="intro__switcher intro__switcher--next">
+                    <span class="sr-only">Следующий слайд</span>
+                </button>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <p class="about__text about__text--title about__text--main-title">С BARIONYX лучше, чем без него!</p>
+                <p class="about__text">
+                    Система BARIONYX показывает, где автомобиль сейчас и ведет историю поездок, помогает предотвратить возможность угона, помогает диагностировать неисправность и оценить водительские навыки, а в случае ДТП – позовет на помощь.
+                </p>
+                <p class="about__text about__text--title">Быстрое внедрение и экономия с первого дня!</p>
+            </div>
+        </section>
+        <section class="offers">
+            <h2 class="sr-only">Предложения</h2>
+            <div class="container offers__container">
+                <div class="offers__elem">
+                    <h3 class="offers__title">"Маяк"</h3>
+                    <ul class="offers-list">
+                        <li class="offers-list__item">
+                            <p class="offers-list__title">Покупка</p>
+                            <p class="offers-list__subtitle">Трекер + подключение</p>
+                            <p class="offers-list__price">6000</p>
+                            <p class="offers-list__subprice">Абонентская плата - 250 ₽/мес</p>
+                            <button class="btn offers-list__order-btn" type="button">
+                                Заказать подключение
+                            </button>
+                        </li>
+                        <li class="offers-list__item">
+                            <p class="offers-list__title">Аренда</p>
+                            <p class="offers-list__subtitle">Трекер + подключение</p>
+                            <p class="offers-list__price offers-list__price--free">Бесплатно</p>
+                            <p class="offers-list__subprice">Абонентская плата - 600 ₽/мес</p>
+                            <button class="btn offers-list__order-btn" type="button">
+                                Заказать подключение
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="offers__elem">
+                    <h3 class="offers__title">Телеметрическая система barionyx</h3>
+                    <ul class="offers-list">
+                        <li class="offers-list__item">
+                            <p class="offers-list__title">Покупка</p>
+                            <p class="offers-list__subtitle">Трекер + подключение</p>
+                            <p class="offers-list__price">4000</p>
+                            <p class="offers-list__subprice">Абонентская плата - 250 ₽/мес</p>
+                            <button class="btn offers-list__order-btn" type="button">
+                                Заказать подключение
+                            </button>
+                        </li>
+                        <li class="offers-list__item">
+                            <p class="offers-list__title">Аренда</p>
+                            <p class="offers-list__subtitle">Трекер + подключение</p>
+                            <p class="offers-list__price offers-list__price--free">Бесплатно</p>
+                            <p class="offers-list__subprice">Абонентская плата - 500 ₽/мес</p>
+                            <button class="btn offers-list__order-btn" type="button">
+                                Заказать подключение
+                            </button>
+                        </li>
+                        <li class="offers-list__item">
+                            <p class="offers-list__title">Перенастройка</p>
+                            <p class="offers-list__subtitle">Перенастройка трекера клиента</p>
+                            <p class="offers-list__price offers-list__price--free">Бесплатно</p>
+                            <p class="offers-list__subprice">Абонентская плата - 350 ₽/мес</p>
+                            <button class="btn offers-list__order-btn" type="button">
+                                Заказать подключение
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="offers__elem">
+                    <h3 class="offers__title">"Контроль топлива"</h3>
+                    <ul class="offers-list">
+                        <li class="offers-list__item">
+                            <p class="offers-list__title">Покупка</p>
+                            <p class="offers-list__subtitle">Трекер + датчик + подключение</p>
+                            <p class="offers-list__price">10000</p>
+                            <p class="offers-list__subprice">Абонентская плата - 250 ₽/мес</p>
+                            <button class="btn offers-list__order-btn" type="button">
+                                Заказать подключение
+                            </button>
+                        </li>
+                        <li class="offers-list__item">
+                            <p class="offers-list__title">Аренда</p>
+                            <p class="offers-list__subtitle">Трекер + датчик + подключение</p>
+                            <p class="offers-list__price offers-list__price--free">Бесплатно</p>
+                            <p class="offers-list__subprice">Абонентская плата - 1000 ₽/мес</p>
+                            <button class="btn offers-list__order-btn" type="button">
+                                Заказать подключение
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="container">
+                <h2 class="services__title">Услуги</h2>
+                <div class="services-table">
+                    <p class="services-table__caption">Навигация</p>
+                    <ul class="services-table__list">
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Установка навигационного блока</span>
+                            <span class="services-table__service-price">1500₽</span>
+                        </li>
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Подключение к CAN-шине</span>
+                            <span class="services-table__service-price">1200₽</span>
+                        </li>
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Установка маяка / закладки</span>
+                            <span class="services-table__service-price">500₽</span>
+                        </li>
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Подключение к тахографу</span>
+                            <span class="services-table__service-price">2200₽</span>
+                        </li>
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Подключение штатного указателя топлива</span>
+                            <span class="services-table__service-price">1200₽</span>
+                        </li>
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Установка реле блокировки двигателя</span>
+                            <span class="services-table__service-price">1000₽</span>
+                        </li>
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Установка тревожной кнопки</span>
+                            <span class="services-table__service-price">1200₽</span>
+                        </li>
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Подключение кнопки вала отбора мощности</span>
+                            <span class="services-table__service-price">1200₽</span>
+                        </li>
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Подключение к штатному датчику оборотов двигателя</span>
+                            <span class="services-table__service-price">1500₽</span>
+                        </li>
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Установка датчика оборотов двигателя, с протяжкой кабеля до кабины</span>
+                            <span class="services-table__service-price">2500₽</span>
+                        </li>
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Установка CAN-LOG</span>
+                            <span class="services-table__service-price">1200₽</span>
+                        </li>
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Установка датчика работы механизма, с протяжкой кабеля до кабины</span>
+                            <span class="services-table__service-price">2500₽</span>
+                        </li>
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Установка считывателя карт водителя</span>
+                            <span class="services-table__service-price">1500₽</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-table">
+                    <p class="services-table__caption">Датчик топлива</p>
+                    <ul class="services-table__list">
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Тарировка бака, до 1 тонны</span>
+                            <span class="services-table__service-price">2600₽</span>
+                        </li>
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Демонтаж / монтаж бака</span>
+                            <span class="services-table__service-price">2200₽</span>
+                        </li>
+                        <li class="services-table__item">
+                            <span class="services-table__service-name">Тарировка ёмкости, 2-4 тонны</span>
+                            <span class="services-table__service-price">4000₽</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="demo">
+            <div class="container">
+                <h2 class="demo__title">
+                    Контролируйте точное местонахождение автомобиля в реальном времени –<br>с вашего смартфона или компьютера!
+                </h2>
+                <p class="demo__text">
+                    Для ознакомления с системой Вы можете воспользоваться демонстрационной версией
+                </p>
+                <button class="btn demo__btn">Попробовать BARIONYX!</button>
+                <p class="demo__accent">
+                    Присоединяйтесь и увеличивайте свою прибыль!
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <a href="#" class="to-top">
+                <span class="sr-only">Наверх страницы</span>
+            </a>
+            <h2 class="footer__title">Контакты</h2>
+            <p class="info-item footer__info-item address">
+                Санкт-Петербург, ул. Автовская, д. 35
+            </p>
+            <a class="info-item footer__info-item mail footer__mail" href="mailto:info@barionyx.ru">info@barionyx.ru</a>
+            <a class="info-item footer__info-item phone footer__phone" href="tel:+78124050505">+7 (812) 405-05-05</a>
+        </div>
+        <div class="overlay overlay--show"></div>
+        <section class="modal modal--show modal-application" data-modal-id="application">
+            <button class="modal__close" type="button">
+                <span class="sr-only">Закрыть</span>
+            </button>
+            <picture>
+                <source type="image/svg+xml" srcset="svg/logo-modal.svg">
+                <img class="logo modal-application__logo" src="images/logo-modal.png" alt="Логотип Barionyx (Зеленый)">
+            </picture>
+            <h2 class="modal__title">Подключиться - легко!</h2>
+            <form class="form modal__form" action="">
+                <div class="form__group">
+                    <label class="form__label sr-only" for="app-name">Имя</label>
+                    <input id="app-name" class="form__input" type="text" name="name" placeholder="Имя" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label sr-only" for="app-phone">Телефон</label>
+                    <input id="app-phone" class="form__input" type="text" name="phone" placeholder="Телефон" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label sr-only" for="app-email">Email</label>
+                    <input id="app-email" class="form__input" type="text" name="email" placeholder="Email" required>
+                </div>
+                <div class="form__group form__group--checkbox">
+                    <label class="check">
+                        <input class="check__input" type="checkbox" name="email" placeholder="Email" required>
+                        <span class="check__box"></span>
+                        Нажимая кнопку «Отправить», я принимаю условия публичной оферты и даю своё согласие на обработку персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных Политикой обработки персональных данных.
+                    </label>
+                </div>
+                <button class="btn form__submit" type="submit">Отправить</button>
+            </form>
+        </section>
+    </footer>
+    <script src="js/main.min.js"></script>
 </body>
+
 </html>
