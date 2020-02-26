@@ -82,7 +82,7 @@
                             <p class="offers-list__subtitle">Трекер + подключение</p>
                             <p class="offers-list__price">6000</p>
                             <p class="offers-list__subprice">Абонентская плата - 250 ₽/мес</p>
-                            <button class="btn offers-list__order-btn" type="button">
+                            <button class="btn offers-list__order-btn" type="button" data-modal-id="application">
                                 Заказать подключение
                             </button>
                         </li>
@@ -91,7 +91,7 @@
                             <p class="offers-list__subtitle">Трекер + подключение</p>
                             <p class="offers-list__price offers-list__price--free">Бесплатно</p>
                             <p class="offers-list__subprice">Абонентская плата - 600 ₽/мес</p>
-                            <button class="btn offers-list__order-btn" type="button">
+                            <button class="btn offers-list__order-btn" type="button" data-modal-id="application">
                                 Заказать подключение
                             </button>
                         </li>
@@ -105,7 +105,7 @@
                             <p class="offers-list__subtitle">Трекер + подключение</p>
                             <p class="offers-list__price">4000</p>
                             <p class="offers-list__subprice">Абонентская плата - 250 ₽/мес</p>
-                            <button class="btn offers-list__order-btn" type="button">
+                            <button class="btn offers-list__order-btn" type="button" data-modal-id="application">
                                 Заказать подключение
                             </button>
                         </li>
@@ -114,7 +114,7 @@
                             <p class="offers-list__subtitle">Трекер + подключение</p>
                             <p class="offers-list__price offers-list__price--free">Бесплатно</p>
                             <p class="offers-list__subprice">Абонентская плата - 500 ₽/мес</p>
-                            <button class="btn offers-list__order-btn" type="button">
+                            <button class="btn offers-list__order-btn" type="button" data-modal-id="application">
                                 Заказать подключение
                             </button>
                         </li>
@@ -123,7 +123,7 @@
                             <p class="offers-list__subtitle">Перенастройка трекера клиента</p>
                             <p class="offers-list__price offers-list__price--free">Бесплатно</p>
                             <p class="offers-list__subprice">Абонентская плата - 350 ₽/мес</p>
-                            <button class="btn offers-list__order-btn" type="button">
+                            <button class="btn offers-list__order-btn" type="button" data-modal-id="application">
                                 Заказать подключение
                             </button>
                         </li>
@@ -137,7 +137,7 @@
                             <p class="offers-list__subtitle">Трекер + датчик + подключение</p>
                             <p class="offers-list__price">10000</p>
                             <p class="offers-list__subprice">Абонентская плата - 250 ₽/мес</p>
-                            <button class="btn offers-list__order-btn" type="button">
+                            <button class="btn offers-list__order-btn" type="button" data-modal-id="application">
                                 Заказать подключение
                             </button>
                         </li>
@@ -146,7 +146,7 @@
                             <p class="offers-list__subtitle">Трекер + датчик + подключение</p>
                             <p class="offers-list__price offers-list__price--free">Бесплатно</p>
                             <p class="offers-list__subprice">Абонентская плата - 1000 ₽/мес</p>
-                            <button class="btn offers-list__order-btn" type="button">
+                            <button class="btn offers-list__order-btn" type="button" data-modal-id="application">
                                 Заказать подключение
                             </button>
                         </li>
@@ -241,7 +241,7 @@
                 <p class="demo__text">
                     Для ознакомления с системой Вы можете воспользоваться демонстрационной версией
                 </p>
-                <button class="btn demo__btn">Попробовать BARIONYX!</button>
+                <button class="btn demo__btn" type="button" data-modal-id="application">Попробовать BARIONYX!</button>
                 <p class="demo__accent">
                     Присоединяйтесь и увеличивайте свою прибыль!
                 </p>
@@ -270,7 +270,7 @@
                 <img class="logo modal-application__logo" src="images/logo-modal.png" loading="lazy" alt="Логотип Barionyx (Зеленый)">
             </picture>
             <h2 class="modal__title">Подключиться - легко!</h2>
-            <form class="form modal__form">
+            <form class="form modal__form modal-application__form">
                 <div class="form__group">
                     <label class="form__label sr-only" for="app-name">Имя</label>
                     <input id="app-name" class="form__input" type="text" name="name" placeholder="Имя" required>
@@ -283,10 +283,14 @@
                     <label class="form__label sr-only" for="app-email">Email</label>
                     <input id="app-email" class="form__input" type="text" name="email" placeholder="Email" required>
                 </div>
-                <div class="form__group form__group--checkbox">
-                    <label class="check">
+                <div class="form__group form__group--checkbox check">
+                    <!-- <label class="check">
                         <input class="check__input" type="checkbox" name="agreement" required>
                         <span class="check__box"></span>
+                        Нажимая кнопку «Отправить», я принимаю условия публичной оферты и даю своё согласие на обработку персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных Политикой обработки персональных данных.
+                    </label> -->
+                    <input id="agreement" class="check__input" type="checkbox" name="agreement" required>
+                    <label for="agreement">
                         Нажимая кнопку «Отправить», я принимаю условия публичной оферты и даю своё согласие на обработку персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных Политикой обработки персональных данных.
                     </label>
                 </div>

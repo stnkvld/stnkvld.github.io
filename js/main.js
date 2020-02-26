@@ -29,9 +29,22 @@ $(function() {
     });
 
     toTop.on('click', function() {
-        $('body,html').animate({
+        $('body, html').animate({
             scrollTop: 0
         }, 800);
         return false;
-    })
+    });
+
+    $('.modal-application__form').on('submit', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        var formData = $(this).serialize();
+        $.post(
+            '/ajax.php', { data: formData },
+            function(response) {
+                var response = JSON.parse(response);
+                alert(response.message);
+            }
+        );
+    });
 });

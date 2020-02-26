@@ -740,7 +740,26 @@ body {
     margin-top: 1.25em;
 }
 
+
+/** START Временные стили **/
+
 .check {
+    display: flex;
+}
+
+.check label {
+    font-size: 0.625rem;
+    text-align: left;
+    line-height: 1.4;
+    color: rgba(68, 68, 68, .5);
+    margin-left: 1.8em;
+}
+
+
+/** END Временные стили **/
+
+
+/* .check {
     position: relative;
     text-align: left;
     display: inline-block;
@@ -748,9 +767,10 @@ body {
     line-height: 1.4;
     color: rgba(68, 68, 68, .5);
     padding-left: 3.8em;
-}
+} */
 
-.check__input {
+
+/* .check__input {
     position: absolute;
     -webkit-appearance: none;
     appearance: none;
@@ -782,7 +802,7 @@ body {
 
 .check__input:checked {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' …' stroke='%231f8ac1' stroke-linecap='round' stroke-width='3'/%3E%3C/svg%3E");
-}
+} */
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5),
 all and (min-resolution: 144dpi) {
@@ -1010,5 +1030,32 @@ all and (min-resolution: 144dpi) {
     }
     .no-webp .intro__slide--fourth {
         background-image: url('../images/intro-4-mobile.jpg');
+    }
+}
+
+@media all and (max-width: 375px) and (-webkit-min-device-pixel-ratio: 1.5) and (min-resolution: 144dpi) {
+    .webp .intro__slide--first {
+        background-image: url('../images/intro-1-mobile@2x.webp');
+    }
+    .no-webp .intro__slide--first {
+        background-image: url('../images/intro-1-mobile@2x.jpg');
+    }
+    .webp .intro__slide--second {
+        background-image: url('../images/intro-2-mobile@2x.webp');
+    }
+    .no-webp .intro__slide--second {
+        background-image: url('../images/intro-2-mobile@2x.jpg');
+    }
+    .webp .intro__slide--third {
+        background-image: url('../images/intro-3-mobile@2x.webp');
+    }
+    .no-webp .intro__slide--third {
+        background-image: url('../images/intro-3-mobile@2x.jpg');
+    }
+    .webp .intro__slide--fourth {
+        background-image: url('../images/intro-4-mobile@2x.webp');
+    }
+    .no-webp .intro__slide--fourth {
+        background-image: url('../images/intro-4-mobile@2x.jpg');
     }
 }
