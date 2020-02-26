@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barionyx</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -25,6 +24,15 @@
     </header>
     <main class="main">
         <section class="intro swiper-container">
+            <div class="container intro__switcher-container">
+                <button type="button" class="intro__switcher intro__switcher--prev">
+                    <span class="sr-only">Предыдущий слайд</span>
+                </button>
+                <button type="button" class="intro__switcher intro__switcher--next">
+                    <span class="sr-only">Следующий слайд</span>
+                </button>
+            </div>
+
             <div class="swiper-wrapper">
                 <div class="swiper-slide intro__slide intro__slide--first">
                     <div class="container intro__slide-container">
@@ -52,15 +60,6 @@
                         <button class="btn intro__btn" type="button" data-modal-id="application">Заказать подключение</button>
                     </div>
                 </div>
-            </div>
-
-            <div class="container intro__switcher-container">
-                <button type="button" class="intro__switcher intro__switcher--prev">
-                    <span class="sr-only">Предыдущий слайд</span>
-                </button>
-                <button type="button" class="intro__switcher intro__switcher--next">
-                    <span class="sr-only">Следующий слайд</span>
-                </button>
             </div>
         </section>
         <section class="about">
@@ -268,10 +267,10 @@
             </button>
             <picture>
                 <source type="image/svg+xml" srcset="svg/logo-modal.svg">
-                <img class="logo modal-application__logo" src="images/logo-modal.png" alt="Логотип Barionyx (Зеленый)">
+                <img class="logo modal-application__logo" src="images/logo-modal.png" loading="lazy" alt="Логотип Barionyx (Зеленый)">
             </picture>
             <h2 class="modal__title">Подключиться - легко!</h2>
-            <form class="form modal__form" action="">
+            <form class="form modal__form">
                 <div class="form__group">
                     <label class="form__label sr-only" for="app-name">Имя</label>
                     <input id="app-name" class="form__input" type="text" name="name" placeholder="Имя" required>
@@ -286,7 +285,7 @@
                 </div>
                 <div class="form__group form__group--checkbox">
                     <label class="check">
-                        <input class="check__input" type="checkbox" name="email" placeholder="Email" required>
+                        <input class="check__input" type="checkbox" name="agreement" required>
                         <span class="check__box"></span>
                         Нажимая кнопку «Отправить», я принимаю условия публичной оферты и даю своё согласие на обработку персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных Политикой обработки персональных данных.
                     </label>
@@ -295,7 +294,7 @@
             </form>
         </section>
     </footer>
-    <script src="js/main.min.js"></script>
+    <script src="js/main.min.js" defer></script>
 </body>
 
 </html>
