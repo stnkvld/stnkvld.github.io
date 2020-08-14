@@ -21,17 +21,17 @@
 }
 
 .intro:before {
-    width: 28.5625rem;
-    height: 9.6875rem;
-    top: -5.9375em;
-    left: calc(50% - 14.28125rem);
+    width: 121.8vw;
+    height: 41.5vw;
+    top: -25.35vw;
+    left: calc(50% - 60.9vw);
     background-image: url(../svg/tf-minimal.svg);
 }
 
 .intro__container:before {
-    width: 16.25rem;
-    height: 6.375rem;
-    top: -7.3125rem;
+    width: 69.3vw;
+    height: 27.2vw;
+    top: -31.2vw;
     right: 0;
     background-image: url(../svg/comfort-plus.svg);
 }
@@ -45,7 +45,7 @@
 }
 
 .intro__subtitle {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
     line-height: 1.25;
     color: #333;
     margin-top: 0;
