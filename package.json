@@ -1,21 +1,15 @@
 {
-    "name": "barionyx",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "stnkvld",
-    "license": "ISC",
-    "dependencies": {
-        "del": "^5.1.0",
-        "gulp": "^4.0.2",
-        "gulp-autoprefixer": "^7.0.1",
-        "gulp-clean-css": "^4.2.0",
-        "gulp-concat": "^2.6.1",
-        "gulp-minify": "^3.1.0",
-        "jquery": "^3.4.1",
-        "swiper": "^5.3.1"
-    }
+  "name": "tf-new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }

@@ -1,0 +1,22 @@
+.joint-venture__download {
+    margin-bottom: 1.875em;
+}
+
+.titled-list {
+    padding: 0 1.125em;
+}
+
+.titled-list__title {
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.titled-list__list {
+    margin-bottom: .375em;
+}
+
+.title-list__list--dashed .titled-list__item:before {
+    content: '— ';
+    position: relative;
+}

@@ -1,1 +1,0 @@
-# stnkvld.github.io

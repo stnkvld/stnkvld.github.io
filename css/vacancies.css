@@ -1,0 +1,14 @@
+.vacancies__title {
+    margin-bottom: 0.35em;
+}
+
+.vacancy__video {
+    width: 100%;
+    height: 12rem;
+    border-radius: 0.5em;
+    margin-bottom: 1.25em;
+}
+
+.vacancy__autoparks-btn {
+    margin-bottom: 2em;
+}

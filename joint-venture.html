@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Таксовичкоф - Главная</title>
+    <title>Таксовичкоф - Совместное предприятие</title>
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/joint-venture.css">
 </head>
 
 <body>
@@ -24,9 +24,9 @@
 				</button>
                 <div class="city-selector__menu">
                     <div class="container">
-                        <div class="text-input search city-selector__search">
-                            <input class="text-input search__input" type="text" placeholder="Поиск">
-                        </div>
+                        <form class="text-input search city-selector__search" method="GET" action="">
+                            <input class="search__input" type="text" placeholder="Поиск">
+                        </form>
                         <div class="city-selector__lists">
                             <div class="city-selector__list">
                                 <p class="city-selector__list-title">Страна</p>
@@ -156,79 +156,106 @@
 			</button>
         </div>
     </header>
-    <main class="main">
-        <section class="intro">
-            <div class="container intro__container">
-                <h1 class="intro__title">Заказ такси с сайта со скидкой 30%</h1>
-                <p class="intro__subtitle">
-                    <strong>Добрый день!</strong><br> Откуда поедете сегодня?
-                </p>
-            </div>
-        </section>
-        <section class="promocode main__promocode">
-            <div class="container">
-                <button class="promocode__btn" type="button">Есть промокод</button>
-            </div>
-        </section>
-        <section class="why-tf">
-            <div class="container">
-                <h2 class="page-title page-title--gray">Почему мы?</h2>
-                <ul class="why-tf__list">
-                    <li class="why-tf__list-item">
-                        <h3 class="why-tf__list-title">Туда и обратно</h3>
-                        <p class="why-tf__list-text">Скидка 30% на вторую поездку в день</p>
-                        <a href="#" class="why-tf__list-link">Заказать такси</a>
-                    </li>
-                    <li class="why-tf__list-item">
-                        <h3 class="why-tf__list-title">Доставка</h3>
-                        <p class="why-tf__list-text">Привезем быстро и оставим у двери</p>
-                        <a href="#" class="why-tf__list-link">Оформить доставку</a>
-                    </li>
-                    <li class="why-tf__list-item">
-                        <h3 class="why-tf__list-title">Бизнесу</h3>
-                        <p class="why-tf__list-text">Такси для владельцев бизнеса</p>
-                        <a href="#" class="why-tf__list-link">Стать бизнес-клиентом</a>
-                    </li>
-                    <li class="why-tf__list-item">
-                        <h3 class="why-tf__list-title">Семья</h3>
-                        <p class="why-tf__list-text">Семейный счёт — выгодные поездки для всей семьи</p>
-                        <a href="#" class="why-tf__list-link">Узнать больше</a>
-                    </li>
-                    <li class="why-tf__list-item">
-                        <h3 class="why-tf__list-title">Мои правила</h3>
-                        <p class="why-tf__list-text">Устанавливайте свою цену на поездки</p>
-                        <a href="#" class="why-tf__list-link">Установить приложение</a>
-                    </li>
+    <main class="main single-page joint-venture">
+        <div class="container">
+            <img class="single-page__image" src="svg/comfort-plus.svg" alt="">
+            <h1 class="page-title">Совместное предприятие</h1>
+            <p class="text">
+                Объединение ресурсов позволяет работать и развиваться в условиях сложной рыночной ситуации и обострившейся конкуренции, одновременно сохраняя бизнес-самостоятельность каждого партнера.
+            </p>
+            <a class="btn btn--narrow btn--green joint-venture__download" href="#">Скачать презентацию</a>
+            <h2 class="page-subtitle">Какие возможности дает совместное предприятие?</h2>
+            <div class="titled-list">
+                <p class="titled-list__title">Операционная деятельность</p>
+                <ul class="list titled-list__list titled-list__list--dashed">
+                    <li class="list__item titled-list__item">Рост эффективности всех такси на линии</li>
+                    <li class="list__item titled-list__item">Увеличение мощности компании</li>
+                    <li class="list__item titled-list__item">Ускорение подачи такси и улучшение сервиса</li>
+                    <li class="list__item titled-list__item">Систематизирование бизнес-процессов</li>
                 </ul>
             </div>
-        </section>
-        <section class="section-float section-float--right become-driver">
-            <h2 class="become-driver__title">Стать водителем</h2>
-            <p class="become-driver__text">
-                Присоединяйтесь к нашей команде
-            </p>
-        </section>
-        <section class="section-float section-float--right download-pult">
-            <h2 class="download-pult__title">Скачать Пульт</h2>
-        </section>
-        <section class="section-float section-float--left news">
-            <h2 class="news__title">Новости</h2>
-            <article class="news__card">
-                <p class="news__text">
-                    «Таксовичкоф» и «ULTAXI» создают совместное предприятие в Ульяновске<br>
-                    <time class="news__date" datetime="2020-06-08">8 июня 2020 в 10:54</time>
-                </p>
-            </article>
-            <a class="link news__all-link" href="#">Читайте все новости</a>
-        </section>
-        <section class="section-float section-float--right quality-control">
-            <h2 class="quality-control__title">Контроль качества</h2>
-            <a class="quality-control__phone" href="tel:+78123300004">
-                +7 (812) 330-00-04<br>
-                <span class="quality-control__phone-caption">нажмите, чтобы позвонить</span>
-            </a>
-            <a class="quality-control__email" href="mailto:okk@taxovichkof.ru">okk@taxovichkof.ru</a>
-        </section>
+            <div class="titled-list">
+                <p class="titled-list__title">Финансы</p>
+                <ul class="list titled-list__list titled-list__list--dashed">
+                    <li class="list__item titled-list__item">Рост выручки</li>
+                    <li class="list__item titled-list__item">Увеличение рентабельности</li>
+                    <li class="list__item titled-list__item">Оптимизация расходов</li>
+                </ul>
+            </div>
+            <div class="titled-list">
+                <p class="titled-list__title">Рынок</p>
+                <ul class="list titled-list__list titled-list__list--dashed">
+                    <li class="list__item titled-list__item">Возможность сформировать рынок качественных услуг такси</li>
+                    <li class="list__item titled-list__item">Установить свою ценовую политику</li>
+                    <li class="list__item titled-list__item">Занять ведущую роль на рынке</li>
+                </ul>
+            </div>
+            <h2 class="page-subtitle">Есть преимущества совместного предприятия с Таксовичкоф</h2>
+            <ul class="list list--advantages">
+                <li class="list__item">Работа с сильным и узнаваемым брендом</li>
+                <li class="list__item">Передовое программное обеспечение</li>
+                <li class="list__item">Полная маркетинговая поддержка</li>
+                <li class="list__item">Стабильный поток клиентов</li>
+            </ul>
+            <h2 class="page-subtitle">Продвижение - наша задача</h2>
+            <ul class="list list--advantages">
+                <li class="list__item">Календарный план акций и скидок</li>
+                <li class="list__item">Готовые рекламные макеты</li>
+                <li class="list__item">Запуск и контроль рекламных кампаний по всем каналам </li>
+                <li class="list__item">Разработка статегии и шаблонов рассылок</li>
+                <li class="list__item">Работа с отзывами</li>
+            </ul>
+            <h2 class="page-subtitle">Что делает каждый из партнеров</h2>
+            <div class="titled-list">
+                <p class="titled-list__title">Мы</p>
+                <ul class="list titled-list__list">
+                    <li class="list__item titled-list__item">Оказываем поддержку до и после открытия</li>
+                    <li class="list__item titled-list__item">Запускаем рекламную кампанию и управляем маркетинговой активностью</li>
+                    <li class="list__item titled-list__item">Помогаем с подбором и обучением персонала</li>
+                    <li class="list__item titled-list__item">Помогаем выгодно приобрести автомобили</li>
+                    <li class="list__item titled-list__item">Даём готовую бизнес-модель и помогаем разработать стратегию развития</li>
+                    <li class="list__item titled-list__item">Внедряем программное обеспечение</li>
+                </ul>
+            </div>
+            <div class="titled-list">
+                <p class="titled-list__title">Вы</p>
+                <ul class="list titled-list__list">
+                    <li class="list__item titled-list__item">Увеличиваете автопарк: лизинг, собственность, частники или партнеры</li>
+                    <li class="list__item titled-list__item">Брендируете и обслуживаете таксопарк</li>
+                    <li class="list__item titled-list__item">Нанимаете персонал и контролируете работу</li>
+                    <li class="list__item titled-list__item">Управляете бизнесом по стандартам «Таксовичкоф»</li>
+                </ul>
+            </div>
+            <a class="btn btn--narrow btn--green joint-venture__download" href="#">Скачать презентацию</a>
+            <h2 class="page-subtitle">Как же стать партнером Таксовичкоф?</h2>
+            <ol class="list numbered-list">
+                <li class="list__item numbered-list__item">
+                    <p class="numbered-list__title">Оставьте заявку на сайте</p>
+                    <p class="numbered-list__text">
+                        Хотите узнать больше? Оставьте заявку, мы свяжемся с вами.
+                    </p>
+                </li>
+                <li class="list__item numbered-list__item">
+                    <p class="numbered-list__title">Исследуйте новые возможности</p>
+                    <p class="numbered-list__text">
+                        Посетите наш офис и автопарк, пообщайтесь с сотрудниками, составьте своё впечатление о бренде.
+                    </p>
+                </li>
+                <li class="list__item numbered-list__item">
+                    <p class="numbered-list__title">Сообщите о своём решении</p>
+                    <p class="numbered-list__text">
+                        Приняв окончательное решение об открытии совместного предприятия, сообщите нам об этом.
+                    </p>
+                </li>
+                <li class="list__item numbered-list__item">
+                    <p class="numbered-list__title">Присоединяйтесь к нам!</p>
+                    <p class="numbered-list__text">
+                        После подписания договора, мы начинаем работы по запуску в вашем регионе.
+                    </p>
+                </li>
+            </ol>
+            <a class="btn btn--narrow btn--green" href="#">Присоединиться к Таксовичкоф</a>
+        </div>
     </main>
     <footer class="footer">
         <div class="container">
