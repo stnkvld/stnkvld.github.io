@@ -665,6 +665,15 @@ html {
     color: #fff;
 }
 
+.download-app__link {
+    display: inline-block;
+    width: 6.9375rem;
+}
+
+.download-app__icon {
+    width: 100%;
+}
+
 .numbered-list {
     counter-reset: num;
 }
