@@ -63,16 +63,18 @@ html {
     text-align: center;
     text-decoration: none;
     border: 0;
-    border-radius: 0.9375em;
+    border-radius: .9375em;
     padding: 0;
-    margin: 0;
-    margin-bottom: 0.625em;
+    margin: 0 auto .625em;
 }
 
-.btn--narrow {
+.btn--small {
     width: 15.375rem;
-    margin-left: auto;
-    margin-right: auto;
+    border-radius: 1.5em;
+}
+
+.btn--medium {
+    width: 19.5rem;
     border-radius: 1.5em;
 }
 
