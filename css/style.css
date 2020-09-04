@@ -36,6 +36,12 @@ html {
     color: #333;
 }
 
+ul,
+ol,
+p {
+    margin-bottom: 3em;
+}
+
 .container {
     width: 92.75%;
     margin: 0 auto;
@@ -56,7 +62,7 @@ html {
 
 .btn {
     display: block;
-    width: 100%;
+    width: auto;
     height: 3rem;
     font-weight: 600;
     line-height: 3rem;
@@ -65,7 +71,16 @@ html {
     border: 0;
     border-radius: .9375em;
     padding: 0;
-    margin: 0 auto .625em;
+    box-sizing: border-box;
+    margin: 0 auto 2.85em;
+}
+
+.btn--download {
+    padding-left: 1.25em;
+    background-image: url(../svg/download.svg);
+    background-position: 1.375em center;
+    background-size: 1.25em 1.25em;
+    background-repeat: no-repeat;
 }
 
 .btn--small {
@@ -78,9 +93,22 @@ html {
     border-radius: 1.5em;
 }
 
+.btn--full {
+    width: 100%;
+    border-radius: 3em;
+}
+
+.btn--download.btn--full {
+    background-position: 2.5em center;
+}
+
 .btn--green {
     color: #fff;
     background-color: #5EB848;
+}
+
+.btn--yellow {
+    background-color: #FBDC00;
 }
 
 .btn--higher {
@@ -96,7 +124,14 @@ html {
 .text {
     line-height: 1.5;
     margin-top: 0;
-    margin-bottom: 1em;
+}
+
+.text--bold {
+    font-weight: 600;
+}
+
+.text--small {
+    font-size: .875rem;
 }
 
 .link-list {
@@ -126,7 +161,7 @@ html {
 .list {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin-top: 0;
 }
 
 .list__item {
@@ -134,19 +169,26 @@ html {
     margin-bottom: 1em;
 }
 
+.list__text-wrapper {
+    margin: 0;
+}
+
 .list--advantages .list__item {
     position: relative;
+    padding-left: 5em;
+    box-sizing: border-box;
+}
+
+.list--advantages.list--fixed-height .list__item {
     display: flex;
     align-items: center;
     height: 4rem;
-    padding-left: 5em;
-    box-sizing: border-box;
 }
 
 .list--advantages .list__item:before {
     content: '';
     position: absolute;
-    top: calc(50% - 2em);
+    top: -.5em;
     left: 0;
     width: 4em;
     height: 4em;
@@ -156,8 +198,35 @@ html {
     background-repeat: no-repeat;
 }
 
+.list--advantages.list--fixed-height .list__item:before {
+    top: 0;
+}
+
+.list--dashed .list__item:before {
+    content: '— ';
+}
+
+.list--numbers {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2.5em;
+}
+
+.list--numbers .list__item-title,
+.list--numbers .list__item-value {
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.list--numbers .list__item-value {
+    font-size: 1.75rem;
+}
+
 .header {
     padding: 0.75em 0;
+    background-color: #fff;
 }
 
 .header__container {
@@ -224,14 +293,16 @@ html {
 .city-selector__menu {
     display: none;
     position: fixed;
-    top: 0;
+    top: 4.5rem;
     left: 0;
     width: 100%;
-    height: 100vh;
-    padding-top: 6.65em;
+    max-height: calc(100vh - 4.5rem);
+    background-color: #fff;
     box-sizing: border-box;
-    overflow-y: scroll;
-    z-index: -1;
+    overflow-y: auto;
+    padding-top: 2.15em;
+    box-sizing: border-box;
+    z-index: 9;
 }
 
 .btn-menu {
@@ -491,8 +562,20 @@ html {
 .page-subtitle {
     font-size: 1.25rem;
     font-weight: 600;
+    line-height: 1.25;
     margin-top: 0;
     margin-bottom: 1.1em;
+}
+
+.page-subtitle--text-center {
+    text-align: center;
+}
+
+.page-lowtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 1em;
 }
 
 .page-addition {
@@ -506,6 +589,7 @@ html {
     border-top-left-radius: 0.9375em;
     border-top-right-radius: 0.9375em;
     padding-top: 1.375em;
+    margin-top: 4em;
 }
 
 .social-list {
@@ -556,9 +640,17 @@ html {
     margin: 0;
 }
 
+.contacts-list__title--accent {
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
 .contacts-list__links {
     display: flex;
     align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .contacts-list__item:not(:last-child) {
@@ -720,4 +812,117 @@ html {
     font-weight: 600;
     margin: 0;
     margin-bottom: .625em;
+}
+
+.numbered-list__item.numbered-list__item--with-btn {
+    margin-bottom: 7rem;
+}
+
+.numbered-list__btn-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: -4rem;
+    width: 100%;
+    margin: 0;
+}
+
+.numbered-list__btn {
+    margin: 0 auto;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+    z-index: 99;
+}
+
+.popup__container {
+    position: relative;
+}
+
+.popup__close {
+    position: absolute;
+    top: .5rem;
+    right: 0;
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+    background-image: url(../svg/close.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.popup__title {
+    font-size: 1.75rem;
+    line-height: 1.25;
+}
+
+.packets-list {
+    margin-bottom: 3.5em;
+}
+
+.packets-list__item {
+    max-width: 296px;
+    border-radius: 1.125em;
+    padding: 1.125em 1.125em 3em 1.125em;
+    box-sizing: border-box;
+}
+
+.packets-list__item--yellow {
+    background-color: #F6E459;
+}
+
+.packets-list__item--orange {
+    background-color: #E39E32;
+}
+
+.packets-list__item--green {
+    background-color: #52B885;
+}
+
+.packets-list__number {
+    font-size: .75rem;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: .5em;
+}
+
+.packets-list__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.packets-list__values-item:not(:last-child) {
+    margin-bottom: 1.5em;
+}
+
+.packets-list__values-title,
+.packets-list__values-value {
+    font-weight: 600;
+    margin: 0;
+}
+
+.packets-list__values-title {
+    margin-bottom: .5em;
+}
+
+.packets-list__values-value {
+    font-size: 1.25rem;
+}
+
+.full-screen-picture {
+    display: block;
+    margin-bottom: 1.625em;
 }

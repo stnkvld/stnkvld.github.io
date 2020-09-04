@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Таксовичкоф - Водитель на личном автомобиле</title>
+    <title>Таксовичкоф - Главная</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/vacancies.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" style="position: fixed; left: 0; top: 0; width: 100%; z-index: 9;">
         <div class="container header__container">
             <a class="logo header__logo" href="/">
                 <img class="logo__image" src="svg/logo-small.svg" alt="Логотип">
@@ -22,7 +22,7 @@
                 <button class="city-selector__close">
 					<span class="sr-only">Закрыть выбор города</span>
 				</button>
-                <div class="city-selector__menu">
+                <div class="city-selector__menu" style="display: block;">
                     <div class="container">
                         <form class="text-input search city-selector__search" method="GET" action="">
                             <input class="search__input" type="text" placeholder="Поиск">
@@ -156,130 +156,78 @@
 			</button>
         </div>
     </header>
-    <main class="main single-page">
-        <section class="vacancy">
-            <div class="container">
-                <h1 class="page-title vacancies__title">Водитель на личном автомобиле</h1>
-                <p class="page-addition">Вакансия</p>
-                <iframe class="vacancy__video" src="https://www.youtube.com/embed/pl2rWTKIaZo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p class="text">
-                    График свободный. Доход — от 80 000 до 130 000 руб. в месяц. Выплаты ежедневные — приезжать в офис не обязательно. Установка программы — бесплатная. Заказы есть всегда. Осмотр автомобиля проводится раз в месяц — перед открытием смены достаточно просто
-                    прислать фото. Пройти инструктаж и выйти на линию можно в 1-й же день — на протяжении всей смены Вам будут помогать специалисты транспортного отдела и техподдержки. Кроме того, мы бесплатно обеспечим Вас БСО, а также предоставим скидку
-                    на оформление лицензии и медицинской справки. Станьте частью команды «Таксовичкоф»!
+    <main class="main" style="padding-top: 4.5rem;">
+        <section class="intro">
+            <div class="container intro__container">
+                <!-- <h1 class="intro__title">Заказ такси с сайта со скидкой 30%</h1> -->
+                <p class="intro__subtitle">
+                    <strong>Добрый день!</strong><br> Откуда поедете сегодня?
                 </p>
-                <a class="btn btn--green vacancy__autoparks-btn" href="#">Автопарки по всему городу</a>
-                <h2 class="page-subtitle">Условия</h2>
-                <ul class="list">
-                    <li class="list__item">Зарплата от 80 000 руб.</li>
-                    <li class="list__item">Высокий процент от заказов: 77%</li>
-                    <li class="list__item">Компенсация минимальных заказов</li>
-                    <li class="list__item">Выплаты заработка ежедневно</li>
-                    <li class="list__item">Свободный график работы</li>
-                    <li class="list__item">Удобное расположение офисов</li>
-                    <li class="list__item">Круглосуточная поддержка водителей, бесплатная юридическая помощь на дорогах</li>
-                    <li class="list__item">Скидки по партнерской программе до 30% (мойки, кафе, автозапчасти и т.д)</li>
-                    <li class="list__item">Организация футбольных матчей и других досуговых мероприятий среди сотрудников «ТаксовичкоФ».</li>
-                </ul>
-                <h2 class="page-subtitle">Требования</h2>
-                <ul class="list">
-                    <li class="list__item">Стаж вождения от 3-х лет</li>
-                    <li class="list__item">Водительские права категории B</li>
-                </ul>
-                <h2 class="page-subtitle">Обязанности</h2>
-                <ul class="list">
-                    <li class="list__item">Выполнение заказов «Таксовичкоф» по Санкт-Петербургу и Ленинградской области.</li>
-                </ul>
             </div>
         </section>
-        <section class="interest">
+        <section class="promocode main__promocode">
             <div class="container">
-                <h2 class="page-subtitle">Заинтересовала вакансия?</h2>
-                <a class="btn btn--green" href="#">Удаленное трудоустройство</a>
-                <a class="btn btn--green" href="#">Отправить анкету</a>
-                <ul class="list contacts-list interest__list">
-                    <li class="contacts-list__item">
-                        <p class="contacts-list__title">Звоните в любое время</p>
-                        <ul class="contacts-list__links">
-                            <li class="contacts-list__links-item">
-                                <a href="tel:+78123330009" class="contacts-list__number-link">333-00-09</a>
-                            </li>
-                            <li class="contacts-list__links-item">
-                                <a href="tel:+78123330009" class="contacts-list__phone-link">
-                                    <span class="sr-only">333-00-09</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <button class="promocode__btn" type="button">Есть промокод</button>
             </div>
         </section>
-        <section class="questions-answers">
+        <section class="why-tf">
             <div class="container">
-                <h2 class="page-title vacancies__title">Вопросы и ответы</h2>
-                <p class="page-addition">Трудоустройство общие</p>
-                <ul class="link-list">
-                    <li class="link-list__item">
-                        <a class="link" href="#">Что делать, если у водителя нет сдачи?</a>
+                <h2 class="page-title page-title--gray">Почему мы?</h2>
+                <ul class="why-tf__list">
+                    <li class="why-tf__list-item">
+                        <h3 class="why-tf__list-title">Туда и обратно</h3>
+                        <p class="why-tf__list-text">Скидка 30% на вторую поездку в день</p>
+                        <a href="#" class="why-tf__list-link">Заказать такси</a>
                     </li>
-                    <li class="link-list__item">
-                        <a class="link" href="#">Можно ли узнать стоимость заказа заранее?</a>
+                    <li class="why-tf__list-item">
+                        <h3 class="why-tf__list-title">Доставка</h3>
+                        <p class="why-tf__list-text">Привезем быстро и оставим у двери</p>
+                        <a href="#" class="why-tf__list-link">Оформить доставку</a>
                     </li>
-                    <li class="link-list__item">
-                        <a class="link" href="#">Что делать, если водитель попросил больше денег?</a>
+                    <li class="why-tf__list-item">
+                        <h3 class="why-tf__list-title">Бизнесу</h3>
+                        <p class="why-tf__list-text">Такси для владельцев бизнеса</p>
+                        <a href="#" class="why-tf__list-link">Стать бизнес-клиентом</a>
                     </li>
-                    <li class="link-list__item">
-                        <a class="link" href="#">Как получить квитанцию об оплате заказа?</a>
+                    <li class="why-tf__list-item">
+                        <h3 class="why-tf__list-title">Семья</h3>
+                        <p class="why-tf__list-text">Семейный счёт — выгодные поездки для всей семьи</p>
+                        <a href="#" class="why-tf__list-link">Узнать больше</a>
+                    </li>
+                    <li class="why-tf__list-item">
+                        <h3 class="why-tf__list-title">Мои правила</h3>
+                        <p class="why-tf__list-text">Устанавливайте свою цену на поездки</p>
+                        <a href="#" class="why-tf__list-link">Установить приложение</a>
                     </li>
                 </ul>
             </div>
         </section>
-        <section id="autoparks" class="popup popup-autoparks">
-            <div class="container popup__container">
-                <button type="button" class="popup__close">
-                    <span class="sr-only">Закрыть модальное окно</span>
-                </button>
-                <h2 class="popup__title">Наши автопарки</h2>
-                <object class="popup-autoparks__map" data="svg/autoparks.svg" type="image/svg+xml" tabindex="-1">
-                    <img src="images/autoparks.png" alt="Автопарки Таксовичкоф">
-                </object>
-                <ul class="popup-autoparks__list">
-                    <li class="popup-autoparks__list-item popup-autoparks__list-item--red">
-                        <p class="popup-autoparks__metro">Кировский завод</p>
-                        <p class="popup-autoparks__address">ул. Автовская, 35а</p>
-                        <p class="popup-autoparks__time">пн-пт 9:00-18:00</p>
-                    </li>
-                    <li class="popup-autoparks__list-item popup-autoparks__list-item--red">
-                        <p class="popup-autoparks__metro">Гражданский проспект</p>
-                        <p class="popup-autoparks__address">ул. Руставели, 45</p>
-                        <p class="popup-autoparks__time">пн-пт 9:00-18:00</p>
-                    </li>
-                    <li class="popup-autoparks__list-item popup-autoparks__list-item--red">
-                        <p class="popup-autoparks__metro">Лесная</p>
-                        <p class="popup-autoparks__address">ул. Литовская, 10</p>
-                        <p class="popup-autoparks__time">пн-пт 9:00-18:00</p>
-                    </li>
-                    <li class="popup-autoparks__list-item popup-autoparks__list-item--blue">
-                        <p class="popup-autoparks__metro">Парнас</p>
-                        <p class="popup-autoparks__address">ул. Михаила Дудина, 15, оф. 403</p>
-                        <p class="popup-autoparks__time">пн-пт 9:00-18:00</p>
-                    </li>
-                    <li class="popup-autoparks__list-item popup-autoparks__list-item--green">
-                        <p class="popup-autoparks__metro">Елизаровская</p>
-                        <p class="popup-autoparks__address">ул. Седова, 11, лит. АБ</p>
-                        <p class="popup-autoparks__time">пн-пт 9:00-18:00</p>
-                    </li>
-                    <li class="popup-autoparks__list-item popup-autoparks__list-item--orange">
-                        <p class="popup-autoparks__metro">Ладожская</p>
-                        <p class="popup-autoparks__address">ул. Латышских Стрелков, 19</p>
-                        <p class="popup-autoparks__time">пн-пт 9:00-18:00</p>
-                    </li>
-                    <li class="popup-autoparks__list-item popup-autoparks__list-item--green">
-                        <p class="popup-autoparks__metro">Приморская/Василеостровская</p>
-                        <p class="popup-autoparks__address">Железноводская ул., 9к2</p>
-                        <p class="popup-autoparks__time">пн-пт 9:00-18:00</p>
-                    </li>
-                </ul>
-            </div>
+        <section class="section-float section-float--right become-driver">
+            <h2 class="become-driver__title">Стать водителем</h2>
+            <p class="become-driver__text">
+                Присоединяйтесь к нашей команде
+            </p>
+        </section>
+        <section class="section-float section-float--right download-pult">
+            <h2 class="download-pult__title">Скачать &laquo;Пульт&raquo;</h2>
+        </section>
+        <section class="section-float section-float--left news">
+            <h2 class="news__title">Новости</h2>
+            <article class="news__card">
+                <p class="news__text">
+                    «Таксовичкоф» и «ULTAXI» создают совместное предприятие в Ульяновске<br>
+                    <time class="news__date" datetime="2020-06-08">8 июня 2020 в 10:54</time>
+                </p>
+            </article>
+            <a class="link news__all-link" href="#">Читайте все новости</a>
+        </section>
+        <section class="section-float section-float--right quality-control">
+            <h2 class="quality-control__title">Контроль качества</h2>
+            <a class="quality-control__phone" href="tel:+78123300004">
+                +7 (812) 330-00-04<br>
+                <span class="quality-control__phone-caption">нажмите, чтобы позвонить</span>
+            </a>
+            <a class="quality-control__email" href="mailto:okk@taxovichkof.ru">okk@taxovichkof.ru</a>
         </section>
     </main>
     <footer class="footer">

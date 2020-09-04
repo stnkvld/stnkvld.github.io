@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таксовичкоф - Франчайзинг</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/franchise.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a class="logo header__logo" href="/">
+                <img class="logo__image" src="svg/logo-small.svg" alt="Логотип">
+            </a>
+            <div class="city-selector">
+                <button class="city-selector__city" type="button">Санкт-Петербург</button>
+                <a class="city-selector__phone" href="tel:+78123330000">333-00-00</a>
+                <button class="city-selector__close">
+					<span class="sr-only">Закрыть выбор города</span>
+				</button>
+                <div class="city-selector__menu">
+                    <div class="container">
+                        <form class="text-input search city-selector__search" method="GET" action="">
+                            <input class="search__input" type="text" placeholder="Поиск">
+                        </form>
+                        <div class="city-selector__lists">
+                            <div class="city-selector__list">
+                                <p class="city-selector__list-title">Страна</p>
+                                <ul class="countries-list">
+                                    <li class="countries-list__item">
+                                        <input class="countries-list__radio" id="country-ru" type="radio" name="country" checked>
+                                        <label class="countries-list__label" for="country-ru">Россия</label>
+                                    </li>
+                                    <li class="countries-list__item">
+                                        <input class="countries-list__radio" id="country-kz" type="radio" name="country">
+                                        <label class="countries-list__label" for="country-kz">Қазақстан</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="city-selector__list">
+                                <p class="city-selector__list-title">Город</p>
+                                <ul class="letters-list">
+                                    <li class="letters-list__item">
+                                        А
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Азнакаево</a>
+                                                <p class="cities-list__area">Республика Татарстан</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        В
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Всеволожск</a>
+                                                <p class="cities-list__area">Ленинградская область</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        Г
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Гатчина</a>
+                                                <p class="cities-list__area">Ленинградская область</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        К
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Колпино</a>
+                                                <p class="cities-list__area">Ленинградская область</p>
+                                            </li>
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Красное село</a>
+                                                <p class="cities-list__area">Ленинградская область</p>
+                                            </li>
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Кронштадт</a>
+                                                <p class="cities-list__area">Ленинградская область</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        М
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Москва</a>
+                                                <p class="cities-list__area">Москва</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        Н
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Нижнекамск</a>
+                                                <p class="cities-list__area">Республика Татарстан</p>
+                                            </li>
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Нурлат</a>
+                                                <p class="cities-list__area">Республика Татарстан</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        О
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Омск</a>
+                                                <p class="cities-list__area">Омская область</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        П
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Петергоф</a>
+                                                <p class="cities-list__area">Санкт-Петербург</p>
+                                            </li>
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Пушкин</a>
+                                                <p class="cities-list__area">Санкт-Петербург</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        С
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <p class="cities-list__city cities-list__city--current">Санкт-Петербург</p>
+                                                <p class="cities-list__area">Санкт-Петербург</p>
+                                            </li>
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Сосновый Бор</a>
+                                                <p class="cities-list__area">Ленинградская область</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-menu header__btn-menu" type="button">
+				<span class="sr-only">Открыть/закрыть меню</span>
+			</button>
+        </div>
+    </header>
+    <main class="main single-page franchise">
+        <section class="start">
+            <div class="container">
+                <object class="single-page__image" type="image/svg+xml" data="svg/comfort-plus.svg" tabindex="-1">
+					<img 
+						src="images/mobile/comfort-plus.png" 
+						srcset="images/png/comfort-plus@2x.png 2x"
+				  		alt="Комфорт-плюс Таксовичкоф">
+				</object>
+                <h1 class="page-title">Франчайзинг от &laquo;Таксовичкоф&raquo;</h1>
+                <h2 class="page-subtitle">
+                    Минимум вложений — максимальный доход
+                </h2>
+                <p class="text">
+                    Начните свой собственный бизнес в такси по уникальной системе франчайзинга «Таксовичкоф» — стабильный ежемесячный доход, реклама в Вашем регионе, помощь при приобретении автомобилей в лизинг.
+                </p>
+                <ul class="list list--numbers">
+                    <li class="list__item">
+                        <p class="list__item-title">Срок окупаемости</p>
+                        <p class="list__item-value">от 6 месяцев</p>
+                    </li>
+                    <li class="list__item">
+                        <p class="list__item-title">Ожидаемая прибыль</p>
+                        <p class="list__item-value">от 800 000 руб./мес.</p>
+                    </li>
+                </ul>
+                <button class="btn btn--small btn--green" type="button">Заявка на франшизу</button>
+            </div>
+        </section>
+        <section class="about-company">
+            <div class="container">
+                <h2 class="page-subtitle">Кратко о компании</h2>
+                <p class="text">
+                    Компания «Таксовичкоф» — лидер на рынке такси Санкт-Петербурга. Мы предлагаем своим клиентам только новые автомобили зарубежных марок, каждый из которых содержит элементы VIP-класса.
+                </p>
+            </div>
+            <picture class="full-screen-picture">
+                <source srcset="images/mobile/park.webp, images/mobile/park@2x.webp 2x" type="image/webp">
+                <img src="images/mobile/park.png" srcset="images/mobile/park@2x.png 2x" alt="О компании Таксовичкоф">
+            </picture>
+            <div class="container">
+                <h2 class="page-subtitle">Чего мы достигли за 5 лет</h2>
+                <ul class="list list--numbers">
+                    <li class="list__item">
+                        <p class="list__item-title">Выполнили заказов</p>
+                        <p class="list__item-value">5 500 000</p>
+                    </li>
+                    <li class="list__item">
+                        <p class="list__item-title">Посетителей сайта в месяц</p>
+                        <p class="list__item-value">160 000</p>
+                    </li>
+                    <li class="list__item">
+                        <p class="list__item-title">Сотрудников в штате</p>
+                        <p class="list__item-value">5000 +</p>
+                    </li>
+                    <li class="list__item">
+                        <p class="list__item-title">Загрузок приложения в месяц</p>
+                        <p class="list__item-value">30 000 +</p>
+                    </li>
+                </ul>
+                <a class="btn btn--small btn--green" type="button" href="#">Узнать больше</a>
+            </div>
+        </section>
+        <section class="easy-money">
+            <div class="container">
+                <h2 class="page-subtitle">Зарабатывать с нами — просто</h2>
+                <p class="text">
+                    Мы не диспетчерская служба. И не продаём программное обеспечение. Начав работу с «Таксовичкоф», Вы получаете полноценную поддержку по всем направлениям развития своего бизнеса!
+                </p>
+                <p class="text text--small">
+                    От базовой подготовки персонала до масштабной PR-кампании в выбранном регионе, от маркетинговых материалов до формирования автопарка с нуля. Это значит, что большинство возможных рисков мы уже взяли на себя. Вам остаётся действовать по проверенной схеме,
+                    получая с этого прибыль.
+                </p>
+            </div>
+        </section>
+        <section class="what-we-offer">
+            <div class="container">
+                <h2 class="page-subtitle">Что мы предлагаем</h2>
+                <ul class="list list--advantages list--fixed-height">
+                    <li class="list__item">Всестороннюю поддержку бизнеса до и после открытия</li>
+                    <li class="list__item">Передовое программное обеспечение и онлайн-сервис</li>
+                    <li class="list__item">Помощь при приобретении автомобилей в лизинг</li>
+                    <li class="list__item">Обучение предпринимателя и управляющего персонала</li>
+                    <li class="list__item">Масштабную рекламную кампанию в Вашем регионе и подробный брендбук</li>
+                </ul>
+            </div>
+        </section>
+        <section class="job-platform">
+            <div class="container">
+                <h2 class="page-subtitle">Готовая рабочая платформа</h2>
+                <ul class="list list--advantages list--fixed-height">
+                    <li class="list__item">Call-центр</li>
+                    <li class="list__item">Сайт</li>
+                    <li class="list__item">Мобильное приложение для клиентов</li>
+                    <li class="list__item">Мобильное приложение для водителей</li>
+                </ul>
+            </div>
+        </section>
+        <section class="packets">
+            <div class="container">
+                <h2 class="page-subtitle">Франчайзинговые пакеты</h2>
+                <p class="text">
+                    Выберите один из трёх пакетов для комфортной работы в соответствии с текущими потребностями своего бизнеса.
+                </p>
+                <ul class="list packets-list">
+                    <li class="packets-list__item packets-list__item--yellow">
+                        <p class="packets-list__number">Пакет I</p>
+                        <p class="packets-list__title">Все и сразу</p>
+                        <p class="text">
+                            Хотите начать бизнес с нуля? Мы поможем создать службу такси, которая займёт ведущие позиции в регионе, и пройдём через все этапы её становления вместе с Вами!
+                        </p>
+                        <ul class="list packets-list__values">
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Инвестиции</p>
+                                <p class="packets-list__values-value">от 5 млн. руб.</p>
+                            </li>
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Срок окупаемости</p>
+                                <p class="packets-list__values-value">от 12 месяцев</p>
+                            </li>
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Время старта</p>
+                                <p class="packets-list__values-value">1,5 месяца</p>
+                            </li>
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Ожидаемая прибыль в месяц</p>
+                                <p class="packets-list__values-value">от 1 млн. руб.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="packets-list__item packets-list__item--orange">
+                        <p class="packets-list__number">Пакет II</p>
+                        <p class="packets-list__title">Мой автопарк</p>
+                        <p class="text">
+                            У Вас есть машины или даже небольшой автопарк? Мы превратим легковые автомобили в полноценно службу такси, которая приносит хороший доход.
+                        </p>
+                        <ul class="list packets-list__values">
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Инвестиции</p>
+                                <p class="packets-list__values-value">от 3 млн. руб.</p>
+                            </li>
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Срок окупаемости</p>
+                                <p class="packets-list__values-value">от 6 месяцев</p>
+                            </li>
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Время старта</p>
+                                <p class="packets-list__values-value">1 месяц</p>
+                            </li>
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Ожидаемая прибыль в месяц</p>
+                                <p class="packets-list__values-value">от 800 тыс. руб.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="packets-list__item packets-list__item--green">
+                        <p class="packets-list__number">Пакет III</p>
+                        <p class="packets-list__title">Переход под бренд</p>
+                        <p class="text">
+                            Желаете расширить вашу службу такси? Мы выведем её на новый уровень и избавим от трудовых затрат сразу по нескольким направлениям.
+                        </p>
+                        <ul class="list packets-list__values">
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Инвестиции</p>
+                                <p class="packets-list__values-value">от 2 млн. руб.</p>
+                            </li>
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Срок окупаемости</p>
+                                <p class="packets-list__values-value">от 6 месяцев</p>
+                            </li>
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Время старта</p>
+                                <p class="packets-list__values-value">1 месяц</p>
+                            </li>
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Ожидаемая прибыль в месяц</p>
+                                <p class="packets-list__values-value">от 800 тыс. руб.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="how-to-become-partner">
+            <div class="container">
+                <h2 class="page-subtitle">Как же стать партнером Таксовичкоф?</h2>
+                <ol class="list numbered-list">
+                    <li class="list__item numbered-list__item">
+                        <p class="numbered-list__title">Оставьте заявку на франчайзинг</p>
+                        <p class="numbered-list__text">
+                            Хотите узнать больше? Оставьте заявку, мы свяжемся с вами.
+                        </p>
+                    </li>
+                    <li class="list__item numbered-list__item">
+                        <p class="numbered-list__title">Исследуйте новые возможности</p>
+                        <p class="numbered-list__text">
+                            Посетите наш офис и автопарк, пообщайтесь с сотрудниками, составьте своё впечатление о бренде.
+                        </p>
+                    </li>
+                    <li class="list__item numbered-list__item">
+                        <p class="numbered-list__title">Сообщите о своём решении</p>
+                        <p class="numbered-list__text">
+                            Приняв окончательное решение об открытии бизнеса под брендом «Таксовичкоф», сообщите нам об этом.
+                        </p>
+                    </li>
+                    <li class="list__item numbered-list__item">
+                        <p class="numbered-list__title">Присоединяйтесь к нам!</p>
+                        <p class="numbered-list__text">
+                            Подпишите договор концессии, оплатите франчайзинговый взнос и начните зарабатывать вместе с нами!
+                        </p>
+                    </li>
+                </ol>
+                <a class="btn btn--medium btn--green" href="#">Присоединиться к Таксовичкоф</a>
+            </div>
+        </section>
+        <section class="any-questions">
+            <div class="container">
+                <h2 class="page-subtitle">Контакты</h2>
+                <ul class="list contacts-list">
+                    <li class="contacts-list__item">
+                        <p class="contacts-list__title contacts-list__title--accent">Цветков Павел Владимирович</p>
+                        <p class="contacts-list__title">Менеджер по региональному развитию</p>
+                        <ul class="contacts-list__links">
+                            <li class="contacts-list__links-item">
+                                <a href="tel:+79818100346" class="contacts-list__number-link">+7 (981) 810-03-46</a>
+                            </li>
+                            <li class="contacts-list__links-item">
+                                <a href="tel:+79818100346" class="contacts-list__phone-link">
+                                    <span class="sr-only">+7 (981) 810-03-46</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <ul class="list social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link social-list__link--vk" href="#" target="_blank" rel="noopener nofollow" title="Наш Вконтакте">
+                        <span class="sr-only">Наша группа в ВК</span>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link social-list__link--instagram" href="#" target="_blank" rel="noopener nofollow" title="Наш Instagram">
+                        <span class="sr-only">Наша группа в Instagram</span>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link social-list__link--facebook" href="#" target="_blank" rel="noopener nofollow" title="Наш Facebook">
+                        <span class="sr-only">Наша группа в Facebook</span>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link social-list__link--twitter" href="#" target="_blank" rel="noopener nofollow" title="Наш Twitter">
+                        <span class="sr-only">Наша группа в Twitter</span>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link social-list__link--odnoklassniki" href="#" target="_blank" rel="noopener nofollow" title="Наши Одноклассники">
+                        <span class="sr-only">Наша группа в Одноклассниках</span>
+                    </a>
+                </li>
+            </ul>
+            <p class="footer__text">
+                Россия, 192019, г. Санкт-Петербург, наб. Обводного канала, д 24Д , БЦ Амилен Бесплатный автобус от ст. метро «Ал.Невского»<br>
+                <a class="link" href="#">Пользовательское соглашение на использование сервисов «Таксовичкоф»</a><br> Адрес раскрытия информации: <a class="link" href="#" target="_blank" rel="nofollow">e-disclosure.ru</a>
+            </p>
+            <a class="link footer__link footer__taxi-pools" href="#">Таксопарки партнеры</a>
+            <div class="download-app">
+                <button class="download-app__close" type="button">
+                    <span class="sr-only">Закрыть</span>
+                </button>
+                <span class="download-app__title">Возьми с собой Таксовичкоф</span>
+                <a class="download-app__link" href="#">
+                    <img class="download-app__icon" src="images/appstore.png" alt="Загрузить в App Store">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

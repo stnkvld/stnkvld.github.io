@@ -1,0 +1,23 @@
+.questions__title {
+    margin-bottom: 1.45em;
+}
+
+.answers {
+    display: flex;
+    justify-content: center;
+}
+
+.answers__btn {
+    padding: 0 2.1875em;
+    border-radius: 1.5em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.answers__btn:first-child {
+    margin-right: 2em;
+}
+
+.question__last-btn {
+    margin-bottom: 0;
+}

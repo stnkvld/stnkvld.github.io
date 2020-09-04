@@ -52,7 +52,7 @@
 }
 
 .promocode {
-    background-color: #9658A0;
+    background-color: #4E6CD3;
     border-radius: 0 0 .5625em .5625em;
     padding: 1.625em 1.25em 1em;
     box-sizing: border-box;
@@ -146,8 +146,7 @@ text-transform: uppercase;
     padding: 1.875em 0 1.5em 1.5em;
 }
 
-.become-driver__title,
-.download-pult__title {
+.become-driver__title {
     width: 13.125rem;
     font-size: 1.5rem;
     font-weight: 600;
@@ -166,11 +165,33 @@ text-transform: uppercase;
 
 .download-pult {
     position: relative;
-    background-color: #E39E32;
+    background-color: #757575;
     padding: 3.125em 0 1.125em 1.5em;
     margin-top: -2.125em;
     margin-bottom: 1.875em;
     z-index: -1;
+}
+
+.download-pult__title {
+    position: relative;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    padding-left: 2.4em;
+}
+
+.download-pult__title:before {
+    content: '';
+    position: absolute;
+    top: calc(50% - .875em);
+    left: 0;
+    width: 1.75em;
+    height: 1.75em;
+    background-image: url('../svg/pult.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .news {
@@ -259,8 +280,4 @@ text-transform: uppercase;
 .quality-control__email {
     font-weight: 300;
     color: #fff;
-}
-
-.footer {
-    margin-top: -1em;
 }
