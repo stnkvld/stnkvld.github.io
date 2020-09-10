@@ -2,7 +2,7 @@
     position: relative;
     background-color: #F6E459;
     border-radius: 0 0 1.125em 1.125em;
-    padding-top: 3.25em;
+    padding-top: 4.625em;
     padding-bottom: 3.5625em;
     margin-top: 7em;
 }
@@ -29,26 +29,37 @@
 }
 
 .intro__container:before {
-    width: 69.3vw;
-    height: 27.2vw;
-    top: -31.2vw;
-    right: 0;
+    width: 100%;
+    height: 36vw;
+    top: -39.5vw;
+    left: 0;
     background-image: url(../svg/comfort-plus.svg);
+    background-size: cover;
 }
 
-.intro__title {
+
+/* .intro__title {
     font-size: 0.875rem;
     font-weight: 600;
     color: #5EB848;
     margin-top: 0;
     margin-bottom: 1.25em;
+} */
+
+.intro__title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #333;
+    margin: 0;
 }
 
 .intro__subtitle {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     line-height: 1.25;
     color: #333;
-    margin-top: 0;
+    margin: 0;
+    margin-bottom: .85em;
 }
 
 .promocode {
@@ -280,4 +291,29 @@ text-transform: uppercase;
 .quality-control__email {
     font-weight: 300;
     color: #fff;
+}
+
+.stocks-slider__slide {
+    width: 4.875rem;
+    height: 7.1875rem;
+    border: .125em solid #4E6CD3;
+    border-radius: .5625em;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.stocks-slider__slide--wide {
+    width: 7.375rem;
+}
+
+.stocks-slider__picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.stocks-slider__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таксовичкоф - Отзыв о заказе</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/feedbacks.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a class="logo header__logo" href="/">
+                <img class="logo__image" src="svg/logo-small.svg" alt="Логотип">
+            </a>
+            <div class="city-selector">
+                <button class="city-selector__city" type="button">Санкт-Петербург</button>
+                <a class="city-selector__phone" href="tel:+78123330000">333-00-00</a>
+                <button class="city-selector__close">
+					<span class="sr-only">Закрыть выбор города</span>
+				</button>
+                <div class="city-selector__menu">
+                    <div class="container">
+                        <form class="text-input search city-selector__search" method="GET" action="">
+                            <input class="search__input" type="text" placeholder="Поиск">
+                        </form>
+                        <div class="city-selector__lists">
+                            <div class="city-selector__list">
+                                <p class="city-selector__list-title">Страна</p>
+                                <ul class="countries-list">
+                                    <li class="countries-list__item">
+                                        <input class="countries-list__radio" id="country-ru" type="radio" name="country" checked>
+                                        <label class="countries-list__label" for="country-ru">Россия</label>
+                                    </li>
+                                    <li class="countries-list__item">
+                                        <input class="countries-list__radio" id="country-kz" type="radio" name="country">
+                                        <label class="countries-list__label" for="country-kz">Қазақстан</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="city-selector__list">
+                                <p class="city-selector__list-title">Город</p>
+                                <ul class="letters-list">
+                                    <li class="letters-list__item">
+                                        А
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Азнакаево</a>
+                                                <p class="cities-list__area">Республика Татарстан</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        В
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Всеволожск</a>
+                                                <p class="cities-list__area">Ленинградская область</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        Г
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Гатчина</a>
+                                                <p class="cities-list__area">Ленинградская область</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        К
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Колпино</a>
+                                                <p class="cities-list__area">Ленинградская область</p>
+                                            </li>
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Красное село</a>
+                                                <p class="cities-list__area">Ленинградская область</p>
+                                            </li>
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Кронштадт</a>
+                                                <p class="cities-list__area">Ленинградская область</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        М
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Москва</a>
+                                                <p class="cities-list__area">Москва</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        Н
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Нижнекамск</a>
+                                                <p class="cities-list__area">Республика Татарстан</p>
+                                            </li>
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Нурлат</a>
+                                                <p class="cities-list__area">Республика Татарстан</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        О
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Омск</a>
+                                                <p class="cities-list__area">Омская область</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        П
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Петергоф</a>
+                                                <p class="cities-list__area">Санкт-Петербург</p>
+                                            </li>
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Пушкин</a>
+                                                <p class="cities-list__area">Санкт-Петербург</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="letters-list__item">
+                                        С
+                                        <ul class="cities-list">
+                                            <li class="cities-list__item">
+                                                <p class="cities-list__city cities-list__city--current">Санкт-Петербург</p>
+                                                <p class="cities-list__area">Санкт-Петербург</p>
+                                            </li>
+                                            <li class="cities-list__item">
+                                                <a href="#" class="cities-list__city">Сосновый Бор</a>
+                                                <p class="cities-list__area">Ленинградская область</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-menu header__btn-menu" type="button">
+				<span class="sr-only">Открыть/закрыть меню</span>
+			</button>
+        </div>
+    </header>
+    <main class="main single-page feedback">
+        <div class="container">
+            <h1 class="page-title">Отзыв о заказе</h1>
+            <form class="form">
+                <div class="form__group">
+                    <label class="form__label" for="feedback-name">Имя</label>
+                    <input id="feedback-name" class="form__input" type="text" placeholder="Представьтесь, пожалуйста" name="feedback-name">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="feedback-phone">Номер телефона</label>
+                    <!-- TODO: Установить маску на номер телефона -->
+                    <input id="feedback-phone" class="form__input" type="text" placeholder="+7" name="feedback-phone">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="feedback-text">Отзыв</label>
+                    <input id="feedback-text" class="form__input" type="text" placeholder="Ваши впечатления" name="feedback-text">
+                </div>
+                <button class="btn btn--small btn--green" type="submit">Отправить</button>
+            </form>
+            <h2 class="page-subtitle">Хотите написать в Отдел контроля качества?</h2>
+            <a class="btn btn--small btn--yellow feedback__link" href="#">Открыть форму</a>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <ul class="list social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link social-list__link--vk" href="#" target="_blank" rel="noopener nofollow" title="Наш Вконтакте">
+                        <span class="sr-only">Наша группа в ВК</span>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link social-list__link--instagram" href="#" target="_blank" rel="noopener nofollow" title="Наш Instagram">
+                        <span class="sr-only">Наша группа в Instagram</span>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link social-list__link--facebook" href="#" target="_blank" rel="noopener nofollow" title="Наш Facebook">
+                        <span class="sr-only">Наша группа в Facebook</span>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link social-list__link--twitter" href="#" target="_blank" rel="noopener nofollow" title="Наш Twitter">
+                        <span class="sr-only">Наша группа в Twitter</span>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link social-list__link--odnoklassniki" href="#" target="_blank" rel="noopener nofollow" title="Наши Одноклассники">
+                        <span class="sr-only">Наша группа в Одноклассниках</span>
+                    </a>
+                </li>
+            </ul>
+            <p class="footer__text">
+                Россия, 192019, г. Санкт-Петербург, наб. Обводного канала, д 24Д , БЦ Амилен Бесплатный автобус от ст. метро «Ал.Невского»<br>
+                <a class="link" href="#">Пользовательское соглашение на использование сервисов «Таксовичкоф»</a><br> Адрес раскрытия информации: <a class="link" href="#" target="_blank" rel="nofollow">e-disclosure.ru</a>
+            </p>
+            <a class="link footer__link footer__taxi-pools" href="#">Таксопарки партнеры</a>
+            <div class="download-app-info">
+                <button class="download-app-info__close" type="button">
+                    <span class="sr-only">Закрыть</span>
+                </button>
+                <span class="download-app-info__title">Возьми с собой Таксовичкоф</span>
+                <a class="download-app" href="#" rel="nofollow">
+                    <object class="download-app__icon" type="image/svg+xml" data="svg/app-store.svg" tabindex="-1">
+						<img 
+							src="images/mobile/app-store.png" 
+							srcset="images/mobile/app-store@2x.png 2x"
+							alt="Скачать приложение">
+					</object>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

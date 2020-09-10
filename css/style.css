@@ -47,6 +47,12 @@ p {
     margin: 0 auto;
 }
 
+.container--right-null {
+    width: 96.375%;
+    margin-left: auto;
+    margin-right: 0;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -62,7 +68,7 @@ p {
 
 .btn {
     display: block;
-    width: auto;
+    width: fit-content;
     height: 3rem;
     font-weight: 600;
     line-height: 3rem;
@@ -84,13 +90,13 @@ p {
 }
 
 .btn--small {
-    width: 15.375rem;
     border-radius: 1.5em;
+    padding: 0 2.5em;
 }
 
 .btn--medium {
-    width: 19.5rem;
     border-radius: 1.5em;
+    padding: 0 4em;
 }
 
 .btn--full {
@@ -108,6 +114,7 @@ p {
 }
 
 .btn--yellow {
+    color: #333;
     background-color: #FBDC00;
 }
 
@@ -119,6 +126,15 @@ p {
 .link {
     color: #5EB848;
     text-decoration: underline;
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+}
+
+.link--more {
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 .text {
@@ -132,6 +148,15 @@ p {
 
 .text--small {
     font-size: .875rem;
+}
+
+.text--small-margin {
+    margin-bottom: 1.5em;
+}
+
+.text--big {
+    font-size: 1.25rem;
+    line-height: 1.4;
 }
 
 .link-list {
@@ -166,7 +191,14 @@ p {
 
 .list__item {
     line-height: 1.5;
+}
+
+.list__item:not(:last-child) {
     margin-bottom: 1em;
+}
+
+.list--null .list__item {
+    margin-bottom: 0;
 }
 
 .list__text-wrapper {
@@ -222,6 +254,18 @@ p {
 
 .list--numbers .list__item-value {
     font-size: 1.75rem;
+}
+
+.list--dated {
+    margin-bottom: 1.875em;
+}
+
+.list--dated .list__item {
+    line-height: 1;
+}
+
+.list--dated .link {
+    line-height: 1.5;
 }
 
 .header {
@@ -546,6 +590,7 @@ p {
     font-size: 1.75rem;
     font-weight: 600;
     line-height: 1.25;
+    color: #181C19;
     margin-top: 0;
     /* margin-bottom: .215em; */
     margin-bottom: .58em;
@@ -724,7 +769,7 @@ p {
     font-size: 0.75rem;
 }
 
-.download-app {
+.download-app-info {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -736,9 +781,10 @@ p {
     border-radius: 0.9375em 0.9375em 0.9375em 0;
     padding: .625em .75em .625em .9375em;
     box-sizing: border-box;
+    z-index: 999;
 }
 
-.download-app__close {
+.download-app-info__close {
     width: 1.125em;
     height: 1.125em;
     background-color: transparent;
@@ -750,7 +796,7 @@ p {
     padding: 0;
 }
 
-.download-app__title {
+.download-app-info__title {
     display: inline-block;
     width: 6rem;
     font-size: 0.75rem;
@@ -759,9 +805,15 @@ p {
     color: #fff;
 }
 
-.download-app__link {
+.download-app {
     display: inline-block;
     width: 6.9375rem;
+}
+
+.download-app--center {
+    display: block;
+    width: 8rem;
+    margin: 0 auto;
 }
 
 .download-app__icon {
@@ -867,62 +919,128 @@ p {
     line-height: 1.25;
 }
 
-.packets-list {
-    margin-bottom: 3.5em;
-}
-
-.packets-list__item {
-    max-width: 296px;
-    border-radius: 1.125em;
-    padding: 1.125em 1.125em 3em 1.125em;
-    box-sizing: border-box;
-}
-
-.packets-list__item--yellow {
-    background-color: #F6E459;
-}
-
-.packets-list__item--orange {
-    background-color: #E39E32;
-}
-
-.packets-list__item--green {
-    background-color: #52B885;
-}
-
-.packets-list__number {
-    font-size: .75rem;
-    text-transform: uppercase;
-    margin: 0;
-    margin-bottom: .5em;
-}
-
-.packets-list__title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 0;
-    margin-bottom: 1em;
-}
-
-.packets-list__values-item:not(:last-child) {
-    margin-bottom: 1.5em;
-}
-
-.packets-list__values-title,
-.packets-list__values-value {
-    font-weight: 600;
-    margin: 0;
-}
-
-.packets-list__values-title {
-    margin-bottom: .5em;
-}
-
-.packets-list__values-value {
-    font-size: 1.25rem;
-}
-
 .full-screen-picture {
     display: block;
     margin-bottom: 1.625em;
+}
+
+.form__group {
+    margin-bottom: 1em;
+}
+
+.form__label {
+    display: block;
+    line-height: 1.25;
+    margin-bottom: .25em;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    border: .125em solid #E8EBED;
+    padding: 0 1em;
+    box-sizing: border-box;
+    border-radius: 1.125em;
+}
+
+::-webkit-input-placeholder {
+    color: #757575;
+}
+
+:-ms-input-placeholder {
+    color: #757575;
+}
+
+::-moz-placeholder {
+    color: #757575;
+    opacity: 1;
+}
+
+:-moz-placeholder {
+    color: #757575;
+    opacity: 1;
+}
+
+.download-list__item:not(:last-child) {
+    margin-bottom: 1.25em;
+}
+
+.download-list__link {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.download-list__link:after {
+    content: '';
+    position: absolute;
+    top: calc(50% - .625em);
+    right: 0;
+    width: 1.25em;
+    height: 1.25em;
+    background-image: url(../svg/download-gray.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.download-list__text {
+    display: block;
+    text-decoration: underline;
+}
+
+.download-list__size {
+    display: block;
+    font-size: .75rem;
+    color: #757575;
+}
+
+.date {
+    font-size: .75rem;
+    color: #757575;
+}
+
+.tabs__list {
+    display: flex;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.tabs__list::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.tabs__item {
+    flex-shrink: 0;
+}
+
+.tabs__item:not(:last-child) {
+    margin-right: 1em;
+}
+
+.tabs__radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(100%);
+}
+
+.tabs__label {
+    font-weight: 600;
+    color: #757575;
+    background-color: transparent;
+}
+
+.tabs__radio:checked+.tabs__label {
+    color: #5EB848;
 }

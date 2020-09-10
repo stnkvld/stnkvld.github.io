@@ -156,9 +156,53 @@
 			</button>
         </div>
     </header>
-    <main class="main single-page partners">
+    <main class="main single-page partner">
         <div class="container">
-            <h1 class="page-title partners__title">Таксопарки-партнеры</h1>
+            <h1 class="page-title">Таксопарки-партнеры</h1>
+            <h2 class="page-subtitle">ИП Саплин Алексей Анатольевич</h2>
+            <p class="text">
+                196602 Санкт-Петербург, г.Пушкин ул. Сапёрная дом 55 корп.2 стр.9 кв.61, ОГРН: 314784703600532
+            </p>
+            <div class="tabs">
+                <ul class="list tabs__list">
+                    <li class="tabs__item">
+                        <input id="class-standart" class="tabs__radio" type="radio" name="auto-class" value="0">
+                        <label class="tabs__label" for="class-standart">Стандарт</label>
+                    </li>
+                    <li class="tabs__item">
+                        <input id="class-comfort" class="tabs__radio" type="radio" name="auto-class" value="1">
+                        <label class="tabs__label" for="class-comfort">Комфорт</label>
+                    </li>
+                    <li class="tabs__item">
+                        <input id="class-comfort-plus" class="tabs__radio" type="radio" name="auto-class" value="2">
+                        <label class="tabs__label" for="class-comfort-plus">Комфорт+</label>
+                    </li>
+                    <li class="tabs__item">
+                        <input id="class-business" class="tabs__radio" type="radio" name="auto-class" value="3">
+                        <label class="tabs__label" for="class-business">Бизнес</label>
+                    </li>
+                    <li class="tabs__item">
+                        <input id="class-miniven-6" class="tabs__radio" type="radio" name="auto-class" value="4">
+                        <label class="tabs__label" for="class-miniven-6">Минивэн 6</label>
+                    </li>
+                    <li class="tabs__item">
+                        <input id="class-miniven-8" class="tabs__radio" type="radio" name="auto-class" value="5">
+                        <label class="tabs__label" for="class-miniven-8">Минивэн 8</label>
+                    </li>
+                    <li class="tabs__item">
+                        <input id="class-vip" class="tabs__radio" type="radio" name="auto-class" value="6">
+                        <label class="tabs__label" for="class-vip">VIP</label>
+                    </li>
+                    <li class="tabs__item">
+                        <input id="class-miniven-vip" class="tabs__radio" type="radio" name="auto-class" value="7">
+                        <label class="tabs__label" for="class-miniven-vip">Минивэн VIP</label>
+                    </li>
+                    <li class="tabs__item">
+                        <input id="class-special" class="tabs__radio" type="radio" name="auto-class" value="8">
+                        <label class="tabs__label" for="class-special">Специальный</label>
+                    </li>
+                </ul>
+            </div>
         </div>
     </main>
     <footer class="footer">
@@ -195,13 +239,18 @@
                 <a class="link" href="#">Пользовательское соглашение на использование сервисов «Таксовичкоф»</a><br> Адрес раскрытия информации: <a class="link" href="#" target="_blank" rel="nofollow">e-disclosure.ru</a>
             </p>
             <a class="link footer__link footer__taxi-pools" href="#">Таксопарки партнеры</a>
-            <div class="download-app">
-                <button class="download-app__close" type="button">
+            <div class="download-app-info">
+                <button class="download-app-info__close" type="button">
                     <span class="sr-only">Закрыть</span>
                 </button>
-                <span class="download-app__title">Возьми с собой Таксовичкоф</span>
-                <a class="download-app__link" href="#">
-                    <img class="download-app__icon" src="images/appstore.png" alt="Загрузить в App Store">
+                <span class="download-app-info__title">Возьми с собой Таксовичкоф</span>
+                <a class="download-app" href="#" rel="nofollow">
+                    <object class="download-app__icon" type="image/svg+xml" data="svg/app-store.svg" tabindex="-1">
+						<img 
+							src="images/mobile/app-store.png" 
+							srcset="images/mobile/app-store@2x.png 2x"
+							alt="Скачать приложение">
+					</object>
                 </a>
             </div>
         </div>

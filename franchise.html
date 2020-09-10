@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Таксовичкоф - Франчайзинг</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/franchise.css">
 </head>
@@ -162,7 +163,7 @@
                 <object class="single-page__image" type="image/svg+xml" data="svg/comfort-plus.svg" tabindex="-1">
 					<img 
 						src="images/mobile/comfort-plus.png" 
-						srcset="images/png/comfort-plus@2x.png 2x"
+						srcset="images/mobile/comfort-plus@2x.png 2x"
 				  		alt="Комфорт-плюс Таксовичкоф">
 				</object>
                 <h1 class="page-title">Франчайзинг от &laquo;Таксовичкоф&raquo;</h1>
@@ -260,11 +261,13 @@
                 <p class="text">
                     Выберите один из трёх пакетов для комфортной работы в соответствии с текущими потребностями своего бизнеса.
                 </p>
-                <ul class="list packets-list">
-                    <li class="packets-list__item packets-list__item--yellow">
+            </div>
+            <div class="swiper-container packets-list">
+                <ul class="list swiper-wrapper packets-list__list">
+                    <li class="list__item swiper-slide packets-list__item packets-list__item--yellow">
                         <p class="packets-list__number">Пакет I</p>
                         <p class="packets-list__title">Все и сразу</p>
-                        <p class="text">
+                        <p class="text text--small-margin packets-list__text">
                             Хотите начать бизнес с нуля? Мы поможем создать службу такси, которая займёт ведущие позиции в регионе, и пройдём через все этапы её становления вместе с Вами!
                         </p>
                         <ul class="list packets-list__values">
@@ -286,10 +289,10 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="packets-list__item packets-list__item--orange">
+                    <li class="list__item swiper-slide packets-list__item packets-list__item--orange">
                         <p class="packets-list__number">Пакет II</p>
                         <p class="packets-list__title">Мой автопарк</p>
-                        <p class="text">
+                        <p class="text text--small-margin packets-list__text">
                             У Вас есть машины или даже небольшой автопарк? Мы превратим легковые автомобили в полноценно службу такси, которая приносит хороший доход.
                         </p>
                         <ul class="list packets-list__values">
@@ -311,10 +314,10 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="packets-list__item packets-list__item--green">
+                    <li class="list__item swiper-slide packets-list__item packets-list__item--green">
                         <p class="packets-list__number">Пакет III</p>
                         <p class="packets-list__title">Переход под бренд</p>
-                        <p class="text">
+                        <p class="text text--small-margin packets-list__text">
                             Желаете расширить вашу службу такси? Мы выведем её на новый уровень и избавим от трудовых затрат сразу по нескольким направлениям.
                         </p>
                         <ul class="list packets-list__values">
@@ -427,17 +430,30 @@
                 <a class="link" href="#">Пользовательское соглашение на использование сервисов «Таксовичкоф»</a><br> Адрес раскрытия информации: <a class="link" href="#" target="_blank" rel="nofollow">e-disclosure.ru</a>
             </p>
             <a class="link footer__link footer__taxi-pools" href="#">Таксопарки партнеры</a>
-            <div class="download-app">
-                <button class="download-app__close" type="button">
+            <div class="download-app-info">
+                <button class="download-app-info__close" type="button">
                     <span class="sr-only">Закрыть</span>
                 </button>
-                <span class="download-app__title">Возьми с собой Таксовичкоф</span>
-                <a class="download-app__link" href="#">
-                    <img class="download-app__icon" src="images/appstore.png" alt="Загрузить в App Store">
+                <span class="download-app-info__title">Возьми с собой Таксовичкоф</span>
+                <a class="download-app" href="#" rel="nofollow">
+                    <object class="download-app__icon" type="image/svg+xml" data="svg/app-store.svg" tabindex="-1">
+						<img 
+							src="images/mobile/app-store.png" 
+							srcset="images/mobile/app-store@2x.png 2x"
+							alt="Скачать приложение">
+					</object>
                 </a>
             </div>
         </div>
     </footer>
+    <script src="js/swiper.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            centeredSlides: true,
+        });
+    </script>
 </body>
 
 </html>

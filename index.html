@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Таксовичкоф - Главная</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -160,14 +161,57 @@
         <section class="intro">
             <div class="container intro__container">
                 <!-- <h1 class="intro__title">Заказ такси с сайта со скидкой 30%</h1> -->
-                <p class="intro__subtitle">
-                    <strong>Добрый день!</strong><br> Откуда поедете сегодня?
-                </p>
+                <p class="intro__title">Добрый день!</p>
+                <p class="intro__subtitle">Откуда поедете сегодня?</p>
             </div>
         </section>
         <section class="promocode main__promocode">
             <div class="container">
                 <button class="promocode__btn" type="button">Есть промокод</button>
+            </div>
+        </section>
+        <section class="stocks">
+            <div class="container container--right-null">
+                <h2 class="page-title page-title--gray">Акции и события</h2>
+                <div class="swiper-container slider-items stocks-slider">
+                    <ul class="list swiper-wrapper slider-items__wrapper">
+                        <li class="swiper-slide slider-items__slide stocks-slider__slide">
+                            <picture class="slider-items__picture stocks-slider__picture">
+                                <source srcset="images/mobile/stock-main-1.webp, images/mobile/stock-main-1@2x.webp 2x" type="image/webp">
+                                <img class="slider-items__image stocks-slider__image" src="images/mobile/stock-main-1.jpg" srcset="images/mobile/stock-main-1.jpg 2x" alt="Акция 1">
+                            </picture>
+                        </li>
+                        <li class="swiper-slide slider-items__slide stocks-slider__slide">
+                            <picture class="slider-items__picture stocks-slider__picture">
+                                <source srcset="images/mobile/stock-main-2.webp, images/mobile/stock-main-2@2x.webp 2x" type="image/webp">
+                                <img class="slider-items__image stocks-slider__image" src="images/mobile/stock-main-2.jpg" srcset="images/mobile/stock-main-2.jpg 2x" alt="Акция 1">
+                            </picture>
+                        </li>
+                        <li class="swiper-slide slider-items__slide stocks-slider__slide stocks-slider__slide--wide">
+                            <picture class="slider-items__picture stocks-slider__picture">
+                                <source srcset="images/mobile/stock-main-3.webp, images/mobile/stock-main-3@2x.webp 2x" type="image/webp">
+                                <img class="slider-items__image stocks-slider__image" src="images/mobile/stock-main-3.jpg" srcset="images/mobile/stock-main-3.jpg 2x" alt="Акция 1">
+                            </picture>
+                        </li>
+                        <li class="swiper-slide slider-items__slide stocks-slider__slide">
+                            <picture class="slider-items__picture stocks-slider__picture">
+                                <source srcset="images/mobile/stock-main-2.webp, images/mobile/stock-main-2@2x.webp 2x" type="image/webp">
+                                <img class="slider-items__image stocks-slider__image" src="images/mobile/stock-main-2.jpg" srcset="images/mobile/stock-main-2.jpg 2x" alt="Акция 1">
+                            </picture>
+                        </li>
+                        <li class="swiper-slide slider-items__slide stocks-slider__slide">
+                            <picture class="slider-items__picture stocks-slider__picture">
+                                <source srcset="images/mobile/stock-main-1.webp, images/mobile/stock-main-1@2x.webp 2x" type="image/webp">
+                                <img class="slider-items__image stocks-slider__image" src="images/mobile/stock-main-1.jpg" srcset="images/mobile/stock-main-1.jpg 2x" alt="Акция 1">
+                            </picture>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="container">
+                <h2 class="page-title page-title--gray">Наши услуги</h2>
             </div>
         </section>
         <section class="why-tf">
@@ -264,17 +308,29 @@
                 <a class="link" href="#">Пользовательское соглашение на использование сервисов «Таксовичкоф»</a><br> Адрес раскрытия информации: <a class="link" href="#" target="_blank" rel="nofollow">e-disclosure.ru</a>
             </p>
             <a class="link footer__link footer__taxi-pools" href="#">Таксопарки партнеры</a>
-            <div class="download-app">
-                <button class="download-app__close" type="button">
+            <div class="download-app-info">
+                <button class="download-app-info__close" type="button">
                     <span class="sr-only">Закрыть</span>
                 </button>
-                <span class="download-app__title">Возьми с собой Таксовичкоф</span>
-                <a class="download-app__link" href="#">
-                    <img class="download-app__icon" src="images/appstore.png" alt="Загрузить в App Store">
+                <span class="download-app-info__title">Возьми с собой Таксовичкоф</span>
+                <a class="download-app" href="#" rel="nofollow">
+                    <object class="download-app__icon" type="image/svg+xml" data="svg/app-store.svg" tabindex="-1">
+						<img 
+							src="images/mobile/app-store.png" 
+							srcset="images/mobile/app-store@2x.png 2x"
+							alt="Скачать приложение">
+					</object>
                 </a>
             </div>
         </div>
     </footer>
+    <script src="js/swiper.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 8,
+        });
+    </script>
 </body>
 
 </html>
