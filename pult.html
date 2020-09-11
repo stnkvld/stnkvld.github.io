@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Таксовичкоф - Пульт</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pult.css">
 </head>
@@ -151,27 +152,121 @@
                     </div>
                 </div>
             </div>
+            <button class="btn btn--inner-green btn-cabinet header__btn-cabinet" type="button">Войти в кабинет</button>
             <button class="btn-menu header__btn-menu" type="button">
 				<span class="sr-only">Открыть/закрыть меню</span>
-			</button>
+            </button>
+            <nav class="menu header__menu">
+                <ul class="list menu__list">
+                    <li class="menu__item menu__item--passenger">
+                        <button class="menu__title" type="button">Пассажирам</button>
+                        <ul class="list menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Акции</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Тарифы</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Услуги</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Мобильное приложение</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item menu__item--drivers">
+                        <button class="menu__title" type="button">Водителям</button>
+                        <ul class="list menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Стать водителем</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Таксовичкоф Пульт</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item menu__item--business">
+                        <button class="menu__title" type="button">Бизнесу</button>
+                        <ul class="list menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Корпоративным клиентам</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Бизнес-кабинет</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item menu__item--partners">
+                        <button class="menu__title" type="button">Партнерам</button>
+                        <ul class="list menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Создать совместное предприятие</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Подключить автопарк</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Франшиза</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Для партнеров</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item menu__item--about">
+                        <button class="menu__title" type="button">О компании</button>
+                        <ul class="list menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Новости</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Контакты</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">О нас</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Отзывы</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Вопросы и ответы</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Пресс-кит</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item menu__item--without-title">
+                        <ul class="list menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Вакансии</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Инвесторам</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main class="main single-page pult">
-        <div class="container">
-            <section class="start">
+        <section class="start">
+            <div class="container">
                 <object class="single-page__image" type="image/svg+xml" data="svg/pult-big.svg" tabindex="-1">
-					<img 
-						src="images/mobile/pult-big.png" 
-						srcset="images/mobile/pult-big@2x.png 2x"
-				  		alt="Таксовичкоф Пульт">
-				</object>
+                        <img 
+                            src="images/mobile/pult-big.png" 
+                            srcset="images/mobile/pult-big@2x.png 2x"
+                            alt="Таксовичкоф Пульт">
+                    </object>
                 <a class="download-app download-app--center start__download-app" href="#" rel="nofollow">
                     <object class="download-app__icon" type="image/svg+xml" data="svg/google-play.svg" tabindex="-1">
-						<img 
-							src="images/mobile/google-play.png" 
-							srcset="images/mobile/google-play@2x.png 2x"
-							alt="Скачать приложение">
-					</object>
+                            <img 
+                                src="images/mobile/google-play.png" 
+                                srcset="images/mobile/google-play@2x.png 2x"
+                                alt="Скачать приложение">
+                        </object>
                 </a>
                 <h1 class="page-title">Таксовичкоф Пульт</h1>
                 <h2 class="page-subtitle">Используйте все возможности «ТаксовичкоФ Пульт» и зарабатывайте больше.</h2>
@@ -184,9 +279,32 @@
                 <p class="text  text--small-margin">
                     В приложении можно следить за статистикой выполненных заказов, финансовых показателей, а также получать актуальную информацию об акциях и новостях компании.
                 </p>
-                <!-- TODO: Swiper -->
-            </section>
-            <section class="opportunities">
+            </div>
+            <div class="swiper-container">
+                <ul class="list swiper-wrapper slider-items__wrapper">
+                    <li class="swiper-slide slider-items__slide">
+                        <picture class="slider-items__picture">
+                            <source srcset="images/mobile/android-screen-1.webp, images/mobile/android-screen-1@2x.webp 2x" type="image/webp">
+                            <img class="slider-items__image" src="images/mobile/android-screen-1.jpg" srcset="images/mobile/android-screen-1@2x.jpg 2x" alt="Скриншот 1">
+                        </picture>
+                    </li>
+                    <li class="swiper-slide slider-items__slide">
+                        <picture class="slider-items__picture">
+                            <source srcset="images/mobile/android-screen-2.webp, images/mobile/android-screen-2@2x.webp 2x" type="image/webp">
+                            <img class="slider-items__image" src="images/mobile/android-screen-2.jpg" srcset="images/mobile/android-screen-2@2x.jpg 2x" alt="Скриншот 1">
+                        </picture>
+                    </li>
+                    <li class="swiper-slide slider-items__slide">
+                        <picture class="slider-items__picture">
+                            <source srcset="images/mobile/android-screen-3.webp, images/mobile/android-screen-3@2x.webp 2x" type="image/webp">
+                            <img class="slider-items__image" src="images/mobile/android-screen-3.jpg" srcset="images/mobile/android-screen-3@2x.jpg 2x" alt="Скриншот 1">
+                        </picture>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="opportunities">
+            <div class="container">
                 <h2 class="page-subtitle">Возможности Таксовичкоф Пульт</h2>
                 <h3 class="page-lowtitle">Предварительный заказ</h3>
                 <p class="text text--small-margin">
@@ -236,8 +354,8 @@
 							alt="Скачать приложение">
 					</object>
                 </a>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="container">
@@ -289,6 +407,14 @@
             </div>
         </div>
     </footer>
+    <script src="js/swiper.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            centeredSlides: true,
+        });
+    </script>
 </body>
 
 </html>

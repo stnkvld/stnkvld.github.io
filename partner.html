@@ -151,9 +151,103 @@
                     </div>
                 </div>
             </div>
+            <button class="btn btn--inner-green btn-cabinet header__btn-cabinet" type="button">Войти в кабинет</button>
             <button class="btn-menu header__btn-menu" type="button">
 				<span class="sr-only">Открыть/закрыть меню</span>
-			</button>
+            </button>
+            <nav class="menu header__menu">
+                <ul class="list menu__list">
+                    <li class="menu__item menu__item--passenger">
+                        <button class="menu__title" type="button">Пассажирам</button>
+                        <ul class="list menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Акции</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Тарифы</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Услуги</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Мобильное приложение</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item menu__item--drivers">
+                        <button class="menu__title" type="button">Водителям</button>
+                        <ul class="list menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Стать водителем</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Таксовичкоф Пульт</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item menu__item--business">
+                        <button class="menu__title" type="button">Бизнесу</button>
+                        <ul class="list menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Корпоративным клиентам</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Бизнес-кабинет</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item menu__item--partners">
+                        <button class="menu__title" type="button">Партнерам</button>
+                        <ul class="list menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Создать совместное предприятие</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Подключить автопарк</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Франшиза</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Для партнеров</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item menu__item--about">
+                        <button class="menu__title" type="button">О компании</button>
+                        <ul class="list menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Новости</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Контакты</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">О нас</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Отзывы</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Вопросы и ответы</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Пресс-кит</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item menu__item--without-title">
+                        <ul class="list menu__submenu">
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Вакансии</a>
+                            </li>
+                            <li class="menu__submenu-item">
+                                <a class="menu__link" href="#">Инвесторам</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main class="main single-page partner">
@@ -166,7 +260,7 @@
             <div class="tabs">
                 <ul class="list tabs__list">
                     <li class="tabs__item">
-                        <input id="class-standart" class="tabs__radio" type="radio" name="auto-class" value="0">
+                        <input id="class-standart" class="tabs__radio" type="radio" name="auto-class" value="0" checked>
                         <label class="tabs__label" for="class-standart">Стандарт</label>
                     </li>
                     <li class="tabs__item">
@@ -202,6 +296,50 @@
                         <label class="tabs__label" for="class-special">Специальный</label>
                     </li>
                 </ul>
+                <div class="tabs__content">
+                    <ul class="list partner__info">
+                        <li class="list__item partner__info-item">
+                            <p class="partner__info-title">Минимальная стоимость</p>
+                            <p class="partner__info-value">1000 руб.</p>
+                        </li>
+                        <li class="list__item partner__info-item">
+                            <p class="partner__info-title">Минимальная стоимость (с учетом скидки 20%)</p>
+                            <p class="partner__info-value">700 руб.</p>
+                        </li>
+                        <li class="list__item partner__info-item">
+                            <p class="partner__info-title">Поездка по городу за 1 км пути</p>
+                            <p class="partner__info-value">1000 руб.</p>
+                        </li>
+                        <li class="list__item partner__info-item">
+                            <p class="partner__info-title">Брендированная машина</p>
+                            <p class="partner__info-value">1000 руб.</p>
+                        </li>
+                        <li class="list__item partner__info-item">
+                            <p class="partner__info-title">Машина без брендирования</p>
+                            <p class="partner__info-value">1000 руб.</p>
+                        </li>
+                        <li class="list__item partner__info-item">
+                            <p class="partner__info-title">Детское кресло 9-36 кг</p>
+                            <p class="partner__info-value">1000 руб.</p>
+                        </li>
+                        <li class="list__item partner__info-item">
+                            <p class="partner__info-title">Детское кресло-люлька 0-13 кг</p>
+                            <p class="partner__info-value">1000 руб.</p>
+                        </li>
+                        <li class="list__item partner__info-item">
+                            <p class="partner__info-title">Деликатное вождение</p>
+                            <p class="partner__info-value">1000 руб.</p>
+                        </li>
+                        <li class="list__item partner__info-item">
+                            <p class="partner__info-title">Молчаливый водитель</p>
+                            <p class="partner__info-value">1000 руб.</p>
+                        </li>
+                        <li class="list__item partner__info-item">
+                            <p class="partner__info-title">Зарядка телефона</p>
+                            <p class="partner__info-value">1000 руб.</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </main>

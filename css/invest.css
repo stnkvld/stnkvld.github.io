@@ -40,6 +40,11 @@
     margin-bottom: .425em;
 }
 
+.invest__title--center {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
 .intro__subtitle {
     color: #fff;
     margin-bottom: 5.45em;
@@ -132,6 +137,15 @@
     color: #fff;
     line-height: 1.5;
     margin: 0;
+}
+
+.know-more {
+    padding-top: 1em;
+    margin-bottom: 4.125em;
+}
+
+.know-more__btn {
+    margin-bottom: 0;
 }
 
 .program__title {
@@ -254,4 +268,46 @@
 .step-list__title:before {
     content: counter(num) '. ';
     counter-increment: num;
+}
+
+.corp-list__name,
+.corp-list__department,
+.corp-list__phone {
+    display: block;
+    font-weight: 600;
+    margin: 0;
+}
+
+.corp-list__name,
+.corp-list__address {
+    margin-bottom: 1em;
+}
+
+.corp-list__phone {
+    font-size: 1.75rem;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: .5em;
+}
+
+.corp-list__site-link {
+    display: block;
+    text-decoration: none;
+}
+
+.documents__list {
+    margin: 0;
+}
+
+.popup-general-info__list-item {
+    line-height: 1.7;
+}
+
+.popup-general-info__title {
+    font-size: .75rem;
+    margin: 0;
+}
+
+.popup-general-info__description {
+    margin: 0;
 }
