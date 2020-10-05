@@ -18,10 +18,14 @@
 .intro {
     padding-top: 7.8125em;
     padding-bottom: 1.875em;
-    background-image: url(../images/mobile/investor-bg.jpg);
+    background-image: url(../images/mobile/invest-bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.webp .intro {
+    background-image: url(../images/mobile/invest-bg.webp);
 }
 
 .intro__title {
@@ -169,21 +173,40 @@
     right: 0;
     width: 3.125em;
     height: 4.8125em;
-    background-image: url(../svg/program-icon.svg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+.program-list__item--production:after {
+    background-image: url(../svg/production.svg);
+}
+
+.program-list__item--coupon:after {
+    background-image: url(../svg/coupon.svg);
+}
+
+.program-list__item--term:after {
+    background-image: url(../svg/term.svg);
+}
+
+.program-list__item--par:after {
+    background-image: url(../svg/par.svg);
+}
+
 .program-list__title,
 .program-list__value {
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.5;
     margin: 0;
 }
 
 .program-list__title {
     color: #5EB848;
+}
+
+.program-list__value {
+    font-size: 1.25rem;
 }
 
 .basic__title {
@@ -233,12 +256,12 @@
 
 .key-list__city {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #757575;
 }
 
 .key-list__values {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     margin: 0;
 }
 
@@ -259,15 +282,6 @@
 
 .become-investor__icon-image {
     max-width: 100%;
-}
-
-.step-list {
-    counter-reset: num;
-}
-
-.step-list__title:before {
-    content: counter(num) '. ';
-    counter-increment: num;
 }
 
 .corp-list__name,
@@ -308,6 +322,17 @@
     margin: 0;
 }
 
-.popup-general-info__description {
+.popup-general-info__description,
+.popup-general-info__list {
     margin: 0;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .intro {
+        background-image: url(../images/mobile/invest-bg@2x.jpg);
+    }
+    .webp .intro {
+        background-image: url(../images/mobile/invest-bg@2x.webp);
+    }
 }

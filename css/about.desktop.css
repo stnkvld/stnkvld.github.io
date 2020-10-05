@@ -1,0 +1,8 @@
+@media all and (min-width: 1024px) {
+    .start,
+    .comfort,
+    .base {
+        width: 65.5%;
+        min-width: 57.375rem;
+    }
+}

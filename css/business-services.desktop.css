@@ -1,0 +1,9 @@
+@media all and (min-width: 1024px) {
+    .single-page__image {
+        display: none;
+    }
+    .start__text {
+        width: 40.5%;
+        min-width: 35.5rem;
+    }
+}

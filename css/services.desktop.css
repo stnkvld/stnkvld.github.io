@@ -1,0 +1,37 @@
+.services {
+    padding-top: 0;
+    background: none;
+}
+
+.services__container {
+    position: relative;
+    background-size: 28.5%;
+    background-position: 97.85% top;
+    background-image: url(../svg/services-desktop.svg);
+    background-repeat: no-repeat;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    max-height: 60rem;
+}
+
+.services-list__item {
+    width: 21.5625rem;
+    margin-right: 8.375em;
+}
+
+.start,
+.evacuation,
+.questions {
+    width: 65.5%;
+    min-width: 57.375rem;
+}
+
+.start__text {
+    width: 40%;
+    min-width: 35.5rem;
+}

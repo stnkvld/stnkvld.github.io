@@ -1,0 +1,135 @@
+@media all and (min-width: 1024px) {
+    .header--drivers {
+        background-color: #fff;
+    }
+    .header--drivers .city-selector__city,
+    .header--drivers .city-selector__phone {
+        color: #333;
+    }
+    .intro {
+        background-color: transparent;
+        background-image: none;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .intro__title {
+        width: 40rem;
+        font-size: 2.625rem;
+        line-height: 1.25;
+        color: #5EB848;
+        margin-bottom: .75em;
+    }
+    .intro__accent {
+        color: #4e6cd3;
+    }
+    .intro__form {
+        display: none;
+    }
+    .why-tf {
+        padding-bottom: 11.25em;
+        margin-bottom: 3.75em;
+    }
+    .why-tf:after {
+        width: 37.5rem;
+        height: 13.5rem;
+        transform: scale(-1, 1);
+        left: auto;
+        right: 0;
+        bottom: -.5em;
+    }
+    .why-tf__container {
+        width: 80%;
+        min-width: 71.125rem;
+    }
+    .why-tf__title {
+        margin-bottom: 3.35em;
+    }
+    .why-tf__title:after {
+        background-image: url(../svg/why-tf-text-desktop.svg);
+    }
+    .why-tf__text {
+        width: 25.75rem;
+    }
+    .work-application {
+        display: flex;
+    }
+    .work {
+        width: 50.5rem;
+        background-image: none;
+        padding: 0;
+        margin-right: 2.5em;
+    }
+    .work__subtitle {
+        font-size: 1.25rem;
+    }
+    .work__step-list {
+        display: block;
+    }
+    .work__step-list-item {
+        width: 100%;
+    }
+    .application {
+        display: block;
+    }
+    .join__title {
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    .join__subtitle {
+        font-size: 2.625rem;
+        margin-bottom: 1em;
+    }
+    .numbered-list__item.join__numbered-list-item {
+        max-width: 18.75rem;
+        min-width: min-content;
+    }
+    .join__numbered-list-item:first-child:before {
+        flex-shrink: 1;
+    }
+    .numbered-list__item.join__numbered-list-item:not(:last-child) {
+        margin-bottom: 0;
+    }
+    .reviews {
+        margin-bottom: 5.75em;
+    }
+    .reviews__title {
+        width: 21.25rem;
+        text-align: center;
+        line-height: 1.5;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0 auto 3.35em;
+    }
+    .reviews__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    .reviews__item {
+        width: 28.125rem;
+    }
+    .reviews__item:not(:last-child) {
+        margin: 0;
+    }
+    .reviews__name {
+        padding-right: 7.65em;
+        margin-bottom: .55em;
+    }
+    .reviews__money-text {
+        margin-top: 0;
+    }
+    .reviews__join-us {
+        display: none;
+    }
+    .independence__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .independence__form,
+    .independence__contacts-list {
+        width: 22rem;
+        margin: 0 auto;
+    }
+    .independence__contacts-list {
+        order: 1;
+    }
+}

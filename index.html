@@ -9,22 +9,28 @@
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.desktop.css" media="(min-width: 1024px)">
+    <link rel="stylesheet" href="css/main.desktop.css" media="(min-width: 1024px)">
 </head>
 
 <body>
     <header class="header">
         <div class="container header__container">
             <a class="logo header__logo" href="/">
-                <img class="logo__image" src="svg/logo-small.svg" alt="Логотип">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="svg/logo-full.svg" type="image/svg+xml">
+                    <source media="(max-width: 1023px)" srcset="svg/logo-small.svg" type="image/svg+xml">
+                    <!-- TODO: fallback for desktop -->
+                    <img class="logo__image" src="images/mobile/logo-small.png" alt="Логотип">
+                </picture>
             </a>
-            <div class="city-selector">
-                <button class="city-selector__city" type="button">Санкт-Петербург</button>
-                <a class="city-selector__phone" href="tel:+78123330000">333-00-00</a>
-                <button class="city-selector__close">
-					<span class="sr-only">Закрыть выбор города</span>
-				</button>
+            <div class="city-selector header__city-selector">
+                <div class="city-selector__wrapper">
+                    <button class="city-selector__city" type="button">Санкт-Петербург</button>
+                    <a class="city-selector__phone" href="tel:+78123330000">333-00-00</a>
+                </div>
                 <div class="city-selector__menu">
-                    <div class="container">
+                    <div class="container city-selector__container">
                         <form class="text-input search city-selector__search" method="GET" action="">
                             <input class="search__input" type="text" placeholder="Поиск">
                         </form>
@@ -152,9 +158,15 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn--inner-green btn-cabinet header__btn-cabinet" type="button">Войти в кабинет</button>
+            <div class="lang-switcher header__lang-switcher lang-switcher--ru">
+                <button class="btn lang-switcher__btn lang-switcher__btn--ru" type="button">RU</button>
+            </div>
+            <button class="btn btn--inner-green btn-cabinet header__btn-cabinet" type="button">Войти</button>
             <button class="btn-menu header__btn-menu" type="button">
 				<span class="sr-only">Открыть/закрыть меню</span>
+            </button>
+            <button class="city-selector-close">
+                <span class="sr-only">Закрыть выбор города</span>
             </button>
             <nav class="menu header__menu">
                 <ul class="list menu__list">
@@ -186,17 +198,6 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu__item menu__item--business">
-                        <button class="menu__title" type="button">Бизнесу</button>
-                        <ul class="list menu__submenu">
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Корпоративным клиентам</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Бизнес-кабинет</a>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="menu__item menu__item--partners">
                         <button class="menu__title" type="button">Партнерам</button>
                         <ul class="list menu__submenu">
@@ -214,36 +215,52 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu__item menu__item--about">
-                        <button class="menu__title" type="button">О компании</button>
+                    <li class="menu__item menu__item--more">
+                        <button class="menu__title" type="button">Еще</button>
                         <ul class="list menu__submenu">
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Новости</a>
+                            <li class="menu__item menu__item--business">
+                                <button class="menu__title" type="button">Бизнесу</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Корпоративным клиентам</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Бизнес-кабинет</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Контакты</a>
+                            <li class="menu__item menu__item--about">
+                                <button class="menu__title" type="button">О компании</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Новости</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Контакты</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">О нас</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Отзывы</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Вопросы и ответы</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Пресс-кит</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">О нас</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Отзывы</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Вопросы и ответы</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Пресс-кит</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item menu__item--without-title">
-                        <ul class="list menu__submenu">
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Вакансии</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Инвесторам</a>
+                            <li class="menu__item menu__item--without-title">
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Вакансии</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Инвесторам</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -253,15 +270,19 @@
     </header>
     <main class="main">
         <section class="intro">
-            <div class="container intro__container">
-                <!-- <h1 class="intro__title">Заказ такси с сайта со скидкой 30%</h1> -->
-                <p class="intro__title">Добрый день!</p>
-                <p class="intro__subtitle">Откуда поедете сегодня?</p>
+            <div class="intro__main-wrapper">
+                <div class="container intro__container">
+                    <p class="intro__title">Добрый день!</p>
+                    <p class="intro__subtitle">Откуда поедете сегодня?</p>
+                    <form class="enter-addr" action="">
+                        <input class="enter-addr__addr-input" type="text" placeholder="Введите адрес отправления">
+                    </form>
+                </div>
             </div>
-        </section>
-        <section class="promocode main__promocode">
-            <div class="container">
-                <button class="promocode__btn" type="button">Есть промокод</button>
+            <div class="intro__promocode-wrapper">
+                <div class="container intro__container">
+                    <button class="promocode__btn" type="button">Есть промокод</button>
+                </div>
             </div>
         </section>
         <section class="stocks">
@@ -309,45 +330,49 @@
             </div>
         </section>
         <section class="why-tf">
-            <div class="container">
-                <h2 class="page-title page-title--gray">Почему мы?</h2>
-                <ul class="why-tf__list">
-                    <li class="why-tf__list-item">
-                        <h3 class="why-tf__list-title">Туда и обратно</h3>
-                        <p class="why-tf__list-text">Скидка 30% на вторую поездку в день</p>
-                        <a href="#" class="why-tf__list-link">Заказать такси</a>
-                    </li>
-                    <li class="why-tf__list-item">
-                        <h3 class="why-tf__list-title">Доставка</h3>
-                        <p class="why-tf__list-text">Привезем быстро и оставим у двери</p>
-                        <a href="#" class="why-tf__list-link">Оформить доставку</a>
-                    </li>
-                    <li class="why-tf__list-item">
-                        <h3 class="why-tf__list-title">Бизнесу</h3>
-                        <p class="why-tf__list-text">Такси для владельцев бизнеса</p>
-                        <a href="#" class="why-tf__list-link">Стать бизнес-клиентом</a>
-                    </li>
-                    <li class="why-tf__list-item">
-                        <h3 class="why-tf__list-title">Семья</h3>
-                        <p class="why-tf__list-text">Семейный счёт — выгодные поездки для всей семьи</p>
-                        <a href="#" class="why-tf__list-link">Узнать больше</a>
-                    </li>
-                    <li class="why-tf__list-item">
-                        <h3 class="why-tf__list-title">Мои правила</h3>
-                        <p class="why-tf__list-text">Устанавливайте свою цену на поездки</p>
-                        <a href="#" class="why-tf__list-link">Установить приложение</a>
-                    </li>
-                </ul>
+            <div class="container why-tf__container">
+                <div class="container why-tf__main">
+                    <h2 class="page-title page-title--gray">Почему мы?</h2>
+                    <ul class="why-tf__list">
+                        <li class="why-tf__list-item">
+                            <h3 class="why-tf__list-title">Туда и обратно</h3>
+                            <p class="why-tf__list-text">Скидка 30% на вторую поездку в день</p>
+                            <a href="#" class="why-tf__list-link">Заказать такси</a>
+                        </li>
+                        <li class="why-tf__list-item">
+                            <h3 class="why-tf__list-title">Доставка</h3>
+                            <p class="why-tf__list-text">Привезем быстро и оставим у двери</p>
+                            <a href="#" class="why-tf__list-link">Оформить доставку</a>
+                        </li>
+                        <li class="why-tf__list-item">
+                            <h3 class="why-tf__list-title">Бизнесу</h3>
+                            <p class="why-tf__list-text">Такси для владельцев бизнеса</p>
+                            <a href="#" class="why-tf__list-link">Стать бизнес-клиентом</a>
+                        </li>
+                        <li class="why-tf__list-item">
+                            <h3 class="why-tf__list-title">Семья</h3>
+                            <p class="why-tf__list-text">Семейный счёт — выгодные поездки для всей семьи</p>
+                            <a href="#" class="why-tf__list-link">Узнать больше</a>
+                        </li>
+                        <li class="why-tf__list-item">
+                            <h3 class="why-tf__list-title">Мои правила</h3>
+                            <p class="why-tf__list-text">Устанавливайте свою цену на поездки</p>
+                            <a href="#" class="why-tf__list-link">Установить приложение</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="why-tf__addition">
+                    <section class="section-float section-float--right become-driver">
+                        <h2 class="become-driver__title">Стать водителем</h2>
+                        <p class="become-driver__text">
+                            Присоединяйтесь к нашей команде
+                        </p>
+                    </section>
+                    <section class="section-float section-float--right download-pult">
+                        <h2 class="download-pult__title">Скачать &laquo;Пульт&raquo;</h2>
+                    </section>
+                </div>
             </div>
-        </section>
-        <section class="section-float section-float--right become-driver">
-            <h2 class="become-driver__title">Стать водителем</h2>
-            <p class="become-driver__text">
-                Присоединяйтесь к нашей команде
-            </p>
-        </section>
-        <section class="section-float section-float--right download-pult">
-            <h2 class="download-pult__title">Скачать &laquo;Пульт&raquo;</h2>
         </section>
         <section class="section-float section-float--left news">
             <h2 class="news__title">Новости</h2>
@@ -360,17 +385,162 @@
             <a class="link news__all-link" href="#">Читайте все новости</a>
         </section>
         <section class="section-float section-float--right quality-control">
-            <h2 class="quality-control__title">Контроль качества</h2>
-            <a class="quality-control__phone" href="tel:+78123300004">
-                +7 (812) 330-00-04<br>
-                <span class="quality-control__phone-caption">нажмите, чтобы позвонить</span>
-            </a>
-            <a class="quality-control__email" href="mailto:okk@taxovichkof.ru">okk@taxovichkof.ru</a>
+            <div class="desktop-container">
+                <h2 class="quality-control__title">Контроль качества</h2>
+                <a class="quality-control__phone" href="tel:+78123300004">
+                    +7 (812) 330-00-04<br>
+                    <span class="quality-control__phone-caption">нажмите, чтобы позвонить</span>
+                </a>
+                <a class="quality-control__email" href="mailto:okk@taxovichkof.ru">okk@taxovichkof.ru</a>
+            </div>
+        </section>
+        <section class="popup popup-order">
+            <form class="form order-form" method="GET" action="">
+                <div class="container">
+                    <div class="order-form__addresses">
+                        <label class="order-form__label order-form__label--from">
+                            от
+                            <input class="order-form__input" type="text" placeholder="Нажмите, чтобы ввести">
+                        </label>
+                        <label class="order-form__label order-form__label--to">
+                            до
+                            <input class="order-form__input" type="text" placeholder="Нажмите, чтобы ввести">
+                        </label>
+                    </div>
+                </div>
+                <ul class="list popup-order__list">
+                    <li class="list__item popup-order__list-item">
+                        <p class="popup-order__address">пр. Литейный</p>
+                        <p class="popup-order__city">г. Санкт-Петербург</p>
+                    </li>
+                    <li class="list__item popup-order__list-item">
+                        <p class="popup-order__address">Литейный мост</p>
+                        <p class="popup-order__city">г. Санкт-Петербург</p>
+                    </li>
+                    <li class="list__item popup-order__list-item">
+                        <p class="popup-order__address">ул. Литераторов</p>
+                        <p class="popup-order__city">г. Колпино</p>
+                    </li>
+                    <li class="list__item popup-order__list-item">
+                        <p class="popup-order__address">Театр на Литейном</p>
+                        <p class="popup-order__city">г. Колпино</p>
+                    </li>
+                </ul>
+                <div class="popup-order__info">
+                    <div class="container">
+                        <div class="tabs popup-order__tarifs">
+                            <ul class="list tabs__list tabs__list--underline">
+                                <li class="tabs__item">
+                                    <input id="class-standart" class="tabs__radio" type="radio" name="auto-class" value="0">
+                                    <label class="tabs__label" for="class-standart">Детский</label>
+                                </li>
+                                <li class="tabs__item">
+                                    <input id="class-comfort" class="tabs__radio" type="radio" name="auto-class" value="1" checked>
+                                    <label class="tabs__label" for="class-comfort">На каждый день</label>
+                                </li>
+                                <li class="tabs__item">
+                                    <input id="class-comfort-plus" class="tabs__radio" type="radio" name="auto-class" value="2">
+                                    <label class="tabs__label" for="class-comfort-plus">Курьерчикоф</label>
+                                </li>
+                                <li class="tabs__item">
+                                    <input id="class-luks" class="tabs__radio" type="radio" name="auto-class" value="3">
+                                    <label class="tabs__label" for="class-luks">Люкс</label>
+                                </li>
+                            </ul>
+                            <div class="tabs__content tabs__content--show" data-tab="0">
+                                <ul class="list tarif-select">
+                                    <li class="tarif-select__item tarif-select__item--standart">
+                                        <input id="tarif-0" class="tarif-select__radio" type="radio" name="tarif" value="0" checked>
+                                        <label for="tarif-0" class="tarif-select__label">
+                                            <p class="tarif-select__name-wait">
+                                                <span class="tarif-select__name">Стандарт</span><br>
+                                                <span class="tarif-select__wait">4 мин</span>
+                                            </p>
+                                            <p class="tarif-select__price-sale">
+                                                <span class="tarif-select__price">210 Р</span><br>
+                                                <span class="tarif-select__sale">300 Р</span>
+                                            </p>
+                                        </label>
+                                    </li>
+                                    <li class="tarif-select__item tarif-select__item--comfort">
+                                        <input id="tarif-1" class="tarif-select__radio" type="radio" name="tarif" value="1">
+                                        <label for="tarif-1" class="tarif-select__label">
+                                            <p class="tarif-select__name-wait">
+                                                <span class="tarif-select__name">Комфорт</span><br>
+                                                <span class="tarif-select__wait">4 мин</span>
+                                            </p>
+                                            <p class="tarif-select__price-sale">
+                                                <span class="tarif-select__price">350 Р</span><br>
+                                                <span class="tarif-select__sale">400 Р</span>
+                                            </p>
+                                        </label>
+                                    </li>
+                                    <li class="tarif-select__item tarif-select__item--comfort-plus">
+                                        <input id="tarif-2" class="tarif-select__radio" type="radio" name="tarif" value="2">
+                                        <label for="tarif-2" class="tarif-select__label">
+                                            <p class="tarif-select__name-wait">
+                                                <span class="tarif-select__name">Комфорт+</span><br>
+                                                <span class="tarif-select__wait">4 мин</span>
+                                            </p>
+                                            <p class="tarif-select__price-sale">
+                                                <span class="tarif-select__price">410 Р</span><br>
+                                                <span class="tarif-select__sale">400 Р</span>
+                                            </p>
+                                        </label>
+                                    </li>
+                                    <li class="tarif-select__item tarif-select__item--business">
+                                        <input id="tarif-3" class="tarif-select__radio" type="radio" name="tarif" value="3">
+                                        <label for="tarif-3" class="tarif-select__label">
+                                            <p class="tarif-select__name-wait">
+                                                <span class="tarif-select__name">Бизнес</span><br>
+                                                <span class="tarif-select__wait">4 мин</span>
+                                            </p>
+                                            <p class="tarif-select__price-sale">
+                                                <span class="tarif-select__price">410 Р</span><br>
+                                                <span class="tarif-select__sale">400 Р</span>
+                                            </p>
+                                        </label>
+                                    </li>
+                                    <li class="tarif-select__item tarif-select__item--minivan-6">
+                                        <input id="tarif-4" class="tarif-select__radio" type="radio" name="tarif" value="4">
+                                        <label for="tarif-4" class="tarif-select__label">
+                                            <p class="tarif-select__name-wait">
+                                                <span class="tarif-select__name">Минивэн 6</span><br>
+                                                <span class="tarif-select__wait">4 мин</span>
+                                            </p>
+                                            <p class="tarif-select__price-sale">
+                                                <span class="tarif-select__price">410 Р</span><br>
+                                                <span class="tarif-select__sale">400 Р</span>
+                                            </p>
+                                        </label>
+                                    </li>
+                                    <li class="tarif-select__item tarif-select__item--minivan-8">
+                                        <input id="tarif-5" class="tarif-select__radio" type="radio" name="tarif" value="5">
+                                        <label for="tarif-5" class="tarif-select__label">
+                                            <p class="tarif-select__name-wait">
+                                                <span class="tarif-select__name">Минивэн 8</span><br>
+                                                <span class="tarif-select__wait">4 мин</span>
+                                            </p>
+                                            <p class="tarif-select__price-sale">
+                                                <span class="tarif-select__price">410 Р</span><br>
+                                                <span class="tarif-select__sale">400 Р</span>
+                                            </p>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="popup-order__pay-req">
+                            <div class="popup-order__payment-select"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </section>
     </main>
     <footer class="footer">
-        <div class="container">
-            <ul class="list social-list">
+        <div class="container footer__container">
+            <ul class="list social-list footer__social-list">
                 <li class="social-list__item">
                     <a class="social-list__link social-list__link--vk" href="#" target="_blank" rel="noopener nofollow" title="Наш Вконтакте">
                         <span class="sr-only">Наша группа в ВК</span>
@@ -397,35 +567,149 @@
                     </a>
                 </li>
             </ul>
-            <p class="footer__text">
-                Россия, 192019, г. Санкт-Петербург, наб. Обводного канала, д 24Д , БЦ Амилен Бесплатный автобус от ст. метро «Ал.Невского»<br>
-                <a class="link" href="#">Пользовательское соглашение на использование сервисов «Таксовичкоф»</a><br> Адрес раскрытия информации: <a class="link" href="#" target="_blank" rel="nofollow">e-disclosure.ru</a>
-            </p>
-            <a class="link footer__link footer__taxi-pools" href="#">Таксопарки партнеры</a>
-            <div class="download-app-info">
+            <div class="desktop-container container__subcontainer">
+                <div class="footer__main">
+                    <div class="menu footer__menu">
+                        <ul class="list menu__list">
+                            <li class="menu__item menu__item--passenger">
+                                <button class="menu__title" type="button">Пассажирам</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Акции</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Тарифы</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Услуги</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Мобильное приложение</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--drivers">
+                                <button class="menu__title" type="button">Водителям</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Стать водителем</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Таксовичкоф Пульт</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--business">
+                                <button class="menu__title" type="button">Бизнесу</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Корпоративным клиентам</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Бизнес-кабинет</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--partners">
+                                <button class="menu__title" type="button">Партнерам</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Создать совместное предприятие</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Подключить автопарк</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Франшиза</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Для партнеров</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--about">
+                                <button class="menu__title" type="button">О компании</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Новости</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Контакты</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">О нас</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Отзывы</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Вопросы и ответы</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Пресс-кит</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--without-title">
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Вакансии</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Инвесторам</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="list apps-list footer__apps">
+                        <li class="apps-list__item">
+                            <a class="apps-list__link apps-list__link--appstore" href="#">
+                                <span class="sr-only">Загрузите в App Store</span>
+                            </a>
+                        </li>
+                        <li class="apps-list__item">
+                            <a class="apps-list__link apps-list__link--gplay" href="#">
+                                <span class="sr-only">Загрузите в Google Play</span>
+                            </a>
+                        </li>
+                        <li class="apps-list__item">
+                            <a class="apps-list__link apps-list__link--appgallery" href="#">
+                                <span class="sr-only">Загрузите в App Gallery</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__text-wrapper">
+                        <p class="footer__text">
+                            Россия, 192019, г. Санкт-Петербург, наб. Обводного канала, д 24Д , БЦ Амилен Бесплатный автобус от ст. метро «Ал.Невского»<br>
+                            <a class="link" href="#">Пользовательское соглашение на использование сервисов «Таксовичкоф»</a><br> Адрес раскрытия информации: <a class="link" href="#" target="_blank" rel="nofollow">e-disclosure.ru</a>
+                        </p>
+                        <a class="link footer__link footer__taxi-pools" href="#">Таксопарки партнеры</a>
+                    </div>
+                    <a href="#" class="footer__support footer__support--skolkovo" target="__blank" rel="nofollow noopener">
+                        <div class="sr-only">При поддержке Сколково</div>
+                    </a>
+                </div>
+            </div>
+            <div class="download-app-info footer__download-app-info">
                 <button class="download-app-info__close" type="button">
                     <span class="sr-only">Закрыть</span>
                 </button>
                 <span class="download-app-info__title">Возьми с собой Таксовичкоф</span>
-                <a class="download-app" href="#" rel="nofollow">
-                    <object class="download-app__icon" type="image/svg+xml" data="svg/app-store.svg" tabindex="-1">
-						<img 
-							src="images/mobile/app-store.png" 
-							srcset="images/mobile/app-store@2x.png 2x"
-							alt="Скачать приложение">
-					</object>
+                <a class="download-app-info__link download-app-info__link--appstore" href="#" rel="nofollow">
+                    <span class="sr-only">Загрузите в App Store</span>
                 </a>
             </div>
+            <button class="write-us">
+                <span class="write-us__text">Напишите нам</span>
+            </button>
         </div>
     </footer>
     <script src="js/swiper.js"></script>
     <script src="js/script.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 'auto',
-            spaceBetween: 8,
-        });
-    </script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

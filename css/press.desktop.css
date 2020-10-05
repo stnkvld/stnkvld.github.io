@@ -1,0 +1,14 @@
+.about {
+    width: 74%;
+    min-width: 64.75rem;
+}
+
+.releases {
+    width: 68.6%;
+    min-width: 60.25rem;
+}
+
+.contacts-list,
+.download-list {
+    max-width: 21.5625rem
+}

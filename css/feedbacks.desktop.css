@@ -1,0 +1,22 @@
+.start {
+    position: relative;
+    width: 40.5%;
+    min-width: 35.5rem;
+}
+
+.start__contacts {
+    position: absolute;
+    top: 4.875em;
+    left: 105%;
+    width: 21.5rem;
+}
+
+.feedbacks-list__item {
+    width: 74.25%;
+    min-width: 65.25rem;
+}
+
+.start__btn,
+.feedbacks__more {
+    margin-left: 0;
+}

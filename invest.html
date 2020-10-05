@@ -8,22 +8,28 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/invest.css">
+    <link rel="stylesheet" href="css/style.desktop.css" media="(min-width: 1024px)">
+    <link rel="stylesheet" href="css/invest.desktop.css" media="(min-width: 1024px)">
 </head>
 
 <body>
     <header class="header">
         <div class="container header__container">
             <a class="logo header__logo" href="/">
-                <img class="logo__image" src="svg/logo-small-white.svg" alt="Логотип">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="svg/logo-full-white.svg" type="image/svg+xml">
+                    <source media="(min-width: 1024px)" srcset="svg/logo-full-white.png" type="image/png">
+                    <source media="(max-width: 1023px)" srcset="svg/logo-small-white.svg" type="image/svg+xml">
+                    <img class="logo__image" src="images/mobile/logo-small-white.png" alt="Логотип">
+                </picture>
             </a>
-            <div class="city-selector">
-                <button class="city-selector__city" type="button">Санкт-Петербург</button>
-                <a class="city-selector__phone" href="tel:+78123330000">333-00-00</a>
-                <button class="city-selector__close">
-					<span class="sr-only">Закрыть выбор города</span>
-				</button>
+            <div class="city-selector header__city-selector">
+                <div class="city-selector__wrapper">
+                    <button class="city-selector__city" type="button">Санкт-Петербург</button>
+                    <a class="city-selector__phone" href="tel:+78123330000">333-00-00</a>
+                </div>
                 <div class="city-selector__menu">
-                    <div class="container">
+                    <div class="container city-selector__container">
                         <form class="text-input search city-selector__search" method="GET" action="">
                             <input class="search__input" type="text" placeholder="Поиск">
                         </form>
@@ -151,9 +157,15 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn--inner-green btn-cabinet header__btn-cabinet" type="button">Войти в кабинет</button>
+            <div class="lang-switcher header__lang-switcher lang-switcher--ru">
+                <button class="btn lang-switcher__btn lang-switcher__btn--ru" type="button">RU</button>
+            </div>
+            <button class="btn btn--inner-green btn-cabinet header__btn-cabinet" type="button">Войти</button>
             <button class="btn-menu header__btn-menu" type="button">
 				<span class="sr-only">Открыть/закрыть меню</span>
+            </button>
+            <button class="city-selector-close">
+                <span class="sr-only">Закрыть выбор города</span>
             </button>
             <nav class="menu header__menu">
                 <ul class="list menu__list">
@@ -185,17 +197,6 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu__item menu__item--business">
-                        <button class="menu__title" type="button">Бизнесу</button>
-                        <ul class="list menu__submenu">
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Корпоративным клиентам</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Бизнес-кабинет</a>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="menu__item menu__item--partners">
                         <button class="menu__title" type="button">Партнерам</button>
                         <ul class="list menu__submenu">
@@ -213,36 +214,52 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu__item menu__item--about">
-                        <button class="menu__title" type="button">О компании</button>
+                    <li class="menu__item menu__item--more">
+                        <button class="menu__title" type="button">Еще</button>
                         <ul class="list menu__submenu">
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Новости</a>
+                            <li class="menu__item menu__item--business">
+                                <button class="menu__title" type="button">Бизнесу</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Корпоративным клиентам</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Бизнес-кабинет</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Контакты</a>
+                            <li class="menu__item menu__item--about">
+                                <button class="menu__title" type="button">О компании</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Новости</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Контакты</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">О нас</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Отзывы</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Вопросы и ответы</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Пресс-кит</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">О нас</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Отзывы</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Вопросы и ответы</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Пресс-кит</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item menu__item--without-title">
-                        <ul class="list menu__submenu">
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Вакансии</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Инвесторам</a>
+                            <li class="menu__item menu__item--without-title">
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Вакансии</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Инвесторам</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -252,7 +269,7 @@
     </header>
     <main class="main invest">
         <section class="intro">
-            <div class="container">
+            <div class="container intro__container">
                 <h1 class="intro__title">Агрегатор такси</h1>
                 <p class="invest__title intro__subtitle">&laquo;Таксовичкоф&raquo; - больше, чем такси</p>
                 <p class="intro__work">
@@ -273,31 +290,33 @@
                 <p class="text calculator__text text--small-margin">
                     Доход инвесторов по облигациям «Транс-миссия» составляет 15% годовых. Рассчитайте прибыль своих инвестиций, указав планируемую сумму и дату покупки.
                 </p>
-                <ul class="list list--numbers">
-                    <li class="list__item">
-                        <p class="list__item-title">Доход</p>
-                        <p class="list__item-value">0,00 руб.</p>
-                    </li>
-                    <li class="list__item">
-                        <p class="list__item-title">Доход в % ном.</p>
-                        <p class="list__item-value">15%</p>
-                    </li>
-                </ul>
-                <form class="form invest-calculator" action="">
-                    <div class="form__group">
-                        <label class="form__label" for="invest-sum">Сумма инвестиций</label>
-                        <input id="invest-sum" class="form__input" type="text" placeholder="0.00 Р" name="">
-                    </div>
-                    <div class="form__group">
-                        <label class="form__label" for="invest-date-buy">Дата покупки</label>
-                        <input id="invest-date-buy" class="form__input" type="text" placeholder="0.00 Р" name="">
-                    </div>
-                    <div class="form__group">
-                        <label class="form__label" for="invest-date-sale">Дата продажи</label>
-                        <input id="invest-date-sale" class="form__input" type="text" placeholder="0.00 Р" name="">
-                    </div>
-                    <button class="btn btn--medium btn--green invest-calculator__submit" type="submit">Рассчитать</button>
-                </form>
+                <div class="calculator__wrapper">
+                    <ul class="list list--numbers calculator__list">
+                        <li class="list__item">
+                            <p class="list__item-title">Доход</p>
+                            <p class="list__item-value">0,00 руб.</p>
+                        </li>
+                        <li class="list__item">
+                            <p class="list__item-title">Доход в % ном.</p>
+                            <p class="list__item-value">15%</p>
+                        </li>
+                    </ul>
+                    <form class="form invest-calculator" action="">
+                        <div class="form__group">
+                            <label class="form__label" for="invest-sum">Сумма инвестиций</label>
+                            <input id="invest-sum" class="form__input" type="text" placeholder="0.00 Р" name="">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="invest-date-buy">Дата покупки</label>
+                            <input id="invest-date-buy" class="form__input" type="text" placeholder="0.00 Р" name="">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="invest-date-sale">Дата продажи</label>
+                            <input id="invest-date-sale" class="form__input" type="text" placeholder="0.00 Р" name="">
+                        </div>
+                        <button class="btn btn--medium btn--green invest-calculator__submit" type="submit">Рассчитать</button>
+                    </form>
+                </div>
                 <p class="calculator__release-number">
                     <b>Номер выпуска</b><br> 4B02-01-00447-R-001P от 27.05.2019
                 </p>
@@ -305,7 +324,7 @@
         </section>
         <section class="know-more">
             <div class="container">
-                <h2 class="invest__title invest__title--center">Узнайте больше у нашего специалиста</h2>
+                <h2 class="invest__title invest__title--center know-more__title">Узнайте больше у нашего специалиста</h2>
                 <button class="btn btn--square btn--green know-more__btn" type="button">Свяжитесь со мной</button>
             </div>
         </section>
@@ -313,27 +332,27 @@
             <div class="container">
                 <h2 class="invest__title program__title">Инвестиционная программа</h2>
                 <ul class="list program-list">
-                    <li class="list__item program-list__item">
+                    <li class="list__item program-list__item program-list__item--production">
                         <p class="program-list__title">Объем выпуска</p>
                         <p class="program-list__value">150 млн рублей</p>
                     </li>
-                    <li class="list__item program-list__item">
+                    <li class="list__item program-list__item program-list__item--coupon">
                         <p class="program-list__title">Размер купонного дохода</p>
                         <p class="program-list__value">15% годовых</p>
                     </li>
-                    <li class="list__item program-list__item">
+                    <li class="list__item program-list__item program-list__item--term">
                         <p class="program-list__title">Срок обращения</p>
                         <p class="program-list__value">1080 дней</p>
                     </li>
-                    <li class="list__item program-list__item">
+                    <li class="list__item program-list__item program-list__item--par">
                         <p class="program-list__title">Номинал одной облигации</p>
                         <p class="program-list__value">10 000 рублей</p>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="basic">
-            <div class="container">
+        <div class="container invest__wrapper invest__basic-key">
+            <section class="basic">
                 <h2 class="invest__title basic__title">Основные сведения</h2>
                 <ol class="list basic-list">
                     <li class="list__item basic-list__item">
@@ -349,10 +368,8 @@
                         <button class="link basic-list__link" type="button">Бухгалтерская отчетность</button>
                     </li>
                 </ol>
-            </div>
-        </section>
-        <section class="key">
-            <div class="container">
+            </section>
+            <section class="key">
                 <h2 class="invest__title basic__title">Ключевые показатели</h2>
                 <ul class="list key-list">
                     <li class="list__item key-list__item">
@@ -371,33 +388,39 @@
                         <p class="key-list__values">21 681 <span class="key-list__slash">/</span> 21 657</p>
                     </li>
                 </ul>
-            </div>
-        </section>
+            </section>
+        </div>
         <section class="become-investor">
             <div class="container">
                 <h2 class="invest__title">Как стать инвестором</h2>
                 <div class="become-investor__icons">
-                    <object class="become-investor__icon" type="image/svg+xml" data="svg/invest-icon-1.svg" tabindex="-1">
-                        <img 
-                            class="become-investor__icon-image"
-                            src="images/mobile/invest-icon-1.png" 
-                            srcset="images/mobile/invest-icon-1@2x.png 2x"
-                                alt="Инвесторам ТФ">
-                    </object>
-                    <object class="become-investor__icon" type="image/svg+xml" data="svg/invest-icon-2.svg" tabindex="-1">
-                        <img 
-                            class="become-investor__icon-image"
-                            src="images/mobile/invest-icon-2.png" 
-                            srcset="images/mobile/invest-icon-2@2x.png 2x"
-                                alt="Инвесторам ТФ">
-                    </object>
-                    <object class="become-investor__icon" type="image/svg+xml" data="svg/invest-icon-3.svg" tabindex="-1">
-                        <img
-                            class="become-investor__icon-image" 
-                            src="images/mobile/invest-icon-3.png" 
-                            srcset="images/mobile/invest-icon-3@2x.png 2x"
-                                alt="Инвесторам ТФ">
-                    </object>
+                    <div class="become-investor__icon-wrapper">
+                        <object class="become-investor__icon" type="image/svg+xml" data="svg/invest-icon-1.svg" tabindex="-1">
+                            <img 
+                                class="become-investor__icon-image"
+                                src="images/mobile/invest-icon-1.png" 
+                                srcset="images/mobile/invest-icon-1@2x.png 2x"
+                                    alt="Инвесторам ТФ">
+                        </object>
+                    </div>
+                    <div class="become-investor__icon-wrapper">
+                        <object class="become-investor__icon" type="image/svg+xml" data="svg/invest-icon-2.svg" tabindex="-1">
+                            <img 
+                                class="become-investor__icon-image"
+                                src="images/mobile/invest-icon-2.png" 
+                                srcset="images/mobile/invest-icon-2@2x.png 2x"
+                                    alt="Инвесторам ТФ">
+                        </object>
+                    </div>
+                    <div class="become-investor__icon-wrapper">
+                        <object class="become-investor__icon" type="image/svg+xml" data="svg/invest-icon-3.svg" tabindex="-1">
+                            <img
+                                class="become-investor__icon-image" 
+                                src="images/mobile/invest-icon-3.png" 
+                                srcset="images/mobile/invest-icon-3@2x.png 2x"
+                                    alt="Инвесторам ТФ">
+                        </object>
+                    </div>
                 </div>
                 <ol class="list step-list">
                     <li class="list__item step-list__item">
@@ -421,71 +444,76 @@
                 </ol>
             </div>
         </section>
-        <section class="request">
-            <div class="container">
-                <h2 class="invest__title">Оставьте заявку</h2>
-                <form class="form" action="">
-                    <div class="form__group">
-                        <label class="form__label" for="invest-sum">Представьтесь пожалуйста</label>
-                        <input id="invest-sum" class="form__input" type="text" placeholder="ФИО" name="">
-                    </div>
-                    <div class="form__group">
-                        <label class="form__label" for="invest-date-buy">Номер телефона</label>
-                        <input id="invest-date-buy" class="form__input" type="text" placeholder="+7" name="">
-                    </div>
-                    <button class="btn btn--medium btn--green" type="submit">Отправить</button>
-                </form>
-            </div>
-        </section>
-        <section class="contacts">
-            <div class="container">
-                <h2 class="invest__title">Контакты</h2>
-                <ul class="list corp-list">
-                    <li class="list__item corp-list__item">
-                        <p class="corp-list__name">ООО &laquo;Транс-Миссия&raquo;</p>
-                        <p class="text corp-list__address">
-                            г. Санкт-Петербург наб. Обводного канала, д. 24Д (БЦ «Амилен»)
-                        </p>
-                        <p class="corp-list__department">Отдел по работе с инвесторами</p>
-                        <a class="corp-list__phone" href="tel:88005052507">
+        <div class="container invest__wrapper invest__request-contacts">
+            <section class="request">
+                <div class="container">
+                    <h2 class="invest__title request__title">Оставьте заявку</h2>
+                    <form class="form" action="">
+                        <div class="form__group">
+                            <label class="form__label" for="invest-sum">Представьтесь пожалуйста</label>
+                            <input id="invest-sum" class="form__input" type="text" placeholder="ФИО" name="">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="invest-date-buy">Номер телефона</label>
+                            <input id="invest-date-buy" class="form__input" type="text" placeholder="+7" name="">
+                        </div>
+                        <button class="btn btn--medium btn--green request__btn" type="submit">Отправить</button>
+                    </form>
+                </div>
+            </section>
+            <div class="invest__contacts-documents">
+                <section class="contacts">
+                    <div class="container">
+                        <h2 class="invest__title">Контакты</h2>
+                        <ul class="list corp-list">
+                            <li class="list__item corp-list__item">
+                                <p class="corp-list__name">ООО &laquo;Транс-Миссия&raquo;</p>
+                                <p class="text corp-list__address">
+                                    г. Санкт-Петербург наб. Обводного канала, д. 24Д (БЦ «Амилен»)
+                                </p>
+                                <p class="corp-list__department">Отдел по работе с инвесторами</p>
+                                <a class="corp-list__phone" href="tel:88005052507">
                             8 (800) 505-25-07
                         </a>
-                        <a class="link corp-list__site-link" href="https://www.taxovichkof.ru" target="_blank">www.taxovichkof.ru</a>
-                    </li>
-                    <li class="list__item corp-list__item">
-                        <p class="corp-list__name">ООО &laquo;Юнисервис Капитал&raquo;</p>
-                        <p class="text corp-list__address">
-                            630007, г. Новосибирск, ул. Спартака, 12/1, 11 этаж
-                        </p>
-                        <p class="corp-list__department">Отдел по работе с инвесторами</p>
-                        <a class="corp-list__phone" href="tel:+73833495776">
+                                <a class="link corp-list__site-link" href="https://www.taxovichkof.ru" target="_blank">www.taxovichkof.ru</a>
+                            </li>
+                            <li class="list__item corp-list__item">
+                                <p class="corp-list__name">ООО &laquo;Юнисервис Капитал&raquo;</p>
+                                <p class="text corp-list__address">
+                                    630007, г. Новосибирск, ул. Спартака, 12/1, 11 этаж
+                                </p>
+                                <p class="corp-list__department">Отдел по работе с инвесторами</p>
+                                <a class="corp-list__phone" href="tel:+73833495776">
                             +7 (383) 349-57-76
                         </a>
-                        <a class="link corp-list__site-link" href="https://www.uscapital.ru" target="_blank">www.uscapital.ru</a>
-                    </li>
-                </ul>
+                                <a class="link corp-list__site-link" href="https://www.uscapital.ru" target="_blank">www.uscapital.ru</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="documents">
+                    <div class="container">
+                        <h2 class="sr-only">Документы для инвесторов</h2>
+                        <ul class="list download-list documents__list">
+                            <li class="list__item download-list__item">
+                                <a class="link download-list__link" href="#">
+                                    <span class="download-list__text">Презентация для инвесторов ООО &laquo;Транс-миссия&raquo;</span>
+                                    <span class="download-list__size">1,7 Мб (PDF)</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
             </div>
-        </section>
-        <section class="documents">
-            <div class="container">
-                <h2 class="sr-only">Документы для инвесторов</h2>
-                <ul class="list download-list documents__list">
-                    <li class="list__item download-list__item">
-                        <a class="link download-list__link" href="#">
-                            <span class="download-list__text">Презентация для инвесторов ООО &laquo;Транс-миссия&raquo;</span>
-                            <span class="download-list__size">1,7 Мб (PDF)</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        </div>
+        <div class="overlay"></div>
         <section class="popup popup-general-info">
             <div class="container popup__container">
                 <button type="button" class="popup__close">
                     <span class="sr-only">Закрыть модальное окно</span>
                 </button>
                 <h2 class="popup__title">Общие сведения</h2>
-                <ul class="list popup-general-info__list">
+                <ul class="list popup__list popup-general-info__list">
                     <li class="list__item popup-general-info__list-item">
                         <p class="popup-general-info__title">Полное наименование организации</p>
                         <p class="popup-general-info__description">Общество с ограниченной ответственностью &laquo;Транс-Миссия&raquo;</p>
@@ -532,13 +560,13 @@
                 <button class="btn btn--small btn--green popup__footer-close">Закрыть</button>
             </div>
         </section>
-        <section class="popup popup-inner-docs">
+        <section class="popup popup-inner-docs" style="display: block;">
             <div class="container popup__container">
                 <button type="button" class="popup__close">
                     <span class="sr-only">Закрыть модальное окно</span>
                 </button>
                 <h2 class="popup__title">Устав и внутренние документы</h2>
-                <ul class="list download-list">
+                <ul class="list download-list popup__list">
                     <li class="list__item download-list__item">
                         <a class="link download-list__link" href="#">
                             <span class="download-list__text">Устав ООО «Транс-миссия» 29.12.2018</span>
@@ -563,8 +591,8 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="container">
-            <ul class="list social-list">
+        <div class="container footer__container">
+            <ul class="list social-list footer__social-list">
                 <li class="social-list__item">
                     <a class="social-list__link social-list__link--vk" href="#" target="_blank" rel="noopener nofollow" title="Наш Вконтакте">
                         <span class="sr-only">Наша группа в ВК</span>
@@ -591,27 +619,147 @@
                     </a>
                 </li>
             </ul>
-            <p class="footer__text">
-                Россия, 192019, г. Санкт-Петербург, наб. Обводного канала, д 24Д , БЦ Амилен Бесплатный автобус от ст. метро «Ал.Невского»<br>
-                <a class="link" href="#">Пользовательское соглашение на использование сервисов «Таксовичкоф»</a><br> Адрес раскрытия информации: <a class="link" href="#" target="_blank" rel="nofollow">e-disclosure.ru</a>
-            </p>
-            <a class="link footer__link footer__taxi-pools" href="#">Таксопарки партнеры</a>
-            <div class="download-app-info">
+            <div class="desktop-container container__subcontainer">
+                <div class="footer__main">
+                    <div class="menu footer__menu">
+                        <ul class="list menu__list">
+                            <li class="menu__item menu__item--passenger">
+                                <button class="menu__title" type="button">Пассажирам</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Акции</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Тарифы</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Услуги</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Мобильное приложение</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--drivers">
+                                <button class="menu__title" type="button">Водителям</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Стать водителем</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Таксовичкоф Пульт</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--business">
+                                <button class="menu__title" type="button">Бизнесу</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Корпоративным клиентам</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Бизнес-кабинет</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--partners">
+                                <button class="menu__title" type="button">Партнерам</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Создать совместное предприятие</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Подключить автопарк</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Франшиза</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Для партнеров</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--about">
+                                <button class="menu__title" type="button">О компании</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Новости</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Контакты</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">О нас</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Отзывы</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Вопросы и ответы</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Пресс-кит</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--without-title">
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Вакансии</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Инвесторам</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="list apps-list footer__apps">
+                        <li class="apps-list__item">
+                            <a class="apps-list__link apps-list__link--appstore" href="#">
+                                <span class="sr-only">Загрузите в App Store</span>
+                            </a>
+                        </li>
+                        <li class="apps-list__item">
+                            <a class="apps-list__link apps-list__link--gplay" href="#">
+                                <span class="sr-only">Загрузите в Google Play</span>
+                            </a>
+                        </li>
+                        <li class="apps-list__item">
+                            <a class="apps-list__link apps-list__link--appgallery" href="#">
+                                <span class="sr-only">Загрузите в App Gallery</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__text-wrapper">
+                        <p class="footer__text">
+                            Россия, 192019, г. Санкт-Петербург, наб. Обводного канала, д 24Д , БЦ Амилен Бесплатный автобус от ст. метро «Ал.Невского»<br>
+                            <a class="link" href="#">Пользовательское соглашение на использование сервисов «Таксовичкоф»</a><br> Адрес раскрытия информации: <a class="link" href="#" target="_blank" rel="nofollow">e-disclosure.ru</a>
+                        </p>
+                        <a class="link footer__link footer__taxi-pools" href="#">Таксопарки партнеры</a>
+                    </div>
+                    <a href="#" class="footer__support footer__support--skolkovo" target="__blank" rel="nofollow noopener">
+                        <div class="sr-only">При поддержке Сколково</div>
+                    </a>
+                </div>
+            </div>
+            <div class="download-app-info footer__download-app-info">
                 <button class="download-app-info__close" type="button">
                     <span class="sr-only">Закрыть</span>
                 </button>
                 <span class="download-app-info__title">Возьми с собой Таксовичкоф</span>
-                <a class="download-app" href="#" rel="nofollow">
-                    <object class="download-app__icon" type="image/svg+xml" data="svg/app-store.svg" tabindex="-1">
-						<img 
-							src="images/mobile/app-store.png" 
-							srcset="images/mobile/app-store@2x.png 2x"
-							alt="Скачать приложение">
-					</object>
+                <a class="download-app-info__link download-app-info__link--appstore" href="#" rel="nofollow">
+                    <span class="sr-only">Загрузите в App Store</span>
                 </a>
             </div>
+            <button class="write-us">
+                <span class="write-us__text">Напишите нам</span>
+            </button>
         </div>
     </footer>
+    <script src="js/modernizr.js" defer></script>
 </body>
 
 </html>

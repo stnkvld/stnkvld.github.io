@@ -8,22 +8,28 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/feedbacks.css">
+    <link rel="stylesheet" href="css/style.desktop.css" media="(min-width: 1024px)">
+    <link rel="stylesheet" href="css/feedbacks.desktop.css" media="(min-width: 1024px)">
 </head>
 
 <body>
     <header class="header">
         <div class="container header__container">
             <a class="logo header__logo" href="/">
-                <img class="logo__image" src="svg/logo-small.svg" alt="Логотип">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="svg/logo-full.svg" type="image/svg+xml">
+                    <source media="(max-width: 1023px)" srcset="svg/logo-small.svg" type="image/svg+xml">
+                    <!-- TODO: fallback for desktop -->
+                    <img class="logo__image" src="images/mobile/logo-small.png" alt="Логотип">
+                </picture>
             </a>
-            <div class="city-selector">
-                <button class="city-selector__city" type="button">Санкт-Петербург</button>
-                <a class="city-selector__phone" href="tel:+78123330000">333-00-00</a>
-                <button class="city-selector__close">
-					<span class="sr-only">Закрыть выбор города</span>
-				</button>
+            <div class="city-selector header__city-selector">
+                <div class="city-selector__wrapper">
+                    <button class="city-selector__city" type="button">Санкт-Петербург</button>
+                    <a class="city-selector__phone" href="tel:+78123330000">333-00-00</a>
+                </div>
                 <div class="city-selector__menu">
-                    <div class="container">
+                    <div class="container city-selector__container">
                         <form class="text-input search city-selector__search" method="GET" action="">
                             <input class="search__input" type="text" placeholder="Поиск">
                         </form>
@@ -151,9 +157,15 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn--inner-green btn-cabinet header__btn-cabinet" type="button">Войти в кабинет</button>
+            <div class="lang-switcher header__lang-switcher lang-switcher--ru">
+                <button class="btn lang-switcher__btn lang-switcher__btn--ru" type="button">RU</button>
+            </div>
+            <button class="btn btn--inner-green btn-cabinet header__btn-cabinet" type="button">Войти</button>
             <button class="btn-menu header__btn-menu" type="button">
 				<span class="sr-only">Открыть/закрыть меню</span>
+            </button>
+            <button class="city-selector-close">
+                <span class="sr-only">Закрыть выбор города</span>
             </button>
             <nav class="menu header__menu">
                 <ul class="list menu__list">
@@ -185,17 +197,6 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu__item menu__item--business">
-                        <button class="menu__title" type="button">Бизнесу</button>
-                        <ul class="list menu__submenu">
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Корпоративным клиентам</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Бизнес-кабинет</a>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="menu__item menu__item--partners">
                         <button class="menu__title" type="button">Партнерам</button>
                         <ul class="list menu__submenu">
@@ -213,36 +214,52 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu__item menu__item--about">
-                        <button class="menu__title" type="button">О компании</button>
+                    <li class="menu__item menu__item--more">
+                        <button class="menu__title" type="button">Еще</button>
                         <ul class="list menu__submenu">
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Новости</a>
+                            <li class="menu__item menu__item--business">
+                                <button class="menu__title" type="button">Бизнесу</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Корпоративным клиентам</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Бизнес-кабинет</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Контакты</a>
+                            <li class="menu__item menu__item--about">
+                                <button class="menu__title" type="button">О компании</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Новости</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Контакты</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">О нас</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Отзывы</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Вопросы и ответы</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Пресс-кит</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">О нас</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Отзывы</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Вопросы и ответы</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Пресс-кит</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item menu__item--without-title">
-                        <ul class="list menu__submenu">
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Вакансии</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Инвесторам</a>
+                            <li class="menu__item menu__item--without-title">
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Вакансии</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Инвесторам</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -250,89 +267,93 @@
             </nav>
         </div>
     </header>
-    <main class="main single-page feedbacks">
+    <main class="main single-page">
         <div class="container">
-            <h1 class="page-title">Отзывы о Таксовичкоф</h1>
-            <p class="text text--small-margin">
-                Какими бы ни были цены и предложения, следует, прежде всего, обращать своё внимание, на благодарности других людей, которые уже успели воспользоваться нашими услугами.
-            </p>
-            <p class="text text--small-margin">
-                Наши клиенты скажут намного больше, чем мы сами, ведь взгляд со стороны всегда полней и объективней.
-            </p>
-            <button class="btn btn--small btn--green" type="button">Оформить заявку</button>
-            <ul class="list contacts-list">
-                <li class="contacts-list__item">
-                    <p class="contacts-list__title">Отдел контроля качества</p>
-                    <ul class="contacts-list__links">
-                        <li class="contacts-list__links-item">
-                            <a href="tel:+78123330004" class="contacts-list__number-link">+7 (812) 330-00-04</a>
-                        </li>
-                        <li class="contacts-list__links-item">
-                            <a href="mailto:info@taxovichkof.ru" class="contacts-list__mail-link">
-                                <span class="sr-only">info@taxovichkof.ru</span>
-                            </a>
-                        </li>
-                        <li class="contacts-list__links-item">
-                            <a href="tel:+78123330004" class="contacts-list__phone-link">
-                                <span class="sr-only">+7 (812) 330-00-04</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <h2 class="page-subtitle">Отзывы</h2>
-            <ul class="list feedbacks-list">
-                <li class="feedbacks-list__item">
-                    <picture class="feedbacks-list__picture">
-                        <img class="feedbacks-list__image" src="" alt="">
-                    </picture>
-                    <p class="feedbacks-list__title">Артем</p>
-                    <p class="text feedbacks-list__text">
-                        Такси норм, цены и оперативность выполнения заказа достойные. Водители дружелюбные
-                    </p>
-                    <time class="date feedbacks-list__date" datetime="2020-03-20">20 марта 2020</time>
-                </li>
-                <li class="feedbacks-list__item">
-                    <picture class="feedbacks-list__picture">
-                        <img class="feedbacks-list__image" src="" alt="">
-                    </picture>
-                    <p class="feedbacks-list__title">Нина</p>
-                    <p class="text feedbacks-list__text">
-                        Хотела поблагодарить водителя Сергея (автомобиль Белый Киа C088PB178) за высокий профессионализм и доброжелательность. Доехали быстро, очень комфортно! Теперь только в Таксовичков!
-                    </p>
-                    <time class="date feedbacks-list__date" datetime="2020-03-20">20 марта 2020</time>
-                    <p class="text feedbacks-list__answer">
-                        <b class="feedbacks-list__answer-title">Ответ:</b> Нина, большое спасибо за отзыв! Нам очень приятно, что Вы остались довольны поездкой с нашим водителем. Будем стараться радовать Вас своей работой и дальше!
-                    </p>
-                </li>
-                <li class="feedbacks-list__item">
-                    <picture class="feedbacks-list__picture">
-                        <img class="feedbacks-list__image" src="" alt="">
-                    </picture>
-                    <p class="feedbacks-list__title">Наталья</p>
-                    <p class="text feedbacks-list__text">
-                        Хотим поблагодарить водителя автомобиля Шкода желтая ММ 926 77 (поездка 17.02.2020 в 20-30 по маршруту «Терминал В аэропорта Шереметьево - ул. Сходненская») за внимательность, вежливость и комфортную поездку. К сожалению, не запомнили имя водителя, но
-                        очень ему благодарны! Побольше бы таких водителей!
-                    </p>
-                    <time class="date feedbacks-list__date" datetime="2020-03-20">20 марта 2020</time>
-                </li>
-                <li class="feedbacks-list__item">
-                    <picture class="feedbacks-list__picture">
-                        <img class="feedbacks-list__image" src="" alt="">
-                    </picture>
-                    <p class="feedbacks-list__title">Мария</p>
-                    <p class="text feedbacks-list__text">
-                        Спасибо за комфортную и спокойную поездку, которую организовал Виктор, водитель Зеленый Киа С918ВК. Несмотря на долгий непростой маршрут был внимателен, вежлив, спокоен. Благодарю!
-                    </p>
-                    <time class="date feedbacks-list__date" datetime="2020-03-20">20 марта 2020</time>
-                </li>
-            </ul>
-            <button class="link feedbacks__more" type="button">Загрузить еще отзывы</button>
+            <section class="start">
+                <h1 class="page-title">Отзывы о Таксовичкоф</h1>
+                <p class="text text--small-margin">
+                    Какими бы ни были цены и предложения, следует, прежде всего, обращать своё внимание, на благодарности других людей, которые уже успели воспользоваться нашими услугами.
+                </p>
+                <p class="text text--small-margin">
+                    Наши клиенты скажут намного больше, чем мы сами, ведь взгляд со стороны всегда полней и объективней.
+                </p>
+                <button class="btn btn--small btn--green start__btn" type="button">Оформить заявку</button>
+                <ul class="list contacts-list start__contacts">
+                    <li class="contacts-list__item">
+                        <p class="contacts-list__title">Отдел контроля качества</p>
+                        <ul class="contacts-list__links">
+                            <li class="contacts-list__links-item">
+                                <a href="tel:+78123330004" class="contacts-list__number-link">+7 (812) 330-00-04</a>
+                            </li>
+                            <li class="contacts-list__links-item">
+                                <a href="mailto:info@taxovichkof.ru" class="contacts-list__mail-link">
+                                    <span class="sr-only">info@taxovichkof.ru</span>
+                                </a>
+                            </li>
+                            <li class="contacts-list__links-item">
+                                <a href="tel:+78123330004" class="contacts-list__phone-link">
+                                    <span class="sr-only">+7 (812) 330-00-04</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section class="feedbacks">
+                <h2 class="page-subtitle">Отзывы</h2>
+                <ul class="list feedbacks-list">
+                    <li class="feedbacks-list__item">
+                        <picture class="feedbacks-list__picture">
+                            <img class="feedbacks-list__image" src="" alt="">
+                        </picture>
+                        <p class="feedbacks-list__title">Артем</p>
+                        <p class="text feedbacks-list__text">
+                            Такси норм, цены и оперативность выполнения заказа достойные. Водители дружелюбные
+                        </p>
+                        <time class="date feedbacks-list__date" datetime="2020-03-20">20 марта 2020</time>
+                    </li>
+                    <li class="feedbacks-list__item">
+                        <picture class="feedbacks-list__picture">
+                            <img class="feedbacks-list__image" src="" alt="">
+                        </picture>
+                        <p class="feedbacks-list__title">Нина</p>
+                        <p class="text feedbacks-list__text">
+                            Хотела поблагодарить водителя Сергея (автомобиль Белый Киа C088PB178) за высокий профессионализм и доброжелательность. Доехали быстро, очень комфортно! Теперь только в Таксовичков!
+                        </p>
+                        <time class="date feedbacks-list__date" datetime="2020-03-20">20 марта 2020</time>
+                        <p class="text feedbacks-list__answer">
+                            <b class="feedbacks-list__answer-title">Ответ:</b> Нина, большое спасибо за отзыв! Нам очень приятно, что Вы остались довольны поездкой с нашим водителем. Будем стараться радовать Вас своей работой и дальше!
+                        </p>
+                    </li>
+                    <li class="feedbacks-list__item">
+                        <picture class="feedbacks-list__picture">
+                            <img class="feedbacks-list__image" src="" alt="">
+                        </picture>
+                        <p class="feedbacks-list__title">Наталья</p>
+                        <p class="text feedbacks-list__text">
+                            Хотим поблагодарить водителя автомобиля Шкода желтая ММ 926 77 (поездка 17.02.2020 в 20-30 по маршруту «Терминал В аэропорта Шереметьево - ул. Сходненская») за внимательность, вежливость и комфортную поездку. К сожалению, не запомнили имя водителя, но
+                            очень ему благодарны! Побольше бы таких водителей!
+                        </p>
+                        <time class="date feedbacks-list__date" datetime="2020-03-20">20 марта 2020</time>
+                    </li>
+                    <li class="feedbacks-list__item">
+                        <picture class="feedbacks-list__picture">
+                            <img class="feedbacks-list__image" src="" alt="">
+                        </picture>
+                        <p class="feedbacks-list__title">Мария</p>
+                        <p class="text feedbacks-list__text">
+                            Спасибо за комфортную и спокойную поездку, которую организовал Виктор, водитель Зеленый Киа С918ВК. Несмотря на долгий непростой маршрут был внимателен, вежлив, спокоен. Благодарю!
+                        </p>
+                        <time class="date feedbacks-list__date" datetime="2020-03-20">20 марта 2020</time>
+                    </li>
+                </ul>
+                <button class="link feedbacks__more" type="button">Загрузить еще отзывы</button>
+            </section>
         </div>
     </main>
     <footer class="footer">
-        <div class="container">
-            <ul class="list social-list">
+        <div class="container footer__container">
+            <ul class="list social-list footer__social-list">
                 <li class="social-list__item">
                     <a class="social-list__link social-list__link--vk" href="#" target="_blank" rel="noopener nofollow" title="Наш Вконтакте">
                         <span class="sr-only">Наша группа в ВК</span>
@@ -359,25 +380,144 @@
                     </a>
                 </li>
             </ul>
-            <p class="footer__text">
-                Россия, 192019, г. Санкт-Петербург, наб. Обводного канала, д 24Д , БЦ Амилен Бесплатный автобус от ст. метро «Ал.Невского»<br>
-                <a class="link" href="#">Пользовательское соглашение на использование сервисов «Таксовичкоф»</a><br> Адрес раскрытия информации: <a class="link" href="#" target="_blank" rel="nofollow">e-disclosure.ru</a>
-            </p>
-            <a class="link footer__link footer__taxi-pools" href="#">Таксопарки партнеры</a>
-            <div class="download-app-info">
+            <div class="desktop-container container__subcontainer">
+                <div class="footer__main">
+                    <div class="menu footer__menu">
+                        <ul class="list menu__list">
+                            <li class="menu__item menu__item--passenger">
+                                <button class="menu__title" type="button">Пассажирам</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Акции</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Тарифы</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Услуги</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Мобильное приложение</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--drivers">
+                                <button class="menu__title" type="button">Водителям</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Стать водителем</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Таксовичкоф Пульт</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--business">
+                                <button class="menu__title" type="button">Бизнесу</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Корпоративным клиентам</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Бизнес-кабинет</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--partners">
+                                <button class="menu__title" type="button">Партнерам</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Создать совместное предприятие</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Подключить автопарк</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Франшиза</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Для партнеров</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--about">
+                                <button class="menu__title" type="button">О компании</button>
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Новости</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Контакты</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">О нас</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Отзывы</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Вопросы и ответы</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Пресс-кит</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item menu__item--without-title">
+                                <ul class="list menu__submenu">
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Вакансии</a>
+                                    </li>
+                                    <li class="menu__submenu-item">
+                                        <a class="menu__link" href="#">Инвесторам</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="list apps-list footer__apps">
+                        <li class="apps-list__item">
+                            <a class="apps-list__link apps-list__link--appstore" href="#">
+                                <span class="sr-only">Загрузите в App Store</span>
+                            </a>
+                        </li>
+                        <li class="apps-list__item">
+                            <a class="apps-list__link apps-list__link--gplay" href="#">
+                                <span class="sr-only">Загрузите в Google Play</span>
+                            </a>
+                        </li>
+                        <li class="apps-list__item">
+                            <a class="apps-list__link apps-list__link--appgallery" href="#">
+                                <span class="sr-only">Загрузите в App Gallery</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__text-wrapper">
+                        <p class="footer__text">
+                            Россия, 192019, г. Санкт-Петербург, наб. Обводного канала, д 24Д , БЦ Амилен Бесплатный автобус от ст. метро «Ал.Невского»<br>
+                            <a class="link" href="#">Пользовательское соглашение на использование сервисов «Таксовичкоф»</a><br> Адрес раскрытия информации: <a class="link" href="#" target="_blank" rel="nofollow">e-disclosure.ru</a>
+                        </p>
+                        <a class="link footer__link footer__taxi-pools" href="#">Таксопарки партнеры</a>
+                    </div>
+                    <a href="#" class="footer__support footer__support--skolkovo" target="__blank" rel="nofollow noopener">
+                        <div class="sr-only">При поддержке Сколково</div>
+                    </a>
+                </div>
+            </div>
+            <div class="download-app-info footer__download-app-info">
                 <button class="download-app-info__close" type="button">
                     <span class="sr-only">Закрыть</span>
                 </button>
                 <span class="download-app-info__title">Возьми с собой Таксовичкоф</span>
-                <a class="download-app" href="#" rel="nofollow">
-                    <object class="download-app__icon" type="image/svg+xml" data="svg/app-store.svg" tabindex="-1">
-						<img 
-							src="images/mobile/app-store.png" 
-							srcset="images/mobile/app-store@2x.png 2x"
-							alt="Скачать приложение">
-					</object>
+                <a class="download-app-info__link download-app-info__link--appstore" href="#" rel="nofollow">
+                    <span class="sr-only">Загрузите в App Store</span>
                 </a>
             </div>
+            <button class="write-us">
+                <span class="write-us__text">Напишите нам</span>
+            </button>
         </div>
     </footer>
 </body>

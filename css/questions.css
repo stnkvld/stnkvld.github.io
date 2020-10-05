@@ -1,4 +1,4 @@
-.questions__title {
+.start__title {
     margin-bottom: 1.45em;
 }
 
@@ -20,4 +20,25 @@
 
 .question__last-btn {
     margin-bottom: 0;
+}
+
+.other {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 52rem;
+    padding-top: 2em;
+}
+
+.question__text {
+    width: 70%;
+    min-width: 61.875rem;
+}
+
+.question__wrapper {
+    display: flex;
+}
+
+.question__element:not(:last-child) {
+    margin-right: 18%;
 }

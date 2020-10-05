@@ -1,0 +1,22 @@
+@media all and (min-width: 1024px) {
+    .news-list__item {
+        width: 56rem;
+    }
+    .news-list__item--special {
+        height: 12.125rem;
+        background-color: #5EB848;
+    }
+    .news-list__picture {
+        position: absolute;
+        right: 0;
+        width: 21.5625rem;
+    }
+    .news-list__text-wrapper {
+        width: 100%;
+    }
+    .news-list__item--special .news-list__title {
+        font-size: 1.875rem;
+        line-height: 1.25;
+        padding: 0 .52em .65em;
+    }
+}

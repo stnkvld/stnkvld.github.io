@@ -1,0 +1,40 @@
+@media all and (min-width: 1024px) {
+    .start__container {
+        position: relative;
+    }
+    .start__subtitle,
+    .start__text {
+        width: 49%;
+        min-width: 43.125rem;
+    }
+    .single-page__image {
+        width: 8.125rem;
+        top: 2.375em;
+        left: auto;
+        right: 15em;
+    }
+    .start__download-app {
+        position: absolute;
+        width: 11em;
+        top: 11.25em;
+        left: auto;
+        right: 13.5em;
+    }
+    .app__slider {
+        width: 97.8%;
+        margin: 0 auto;
+    }
+    .app__slider:before {
+        content: none;
+    }
+    .app__slider .slider-items__slide:not(.swiper-slide-active) .slider-items__picture:before {
+        content: none;
+    }
+    .opportunities {
+        width: 68%;
+        min-width: 59.75rem;
+    }
+    .opportunities__download-app {
+        display: none;
+    }
+}
