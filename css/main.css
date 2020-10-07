@@ -364,16 +364,11 @@ text-transform: uppercase;
 }
 
 .stocks-slider__slide {
-    width: 4.875rem;
-    height: 7.1875rem;
-    border: .125em solid #4E6CD3;
-    border-radius: .5625em;
+    width: 7.5rem;
+    height: 11.25rem;
+    border-radius: 1.125em;
     box-sizing: border-box;
     overflow: hidden;
-}
-
-.stocks-slider__slide--wide {
-    width: 7.375rem;
 }
 
 .stocks-slider__picture {

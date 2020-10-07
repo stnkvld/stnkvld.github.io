@@ -69,7 +69,7 @@ p {
 
 .btn {
     display: block;
-    width: fit-content;
+    width: max-content;
     height: 3rem;
     font-weight: 600;
     line-height: 3rem;
@@ -123,6 +123,7 @@ p {
 }
 
 .btn--download.btn--full {
+    text-align: left;
     background-position: 2.5em center;
 }
 
@@ -249,13 +250,45 @@ p {
     width: 4em;
     height: 4em;
     background-image: url(../svg/star.svg);
-    background-size: 3.125em 3.125em;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .list--advantages.list--fixed-height .list__item:before {
     top: 0;
+}
+
+.list--advantages .list__item--delivery:before {
+    background-image: url(../svg/delivery.svg);
+}
+
+.list--advantages .list__item--courier:before {
+    background-image: url(../svg/courier.svg);
+}
+
+.list--advantages .list__item--self-driver:before {
+    background-image: url(../svg/self-driver.svg);
+}
+
+.list--advantages .list__item--transfer:before {
+    background-image: url(../svg/transfer.svg);
+}
+
+.list--advantages .list__item--priority:before {
+    background-image: url(../svg/priority.svg);
+}
+
+.list--advantages .list__item--bill:before {
+    background-image: url(../svg/bill.svg);
+}
+
+.list--advantages .list__item--protect:before {
+    background-image: url(../svg/protect.svg);
+}
+
+.list--advantages .list__item--charge:before {
+    background-image: url(../svg/charge.svg);
 }
 
 .list--dashed .list__item:before {
@@ -1178,14 +1211,29 @@ p {
     right: .36em;
 }
 
+.numbered-list__item.numbered-list__item--with-btn {
+    margin-bottom: 7rem;
+}
+
+.numbered-list__item.numbered-list__item--send:before {
+    width: 4.8125em;
+    background-image: url(../svg/send.svg);
+}
+
+.numbered-list__item.numbered-list__item--contract:before {
+    width: 3.875em;
+    background-image: url(../svg/contract.svg);
+}
+
+.numbered-list__item.numbered-list__item--car:before {
+    width: 5.125em;
+    background-image: url(../svg/comfort-plus.svg);
+}
+
 .numbered-list__title {
     font-weight: 600;
     margin: 0;
     margin-bottom: .625em;
-}
-
-.numbered-list__item.numbered-list__item--with-btn {
-    margin-bottom: 7rem;
 }
 
 .numbered-list__btn-wrapper {

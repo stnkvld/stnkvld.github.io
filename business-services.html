@@ -268,9 +268,9 @@
             </nav>
         </div>
     </header>
-    <main class="main single-page franchise">
+    <main class="main single-page business">
         <section class="start">
-            <div class="container">
+            <div class="container start__container">
                 <object class="single-page__image" type="image/svg+xml" data="svg/comfort-plus.svg" tabindex="-1">
 					<img 
 						src="images/mobile/comfort-plus.png" 
@@ -281,7 +281,7 @@
                 <p class="text start__text">
                     Это, когда вы уверены: сотрудники всегда успевают вовремя, гостям обеспечена достойная встреча, а клиенты не потеряются по пути к вам
                 </p>
-                <ul class="list contacts-list">
+                <ul class="list contacts-list start__contacts-list">
                     <li class="contacts-list__item">
                         <p class="contacts-list__title">Корпоративный отдел</p>
                         <ul class="contacts-list__links">
@@ -301,79 +301,114 @@
                         </ul>
                     </li>
                 </ul>
-                <button class="btn btn--small btn--green" type="button">Оформить заявку</button>
+                <button class="btn btn--small btn--green start__btn" type="button">Оформить заявку</button>
+                <section class="application start__application">
+                    <h2 class="page-subtitle">Оставьте заявку</h2>
+                    <form class="form application__form">
+                        <div class="form__group">
+                            <label class="form__label" for="ask-name">Имя (необязательно)</label>
+                            <input id="ask-name" class="form__input" type="text" placeholder="Представьтесь, пожалуйста" name="ask-name">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="ask-phone">Номер телефона или email</label>
+                            <input id="ask-phone" class="form__input" type="text" placeholder="Удобный способ связи" name="ask-phone">
+                        </div>
+                        <button class="btn btn--small btn--green  application__btn" type="submit">Оформить заявку</button>
+                    </form>
+                </section>
             </div>
         </section>
         <section class="emerging-opportunities">
             <div class="container">
-                <h2 class="page-subtitle">Открывающиеся возможности</h2>
-                <ul class="list list--advantages list--fixed-height">
-                    <li class="list__item">Развозка сотрудников</li>
-                    <li class="list__item">Групповые поездки</li>
-                    <li class="list__item">Курьерская доставка</li>
-                    <li class="list__item">Личный водитель</li>
-                    <li class="list__item">Трансфер</li>
+                <h2 class="page-subtitle emerging-opportunities__title">Открывающиеся возможности</h2>
+                <ul class="list list--advantages list--fixed-height emerging-opportunities__list">
+                    <li class="list__item list__item--delivery">Развозка сотрудников и групповые поездки</li>
+                    <li class="list__item list__item--courier">Курьерская доставка</li>
+                    <li class="list__item list__item--self-driver">Личный водитель</li>
+                    <li class="list__item list__item--transfer">Трансфер</li>
+                </ul>
+                <ul class="list contacts-list emerging-opportunities__contacts-list">
+                    <li class="contacts-list__item">
+                        <p class="contacts-list__title">Корпоративный отдел</p>
+                        <ul class="contacts-list__links">
+                            <li class="contacts-list__links-item">
+                                <a href="tel:+78123330008" class="contacts-list__number-link">+7 (812) 330-00-08</a>
+                            </li>
+                            <li class="contacts-list__links-item">
+                                <a href="mailto:info@taxovichkof.ru" class="contacts-list__mail-link">
+                                    <span class="sr-only">info@taxovichkof.ru</span>
+                                </a>
+                            </li>
+                            <li class="contacts-list__links-item">
+                                <a href="tel:+78123330008" class="contacts-list__phone-link">
+                                    <span class="sr-only">+7 (812) 330-00-08</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
-            <picture class="full-screen-picture">
+            <picture class="full-screen-picture emerging-opportunities__picture">
                 <source srcset="images/mobile/park.webp, images/mobile/park@2x.webp 2x" type="image/webp">
                 <img src="images/mobile/park.png" srcset="images/mobile/park@2x.png 2x" alt="О компании Таксовичкоф">
             </picture>
         </section>
         <section class="corporate">
-            <div class="container">
+            <div class="container corporate__container">
                 <h2 class="page-subtitle">Корпоративное такси в &laquo;Таксовичкоф&raquo;</h2>
-                <ul class="list">
-                    <li class="list__item">Заключение договора за 30 минут</li>
-                    <li class="list__item">Оплата счетов по факту</li>
-                    <li class="list__item">Отчеты по требуемым параметрам</li>
-                    <li class="list__item">Закрепление скидки на весь срок договора</li>
-                </ul>
-                <button class="btn btn--small btn--green" type="button">Оформить заявку</button>
-                <ul class="list list--advantages">
-                    <li class="list__item">
-                        <p class="list__text-wrapper">
-                            Приоритетная подача<br>
-                            <small>Время подачи автомобиля от 5 минут!</small>
-                        </p>
-                    </li>
-                    <li class="list__item">
-                        <p class="list__text-wrapper">
-                            Оплата «по факту»<br>
-                            <small>Пользуйтесь такси сейчас, а оплачивайте потом</small>
-                        </p>
-                    </li>
-                    <li class="list__item">
-                        <p class="list__text-wrapper">
-                            Защита бизнес-счета<br>
-                            <small>Максимальная безопасность от стороннего использования</small>
-                        </p>
-                    </li>
-                    <li class="list__item">
-                        <p class="list__text-wrapper">
-                            Зарядка для мобильных устройств<br>
-                            <small>Чтобы всегда быть на связи</small>
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="document-circ">
-            <div class="container">
-                <h2 class="page-subtitle">Удобный документооборот</h2>
-                <ul class="list list--dashed">
-                    <li class="list__item">Заключение договора за 30 минут</li>
-                    <li class="list__item">Отчеты по требуемым параметрам</li>
-                    <li class="list__item">Закрывающие документы с учетом налогообложения вашей компании</li>
-                    <li class="list__item">Детализированная выписка по счетам</li>
-                </ul>
+                <div class="corporate__wrapper">
+                    <div class="corporate__top">
+                        <ul class="list corporate__list">
+                            <li class="list__item">Заключение договора за 30 минут</li>
+                            <li class="list__item">Оплата счетов по факту</li>
+                            <li class="list__item">Отчеты по требуемым параметрам</li>
+                            <li class="list__item">Закрепление скидки на весь срок договора</li>
+                        </ul>
+                        <button class="btn btn--small btn--green corporate__btn" type="button">Оформить заявку</button>
+                        <ul class="list list--advantages corporate__second-list">
+                            <li class="list__item list__item--priority">
+                                <p class="list__text-wrapper">
+                                    Приоритетная подача<br>
+                                    <small>Время подачи автомобиля от 5 минут!</small>
+                                </p>
+                            </li>
+                            <li class="list__item list__item--bill">
+                                <p class="list__text-wrapper">
+                                    Оплата «по факту»<br>
+                                    <small>Пользуйтесь такси сейчас, а оплачивайте потом</small>
+                                </p>
+                            </li>
+                            <li class="list__item list__item--protect">
+                                <p class="list__text-wrapper">
+                                    Защита бизнес-счета<br>
+                                    <small>Максимальная безопасность от стороннего использования</small>
+                                </p>
+                            </li>
+                            <li class="list__item list__item--charge">
+                                <p class="list__text-wrapper">
+                                    Зарядка для мобильных устройств<br>
+                                    <small>Чтобы всегда быть на связи</small>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="corporate__bottom">
+                        <h2 class="page-subtitle corporate__doc-title">Удобный документооборот</h2>
+                        <ul class="list list--dashed">
+                            <li class="list__item">Заключение договора за 30 минут</li>
+                            <li class="list__item">Отчеты по требуемым параметрам</li>
+                            <li class="list__item">Закрывающие документы с учетом налогообложения вашей компании</li>
+                            <li class="list__item">Детализированная выписка по счетам</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="become-corp-client">
             <div class="container">
                 <h2 class="page-subtitle">Стать корпоративным клиентом легко</h2>
-                <ol class="list numbered-list">
-                    <li class="list__item numbered-list__item numbered-list__item--with-btn">
+                <ol class="list numbered-list become-corp-client__list">
+                    <li class="list__item numbered-list__item numbered-list__item--with-btn numbered-list__item--send">
                         <p class="numbered-list__title">Оставьте заявку на сайте</p>
                         <p class="numbered-list__text">
                             или позвоните по телефону 330-00-08
@@ -382,7 +417,7 @@
                             <button class="btn btn--small btn--green numbered-list__btn" type="button">Оформить заявку</button>
                         </div>
                     </li>
-                    <li class="list__item numbered-list__item numbered-list__item--with-btn">
+                    <li class="list__item numbered-list__item numbered-list__item--with-btn numbered-list__item--contract">
                         <p class="numbered-list__title">Заключите договор</p>
                         <p class="numbered-list__text">
                             Оформление договора займет не более 30 мин
@@ -391,7 +426,7 @@
                             <a class="btn btn--download btn--full btn--green numbered-list__btn" href="#">Скачать образец договора</a>
                         </div>
                     </li>
-                    <li class="list__item numbered-list__item">
+                    <li class="list__item numbered-list__item numbered-list__item--car">
                         <p class="numbered-list__title">Заказывать такси можно в день подписания договора</p>
                     </li>
                 </ol>
@@ -512,7 +547,7 @@
             <div class="container">
                 <h2 class="page-subtitle">Истории наших клиентов</h2>
             </div>
-            <div class="swiper-container slider-items">
+            <div class="swiper-container slider-items desktop-container">
                 <ul class="list swiper-wrapper slider-items__wrapper">
                     <li class="swiper-slide slider-items__slide">
                         <picture class="slider-items__picture">
@@ -577,7 +612,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="desktop-container container__subcontainer">
+            <div class="footer__subcontainer container__subcontainer">
                 <div class="footer__main">
                     <div class="menu footer__menu">
                         <ul class="list menu__list">
@@ -723,6 +758,12 @@
             slidesPerView: 'auto',
             spaceBetween: 20,
             centeredSlides: true,
+            breakpoints: {
+                1024: {
+                    centeredSlides: false,
+                    spaceBetween: 46
+                }
+            }
         });
     </script>
 </body>

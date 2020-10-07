@@ -1,3 +1,7 @@
+.emerging-opportunities__contacts-list {
+    display: none;
+}
+
 .partners-list {
     overflow: scroll;
     margin-bottom: 3.25em;
@@ -39,4 +43,8 @@
 
 .slider-items__slide {
     width: 13.375rem;
+}
+
+.start__application {
+    display: none;
 }

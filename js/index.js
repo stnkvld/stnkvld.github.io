@@ -6,6 +6,11 @@ var writeUs = document.querySelector('.write-us');
 var swiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto',
     spaceBetween: 8,
+    breakpoints: {
+        1024: {
+            spaceBetween: 16
+        }
+    }
 });
 
 window.addEventListener('scroll', function() {

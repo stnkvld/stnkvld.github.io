@@ -35,6 +35,10 @@
         left: 50%;
         border-radius: 0 0 1.125em 1.125em;
     }
+    .stocks-slider__slide {
+        width: 18rem;
+        height: 16rem;
+    }
     .why-tf__container {
         width: 97.8%;
         display: flex;
