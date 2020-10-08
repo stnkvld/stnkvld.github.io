@@ -1,17 +1,6 @@
 @media all and (min-width: 1024px) {
-    .header__menu {
-        background-color: transparent;
-    }
-    .header__btn-cabinet {
-        background-color: #fff;
-    }
     .city-selector {
         display: block;
-    }
-    .city-selector__city,
-    .city-selector__phone,
-    .header__menu .menu__title {
-        color: #fff;
     }
     .intro {
         height: 100vh;
@@ -114,7 +103,7 @@
     }
     .program-list__item:after {
         top: 0;
-        left: calc(50% - 1.5625em);
+        left: calc(50% - 3.5em);
     }
     .program-list__title,
     .program-list__value {
@@ -127,15 +116,15 @@
         display: flex;
     }
     .invest__basic-key {
-        background-image: url(../svg/desktop-key-autopark.svg);
-        background-size: 24em 14em;
+        background-image: url(../svg/invest-cars.svg);
+        background-size: 29.75em;
         background-position: right 20%;
         background-repeat: no-repeat;
         margin-bottom: 7.25em;
     }
     .basic {
         order: 1;
-        margin-left: 10em;
+        margin-left: 8em;
     }
     .key {
         background-image: none;
@@ -156,6 +145,9 @@
     .invest__request-contacts {
         align-items: center;
     }
+    .invest__contacts-documents {
+        width: 66%;
+    }
     .request {
         order: 1;
         width: 20.875rem;
@@ -169,6 +161,13 @@
     }
     .corp-list {
         display: flex;
+        justify-content: space-between;
+    }
+    .corp-list__item {
+        width: 28rem;
+    }
+    .documents__list {
+        width: 21.5rem;
     }
     .popup-general-info__title {
         margin-bottom: .215em;

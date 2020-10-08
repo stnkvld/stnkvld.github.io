@@ -270,12 +270,15 @@
     <main class="main single-page become-partner">
         <div class="container">
             <section class="start">
-                <object class="single-page__image" type="image/svg+xml" data="svg/comfort-plus.svg" tabindex="-1">
-					<img 
-						src="images/mobile/comfort-plus.png" 
-						srcset="images/mobile/comfort-plus@2x.png 2x"
-				  		alt="Комфорт-плюс Таксовичкоф">
-				</object>
+                <object class="single-page__image" type="image/svg+xml" data="svg/become-partner.svg" tabindex="-1">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcset="images/desktop/become-partner.png, images/desktop/become-partner@2x.png 2x" type="image/png">
+                        <img 
+                            src="images/mobile/become-partner.png" 
+                            srcset="images/mobile/become-partner@2x.png 2x"
+                            alt="Комфорт-плюс Таксовичкоф">
+                    </picture>
+                </object>
                 <h1 class="page-title">Станьте партнером &laquo;Таксовичкоф&raquo;</h1>
                 <p class="text start__text">
                     Вы получаете личный кабинет партнера для управления своим автопарком и мобильное приложение для работы водителей
@@ -362,17 +365,17 @@
             <section class="join-us">
                 <h2 class="page-subtitle page-subtitle--text-center join-us__title">Присоединяйтесь к нашей команде на выгодных условиях!</h2>
                 <ul class="list list--advantages">
-                    <li class="list__item">
+                    <li class="list__item list__item--percent">
                         <p class="list__text-wrapper">
                             <strong>Прозрачная комиссия</strong><br> Никаких скрытых платежей
                         </p>
                     </li>
-                    <li class="list__item">
+                    <li class="list__item list__item--help">
                         <p class="list__text-wrapper">
                             <strong>Персональный менеджер</strong><br> На связи с вами 24/7 будут наши операторы, логисты и техническая поддержка
                         </p>
                     </li>
-                    <li class="list__item">
+                    <li class="list__item list__item--pult">
                         <p class="list__text-wrapper">
                             <strong>Удобное приложение</strong><br> Вам будет доступна работа в приложении с удобным и понятным интерфейсом. Получайте больше выгодных заказов!
                         </p>
@@ -410,7 +413,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="desktop-container container__subcontainer">
+            <div class="footer__subcontainer container__subcontainer">
                 <div class="footer__main">
                     <div class="menu footer__menu">
                         <ul class="list menu__list">

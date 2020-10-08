@@ -269,6 +269,7 @@ p {
 
 .list--advantages .list__item--self-driver:before {
     background-image: url(../svg/self-driver.svg);
+    background-size: 4.1875em 1.375em;
 }
 
 .list--advantages .list__item--transfer:before {
@@ -289,6 +290,70 @@ p {
 
 .list--advantages .list__item--charge:before {
     background-image: url(../svg/charge.svg);
+}
+
+.list--advantages .list__item--help:before {
+    background-image: url(../svg/help.svg);
+    background-size: 3.5em 3.5em;
+}
+
+.list--advantages .list__item--clients:before {
+    background-image: url(../svg/clients.svg);
+    background-size: 3.5em 2.8125em;
+}
+
+.list--advantages .list__item--send:before {
+    background-image: url(../svg/send.svg);
+    background-size: 3.125em 2em;
+}
+
+.list--advantages .list__item--calendar:before {
+    background-image: url(../svg/calendar.svg);
+    background-size: 3em 2.625em;
+}
+
+.list--advantages .list__item--admat:before {
+    background-image: url(../svg/admat.svg);
+    background-size: 2.625em 3.5em;
+}
+
+.list--advantages .list__item--percent:before {
+    background-image: url(../svg/percent.svg);
+    background-size: 3.75em 3.5em;
+}
+
+.list--advantages .list__item--site:before {
+    background-image: url(../svg/site.svg);
+    background-size: 3.75em 2.3125em;
+}
+
+.list--advantages .list__item--book:before {
+    background-image: url(../svg/book.svg);
+    background-size: 2.125em 2.8125em;
+}
+
+.list--advantages .list__item--marketing:before {
+    background-image: url(../svg/marketing.svg);
+    background-size: 3em 2.8125em;
+}
+
+.list--advantages .list__item--feedback:before {
+    background-image: url(../svg/feedback.svg);
+    background-size: 3.75em 2.8125em;
+}
+
+.list--advantages .list__item--notebook:before {
+    background-image: url(../svg/notebook.svg);
+}
+
+.list--advantages .list__item--app:before {
+    background-image: url(../svg/app-icon.svg);
+    background-size: 2.875em 2.875em;
+}
+
+.list--advantages .list__item--pult:before {
+    background-image: url(../svg/pult.svg);
+    background-size: 2.875em 2.875em;
 }
 
 .list--dashed .list__item:before {
@@ -326,9 +391,12 @@ p {
 }
 
 .header {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     padding: 0.75em 0;
-    background-color: #fff;
+    background-color: transparent;
     z-index: 9;
 }
 
@@ -660,6 +728,44 @@ p {
     background-image: url(../svg/dropdown-white.svg);
 }
 
+.header--white .city-selector__city,
+.header--white .city-selector__phone,
+.header--white .menu__title {
+    color: #fff;
+}
+
+.header--white .header__menu {
+    background-color: transparent;
+}
+
+.header--white .header__btn-cabinet {
+    background-color: #fff;
+}
+
+.header--white .city-selector__wrapper::after {
+    background-image: url(../svg/dropdown-white.svg);
+}
+
+.header--white .menu__item--passenger .menu__title:before {
+    background-image: url(../svg/passenger-white.svg);
+}
+
+.header--white .menu__item--drivers .menu__title:before {
+    background-image: url(../svg/driver-white.svg);
+}
+
+.header--white .menu__item--partners .menu__title:before {
+    background-image: url(../svg/partners-white.svg);
+}
+
+.header--white .menu__item--more .menu__title:before {
+    background-image: url(../svg/more-white.svg);
+}
+
+.header--white .lang-switcher__btn {
+    color: #fff;
+}
+
 .text-input {
     width: 100%;
     height: 3.5rem;
@@ -850,7 +956,8 @@ p {
 }
 
 .main {
-    overflow: hidden;
+    padding-top: 4.5em;
+    overflow-x: hidden;
 }
 
 .section-float {
@@ -874,7 +981,7 @@ p {
 }
 
 .single-page {
-    padding-top: 1em;
+    padding-top: 5.5em;
 }
 
 .single-page__image {
@@ -1228,6 +1335,16 @@ p {
 .numbered-list__item.numbered-list__item--car:before {
     width: 5.125em;
     background-image: url(../svg/comfort-plus.svg);
+}
+
+.numbered-list__item.numbered-list__item--garage:before {
+    width: 7.625em;
+    background-image: url(../svg/garage.svg);
+}
+
+.numbered-list__item.numbered-list__item--check:before {
+    width: 5em;
+    background-image: url(../svg/check.svg);
 }
 
 .numbered-list__title {
@@ -1836,6 +1953,7 @@ p {
 }
 
 .overlay {
+    display: none;
     position: fixed;
     top: 0;
     right: 0;

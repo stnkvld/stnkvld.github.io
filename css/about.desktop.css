@@ -5,4 +5,8 @@
         width: 65.5%;
         min-width: 57.375rem;
     }
+    .single-page__image {
+        width: 50.125rem;
+        right: -20rem;
+    }
 }

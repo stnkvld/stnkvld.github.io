@@ -227,8 +227,9 @@
     .page-subtitle {
         font-size: 1.875rem;
     }
+    .main,
     .single-page {
-        padding: 0;
+        padding-top: 10em;
     }
     .single-page__container {
         position: relative;
@@ -353,8 +354,9 @@
         top: 0;
         left: 0;
     }
+    .numbered-list__title,
     .numbered-list__text {
-        margin-bottom: 0;
+        margin: 0;
     }
     .step-list {
         display: flex;

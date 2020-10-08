@@ -270,13 +270,16 @@
     </header>
     <main class="main single-page franchise">
         <section class="start">
-            <div class="container">
-                <object class="single-page__image" type="image/svg+xml" data="svg/comfort-plus.svg" tabindex="-1">
-					<img 
-						src="images/mobile/comfort-plus.png" 
-						srcset="images/mobile/comfort-plus@2x.png 2x"
-				  		alt="Комфорт-плюс Таксовичкоф">
-				</object>
+            <div class="container start__container">
+                <object class="single-page__image" type="image/svg+xml" data="svg/franchise.svg" tabindex="-1">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcset="images/desktop/franchise.png, images/desktop/franchise@2x.png 2x" type="image/png">
+                        <img 
+                            src="images/mobile/franchise.png" 
+                            srcset="images/mobile/franchise@2x.png 2x"
+                            alt="Комфорт-плюс Таксовичкоф">
+                    </picture>
+                </object>
                 <h1 class="page-title start__title">Франчайзинг от &laquo;Таксовичкоф&raquo;</h1>
                 <h2 class="page-subtitle start__subtitle">
                     Минимум вложений — максимальный доход
@@ -360,20 +363,20 @@
             <section class="what-we-offer">
                 <h2 class="page-subtitle">Что мы предлагаем</h2>
                 <ul class="list list--advantages list--fixed-height">
-                    <li class="list__item">Всестороннюю поддержку бизнеса до и после открытия</li>
-                    <li class="list__item">Передовое программное обеспечение и онлайн-сервис</li>
-                    <li class="list__item">Помощь при приобретении автомобилей в лизинг</li>
-                    <li class="list__item">Обучение предпринимателя и управляющего персонала</li>
-                    <li class="list__item">Масштабную рекламную кампанию в Вашем регионе и подробный брендбук</li>
+                    <li class="list__item list__item--help">Всестороннюю поддержку бизнеса до и после открытия</li>
+                    <li class="list__item list__item--site">Передовое программное обеспечение и онлайн-сервис</li>
+                    <li class="list__item list__item--self-driver">Помощь при приобретении автомобилей в лизинг</li>
+                    <li class="list__item list__item--book">Обучение предпринимателя и управляющего персонала</li>
+                    <li class="list__item list__item--marketing">Масштабную рекламную кампанию в Вашем регионе и подробный брендбук</li>
                 </ul>
             </section>
             <section class="job-platform">
                 <h2 class="page-subtitle">Готовая рабочая платформа</h2>
                 <ul class="list list--advantages list--fixed-height">
-                    <li class="list__item">Call-центр</li>
-                    <li class="list__item">Сайт</li>
-                    <li class="list__item">Мобильное приложение для клиентов</li>
-                    <li class="list__item">Мобильное приложение для водителей</li>
+                    <li class="list__item list__item--feedback">Call-центр</li>
+                    <li class="list__item list__item--notebook">Сайт</li>
+                    <li class="list__item list__item--app">Мобильное приложение для клиентов</li>
+                    <li class="list__item list__item--pult">Мобильное приложение для водителей</li>
                 </ul>
             </section>
         </div>
@@ -468,32 +471,32 @@
             <div class="container">
                 <h2 class="page-subtitle">Как же стать партнером Таксовичкоф?</h2>
                 <ol class="list numbered-list">
-                    <li class="list__item numbered-list__item">
+                    <li class="list__item numbered-list__item numbered-list__item--send">
                         <p class="numbered-list__title">Оставьте заявку на франчайзинг</p>
                         <p class="numbered-list__text">
                             Хотите узнать больше? Оставьте заявку, мы свяжемся с вами.
                         </p>
                     </li>
-                    <li class="list__item numbered-list__item">
+                    <li class="list__item numbered-list__item numbered-list__item--garage">
                         <p class="numbered-list__title">Исследуйте новые возможности</p>
                         <p class="numbered-list__text">
                             Посетите наш офис и автопарк, пообщайтесь с сотрудниками, составьте своё впечатление о бренде.
                         </p>
                     </li>
-                    <li class="list__item numbered-list__item">
+                    <li class="list__item numbered-list__item numbered-list__item--check">
                         <p class="numbered-list__title">Сообщите о своём решении</p>
                         <p class="numbered-list__text">
                             Приняв окончательное решение об открытии бизнеса под брендом «Таксовичкоф», сообщите нам об этом.
                         </p>
                     </li>
-                    <li class="list__item numbered-list__item">
+                    <li class="list__item numbered-list__item numbered-list__item--contract">
                         <p class="numbered-list__title">Присоединяйтесь к нам!</p>
                         <p class="numbered-list__text">
                             Подпишите договор концессии, оплатите франчайзинговый взнос и начните зарабатывать вместе с нами!
                         </p>
                     </li>
                 </ol>
-                <a class="btn btn--medium btn--green" href="#">Присоединиться к Таксовичкоф</a>
+                <a class="btn btn--small btn--green how-to-become-partner__btn" href="#">Присоединиться к &laquo;Таксовичкоф&raquo;</a>
             </div>
         </section>
         <section class="any-questions">
@@ -547,7 +550,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="desktop-container container__subcontainer">
+            <div class="footer__subcontainer container__subcontainer">
                 <div class="footer__main">
                     <div class="menu footer__menu">
                         <ul class="list menu__list">

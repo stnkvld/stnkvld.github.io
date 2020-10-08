@@ -1,8 +1,16 @@
 @media all and (min-width: 1024px) {
+    .start {
+        position: relative;
+        margin-bottom: 3.5em;
+    }
     .single-page__image {
-        display: none;
+        width: 50.125rem;
+        height: 21.375em;
+        top: -2em;
+        right: -2.5%;
     }
     .start__text {
+        font-size: 1.25rem;
         width: 40.5%;
         min-width: 35.5rem;
     }

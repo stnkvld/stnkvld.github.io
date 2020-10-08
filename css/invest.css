@@ -1,9 +1,12 @@
+.main.invest {
+    padding-top: 0;
+}
+
 .header {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: transparent;
 }
 
 .city-selector {
@@ -169,29 +172,29 @@
 .program-list__item:after {
     content: '';
     position: absolute;
-    top: calc(50% - 2.40625em);
+    top: calc(50% - 2.625em);
     right: 0;
-    width: 3.125em;
-    height: 4.8125em;
+    width: 7em;
+    height: 5.25em;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .program-list__item--production:after {
-    background-image: url(../svg/production.svg);
+    background-image: url(../svg/papers.svg);
 }
 
 .program-list__item--coupon:after {
-    background-image: url(../svg/coupon.svg);
+    background-image: url(../svg/percent.svg);
 }
 
 .program-list__item--term:after {
-    background-image: url(../svg/term.svg);
+    background-image: url(../svg/calendar.svg);
 }
 
 .program-list__item--par:after {
-    background-image: url(../svg/par.svg);
+    background-image: url(../svg/paper.svg);
 }
 
 .program-list__title,
@@ -278,6 +281,18 @@
 .become-investor__icon {
     display: block;
     width: 6.25rem;
+}
+
+.become-investor__icon:first-child {
+    width: 5.875rem;
+}
+
+.become-investor__icon:first-child {
+    width: 5.125rem;
+}
+
+.become-investor__icon:last-child {
+    width: 5.25rem;
 }
 
 .become-investor__icon-image {
