@@ -132,6 +132,17 @@ p {
     background-color: #5EB848;
 }
 
+.btn--white {
+    background-color: #fff;
+    box-shadow: 0 .25em .5em rgba(0, 87, 159, .2);
+}
+
+.btn__icon {
+    max-width: 8em;
+    vertical-align: middle;
+    margin-left: .5em;
+}
+
 .btn--inner-green {
     color: #5EB848;
     background-color: transparent;

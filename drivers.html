@@ -285,7 +285,18 @@
                 <p class="text intro__text">
                     Одна из крупнейших служб такси Санкт-Петербурга предлагает вам зарабатывать <span class="intro__accent">от 80 000 рублей!</span>
                 </p>
-                <button class="btn btn--small btn--green intro__btn" type="button">Присоединяйтесь к нам!</button>
+                <div class="intro__btn-wrapper">
+                    <button class="btn btn--small btn--green intro__btn" type="button">Присоединяйтесь к нам!</button>
+                    <button class="btn btn--small btn--white btn--icon intro__btn intro__pult-btn" type="button">
+                        Таксовичкоф Пульт
+                        <object class="btn__icon" type="image/svg+xml" data="svg/app-store.svg" tabindex="-1">
+                            <img 
+                                src="images/mobile/app-store.png" 
+                                srcset="images/mobile/app-store@2x.png 2x"
+                                alt="Скачать приложение">
+                        </object>
+                    </button>
+                </div>
             </div>
         </section>
         <div class="drivers__wrapper">
@@ -501,6 +512,29 @@
                         Поиск, отбор, представление кандидатов, а также обработку персональной информации, осуществляет специализированное рекрутинговое агентство. Информацию о потенциальных работодателях уточняйте на <a href="https://tfdrivers.ru/" target="_blank">https://tfdrivers.ru/</a>
                     </p>
                 </div>
+            </div>
+        </section>
+        <div class="overlay"></div>
+        <section class="popup popup-application">
+            <div class="container popup__container">
+                <button type="button" class="popup__close">
+                    <span class="sr-only">Закрыть модальное окно</span>
+                </button>
+                <h2 class="popup__title">Обратный звонок</h2>
+                <p class="text">
+                    Укажите свой номер и оператор перезвонит Вам! Круглосуточно и бесплатно
+                </p>
+                <form class="form">
+                    <div class="form__group">
+                        <label class="form__label" for="ask-name">Имя (необязательно)</label>
+                        <input id="ask-name" class="form__input" type="text" placeholder="Представьтесь, пожалуйста" name="ask-name">
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="ask-phone">Номер телефона или email</label>
+                        <input id="ask-phone" class="form__input" type="text" placeholder="Удобный способ связи" name="ask-phone">
+                    </div>
+                    <button class="btn btn--small btn--green" type="submit">Оформить заявку</button>
+                </form>
             </div>
         </section>
     </main>

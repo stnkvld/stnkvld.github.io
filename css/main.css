@@ -30,10 +30,10 @@ body {
 }
 
 .intro:after {
-    width: 100%;
+    width: 91.25%;
     height: 36vw;
     top: -20vw;
-    left: 0;
+    left: 4.375%;
     background-image: url(../svg/comfort-plus.svg);
 }
 
@@ -151,6 +151,13 @@ body {
 
 .why-tf__list-item:not(:last-child) {
     margin-bottom: 2.5em;
+}
+
+.why-tf__list-item--new .why-tf__list-title:after {
+    content: 'NEW';
+    font-size: 1rem;
+    color: #4E6CD3;
+    margin-left: .5em;
 }
 
 .why-tf__list-title {
@@ -529,28 +536,91 @@ text-transform: uppercase;
     text-decoration: line-through;
 }
 
-.round-tabs__list {
+.round-tabs {
     position: relative;
+    padding-top: 7em;
+}
+
+.round-tabs__list {
+    position: absolute;
+    top: 0;
+    width: 100%;
     height: 10.375rem;
+    z-index: 9;
 }
 
 .round-tabs__item {
     position: absolute;
-    transform: translateX(-2.25rem)
-}
-
-.round-tabs__label {
-    display: inline-block;
     width: 19.2vw;
     min-width: 4.5rem;
     height: 19.2vw;
     min-height: 4.5rem;
+    transform: translateX(-2.25rem);
+    transition: top .3s ease-in-out, left .3s ease-in-out;
+}
+
+.round-tabs__label {
+    display: block;
+    width: 100%;
+    height: 100%;
     background: #F6E459;
     border-radius: 50%;
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
     transition: all .3s ease-in-out;
+}
+
+.round-tabs__label--courier {
+    background-image: url(../svg/courier.svg);
+}
+
+.round-tabs__label--chair {
+    background-image: url(../svg/chair.svg);
+}
+
+.round-tabs__label--payment {
+    background-image: url(../svg/payment.svg);
+}
+
+.round-tabs__label--garage {
+    background-image: url(../svg/garage.svg);
+}
+
+.round-tabs__label--auction {
+    background-image: url(../svg/auction.svg);
+}
+
+.round-tabs__label--percent {
+    background-image: url(../svg/percent.svg);
+}
+
+.round-tabs__label--med {
+    background-image: url(../svg/med.svg);
 }
 
 .round-tabs__radio:checked+.round-tabs__label {
     background-color: #fff;
     box-shadow: 0 .25em .5em rgba(0, 87, 159, .2);
+}
+
+.round-tabs__content {
+    display: none;
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+.round-tabs__content--show {
+    display: block;
+}
+
+.round-tabs__image {
+    width: 7.375rem;
+}
+
+.round-tabs__title {
+    font-size: 1.5rem;
+    color: #5EB848;
+    margin-top: 1em;
+    margin-bottom: 0;
 }

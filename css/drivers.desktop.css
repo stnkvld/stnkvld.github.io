@@ -111,4 +111,17 @@
         width: 20.5rem;
         margin-left: auto;
     }
+    .popup-application {
+        width: 25.5rem;
+        left: calc(50% - 12.75rem);
+    }
+    .intro__btn-wrapper {
+        display: flex;
+    }
+    .intro__btn {
+        margin: 0;
+    }
+    .intro__pult-btn {
+        margin-left: 1em;
+    }
 }
