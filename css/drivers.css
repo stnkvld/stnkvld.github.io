@@ -1,69 +1,45 @@
 .intro,
 .why-tf {
     position: relative;
-    color: #fff;
-    background-color: #5EB848;
 }
 
 .intro {
     position: relative;
-    background-color: #5EB848;
-    padding-top: 51.2vw;
-    padding-bottom: 2.1875em;
-    background-image: url(../images/mobile/drivers-intro@2x.png);
-    background-position: top left;
-    background-size: 96%;
-    background-repeat: no-repeat;
+}
+
+.intro__image {
+    width: 100%;
+    margin-bottom: 2.625em;
 }
 
 .intro__title {
     font-size: 1.75rem;
     line-height: 1.25;
-    color: #fff;
     margin: 0;
-    margin-bottom: 1.15em;
+    margin-bottom: .5em;
 }
 
-.intro__submit {
-    margin-bottom: 0;
+.intro__text {
+    font-size: 1.25rem;
+    margin-bottom: 1em;
+}
+
+.intro__accent {
+    color: #4e6cd3;
+    font-weight: 700;
+}
+
+.intro__btn {
+    margin-left: 0;
 }
 
 .why-tf {
     position: relative;
-    padding-top: 2.1875em;
-    padding-bottom: 10em;
-}
-
-.why-tf:after {
-    content: '';
-    position: absolute;
-    bottom: -.25em;
-    left: -2em;
-    width: 22rem;
-    height: 8.25rem;
-    background-image: url(../svg/comfort-plus.svg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .why-tf__title {
     position: relative;
-    color: #fff;
-    margin-bottom: 5.6em;
-}
-
-.why-tf__title:after {
-    content: '';
-    position: absolute;
-    top: calc(100% + .58em);
-    left: 0;
-    width: 100%;
-    height: 5.125rem;
-    background-image: url(../svg/why-tf-text.svg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    font-size: 1.25rem;
 }
 
 .why-tf__text {
@@ -76,18 +52,53 @@
     font-weight: 500;
 }
 
-.work {
-    padding-top: 1.75em;
-    padding-bottom: 65.5vw;
-    background-image: url(../images/mobile/drivers-work@2x.png);
-    background-position: bottom left;
-    background-size: 96%;
+.work__title {
+    font-size: 1.25rem;
+}
+
+.join__title {
+    color: #5EB848;
+}
+
+.join__list-item {
+    position: relative;
+    width: 18rem;
+    padding-top: 6.25em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.join__list-item:not(:last-child) {
+    margin-bottom: 2em;
+}
+
+.join__list-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(50% - 2.75em);
+    width: 5.5em;
+    height: 5.5em;
+    background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
-.drivers__subtitle {
+.join__list-item--interview:before {
+    background-image: url(../svg/book.svg);
+}
+
+.join__list-item--order:before {
+    background-image: url(../svg/accept-order.svg);
+}
+
+.join__list-item--address:before {
+    background-image: url(../svg/map.svg);
+}
+
+.options__title {
     color: #5EB848;
-    margin-bottom: 1.9em;
+    text-align: center;
 }
 
 .reviews__item {
@@ -132,13 +143,13 @@
     margin: 0;
 }
 
-.independence__title,
 .independence__subtitle {
-    text-align: center;
+    color: #5EB848;
 }
 
-.application {
-    display: none;
+.independence__text {
+    font-size: .75rem;
+    color: #757575;
 }
 
 .numbered-list__item.join__numbered-list-item {

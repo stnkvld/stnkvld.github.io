@@ -1507,6 +1507,10 @@ p {
     counter-reset: num;
 }
 
+.step-list__title {
+    color: #757575;
+}
+
 .step-list__title:before {
     content: counter(num) '. ';
     counter-increment: num;
@@ -1961,6 +1965,65 @@ p {
     left: 0;
     background-color: rgba(0, 0, 0, .7);
     z-index: 9999;
+}
+
+.packets-list__item {
+    max-width: 296px;
+    border-radius: 1.125em;
+    padding: 1.125em 1.125em 3em 1.125em;
+    box-sizing: border-box;
+}
+
+.packets-list__item--yellow {
+    background-color: #F6E459;
+}
+
+.packets-list__item--yellow .packets-list__values-value {
+    color: #4E6CD3;
+}
+
+.packets-list__item--orange {
+    background-color: #E39E32;
+}
+
+.packets-list__item--orange .packets-list__values-value {
+    color: #F6E459;
+}
+
+.packets-list__item--green {
+    background-color: #52B885;
+}
+
+.packets-list__number {
+    font-size: .75rem;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: .5em;
+}
+
+.packets-list__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.packets-list__text {
+    min-height: 145px;
+}
+
+.packets-list__values-item:not(:last-child) {
+    margin-bottom: 1.5em;
+}
+
+.packets-list__values-title,
+.packets-list__values-value {
+    font-weight: 600;
+    margin: 0;
+}
+
+.packets-list__values-value {
+    font-size: 1.25rem;
 }
 
 @media screen and (min-width: 641px) {

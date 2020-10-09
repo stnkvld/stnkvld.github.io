@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Таксовичкоф - Водителям</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/drivers.css">
     <link rel="stylesheet" href="css/style.desktop.css" media="(min-width: 1024px)">
@@ -13,14 +14,14 @@
 </head>
 
 <body>
-    <header class="header header--green header--drivers">
+    <header class="header">
         <div class="container header__container">
             <a class="logo header__logo" href="/">
                 <picture>
                     <source media="(min-width: 1024px)" srcset="svg/logo-full.svg" type="image/svg+xml">
                     <source media="(min-width: 1024px)" srcset="svg/logo-full.png" type="image/png">
-                    <source media="(max-width: 1023px)" srcset="svg/logo-small-yellow.svg" type="image/svg+xml">
-                    <img class="logo__image" src="images/mobile/logo-small-yellow.png" alt="Логотип">
+                    <source media="(max-width: 1023px)" srcset="svg/logo-small.svg" type="image/svg+xml">
+                    <img class="logo__image" src="images/mobile/logo-small.png" alt="Логотип">
                 </picture>
             </a>
             <div class="city-selector header__city-selector">
@@ -267,103 +268,163 @@
             </nav>
         </div>
     </header>
-    <main class="main drivers">
+    <main class="main single-page drivers">
         <section class="intro">
             <div class="container">
+                <object class="single-page__image intro__image" type="image/svg+xml" data="svg/become-driver.svg" tabindex="-1">
+                    <picture>
+                        <img 
+                            src="images/mobile/become-driver.png" 
+                            srcset="images/mobile/become-driver@2x.png 2x"
+                            alt="Комфорт-плюс Таксовичкоф">
+                    </picture>
+                </object>
                 <h1 class="intro__title">
-                    Берите выгодные заказы и получайте <span class="intro__accent">от 80 000 рублей!</span>
+                    Станьте водителем &laquo;Таксовичкоф&raquo;
                 </h1>
-                <form class="form intro__form" action="">
-                    <div class="form__group">
-                        <label class="form__label" for="name">Имя (необязательно)</label>
-                        <input id="name" class="form__input" type="text" placeholder="Представьтесь, пожалуйста" name="name">
-                    </div>
-                    <div class="form__group">
-                        <label class="form__label" for="contact">Номер телефона или email</label>
-                        <input id="contact" class="form__input" type="text" placeholder="Удобный способ связи" name="contact">
-                    </div>
-                    <button class="btn btn--small btn--yellow intro__submit" type="submit">Отправить заявку</button>
-                </form>
-            </div>
-        </section>
-        <section class="why-tf">
-            <h2 class="page-title why-tf__title">
-                <div class="container why-tf__container">
-                    Почему &laquo;Таксовичкоф&raquo;?
-                </div>
-            </h2>
-            <div class="container why-tf__container">
-                <p class="text why-tf__text">
-                    Одна из крупнейших служб такси Санкт-Петербурга предлагает вам зарабатывать<br><strong class="why-tf__accent">от 80 000 рублей!</strong>
+                <p class="text intro__text">
+                    Одна из крупнейших служб такси Санкт-Петербурга предлагает вам зарабатывать <span class="intro__accent">от 80 000 рублей!</span>
                 </p>
+                <button class="btn btn--small btn--green intro__btn" type="button">Присоединяйтесь к нам!</button>
             </div>
         </section>
-        <div class="work-application">
+        <div class="drivers__wrapper">
+            <section class="why-tf">
+                <div class="container">
+                    <h2 class="page-title why-tf__title">
+                        Почему &laquo;Таксовичкоф&raquo;?
+                    </h2>
+                    <ul class="list">
+                        <li class="list__item">Удобное приложение для работы <a class="link" href="#">&laquo;Таксовичкоф Пульт&raquo;</a></li>
+                        <li class="list__item">Собственная диспетчерская служба и круглосуточная служба поддержки для партнеров и водителей</li>
+                        <li class="list__item">Компенсация минимальных заказов</li>
+                        <li class="list__item">Отсутствие дополнительных и скрытых комиссий</li>
+                        <li class="list__item">Дополнительная мотивация водителей</li>
+                        <li class="list__item">Постоянный поток заказов</li>
+                        <li class="list__item">Узнаваемый и престижный бренд</li>
+                        <li class="list__item">Оформление лицензии</li>
+                    </ul>
+                </div>
+            </section>
             <section class="work">
                 <div class="container">
-                    <h2 class="page-title">Работайте, когда захотите!</h2>
-                    <p class="page-subtitle drivers__subtitle work__subtitle">
-                        Ежедневную выручку вы оставляете себе! Прозрачный расчет заработка в программе
-                    </p>
+                    <h2 class="page-title work__title">Начало работы</h2>
                     <ol class="list step-list work__step-list">
                         <li class="list__item step-list__item work__step-list-item">
-                            <h3 class="list__title step-list__title">Оформить документы</h3>
-                            <p class="text text--small-margin">Лицензия – залог нашей и вашей надежности. Специалисты компании могут проконсультировать.</p>
-                        </li>
-                        <li class="list__item step-list__item work__step-list-item">
-                            <h3 class="list__title step-list__title">Пройдите обучение</h3>
-                            <p class="text text--small-margin">Мы ответственно относимся как к водителям, так и к пассажирам, поэтому мы просим пройти инструктаж по работе с клиентами и программным обеспечением. У нас есть собственная программа, которой удобно и легко пользоваться даже
-                                новичку.
+                            <h3 class="list__title step-list__title">
+                                Заполните <a class="link" href="#">заявку</a> на сайте
+                            </h3>
+                            <p class="text text--small-margin">
+                                Лицензия – залог нашей и вашей надежности. Специалисты компании могут проконсультировать в получении лицензии водителя такси.
                             </p>
                         </li>
                         <li class="list__item step-list__item work__step-list-item">
-                            <h3 class="list__title step-list__title">Выходите на линию</h3>
-                            <p class="text text--small-margin">Выезжайте в удобное время, а мы будем подсказывать, когда лучше это сделать, и обеспечим постоянным потоком заказов.</p>
+                            <h3 class="list__title step-list__title">Обучение и поддержка</h3>
+                            <p class="text text--small-margin">
+                                Мы ответственно относимся как к водителям, так и к пассажирам, поэтому мы проводим инструктаж по работе с клиентами и программным обеспечением. У нас есть собственное удобное приложение для водителей, которым легко пользоваться даже новичку.
+                            </p>
+                        </li>
+                        <li class="list__item step-list__item work__step-list-item">
+                            <h3 class="list__title step-list__title">Выход на линию</h3>
+                            <p class="text text--small-margin">
+                                Выезжайте в удобное время, а мы будем подсказывать, когда лучше это сделать, и обеспечим постоянным потоком заказов.
+                            </p>
                         </li>
                     </ol>
-                    <button class="btn btn--small btn--yellow" type="button">Присоединяйтесь к нам!</button>
                 </div>
-            </section>
-            <section class="application">
-                <form class="form application__form" action="">
-                    <h2 class="form__title">Оставьте заявку</h2>
-                    <div class="form__group">
-                        <label class="form__label" for="name">Имя (необязательно)</label>
-                        <input id="name" class="form__input" type="text" placeholder="Представьтесь, пожалуйста" name="name">
-                    </div>
-                    <div class="form__group">
-                        <label class="form__label" for="contact">Номер телефона или email</label>
-                        <input id="contact" class="form__input" type="text" placeholder="Удобный способ связи" name="contact">
-                    </div>
-                    <button class="btn btn--small btn--green" type="submit">Отправить заявку</button>
-                </form>
             </section>
         </div>
         <section class="join">
             <div class="container">
-                <h2 class="page-title join__title">Работа есть всегда! Присоединяйтесь!</h2>
-                <p class="page-subtitle drivers__subtitle join__subtitle">Водитель такси - это просто</p>
-                <ol class="list numbered-list join__numbered-list">
-                    <li class="list__item numbered-list__item join__numbered-list-item">
+                <h2 class="page-title join__title">Водитель такси - это просто</h2>
+                <ul class="list join__list">
+                    <li class="list__item join__list-item join__list-item--interview">
                         Пройдите собеседование и инструктаж
                     </li>
-                    <li class="list__item numbered-list__item join__numbered-list-item">
+                    <li class="list__item join__list-item join__list-item--order">
                         Примите заказ одним нажатием
                     </li>
-                    <li class="list__item numbered-list__item join__numbered-list-item">
+                    <li class="list__item join__list-item join__list-item--address">
                         Доставьте пассажира по указанному адресу
                     </li>
-                    <li class="list__item numbered-list__item join__numbered-list-item">
-                        Получите деньги
+                </ul>
+            </div>
+        </section>
+        <section class="options">
+            <div class="container">
+                <h2 class="page-title options__title">Варианты сотрудничества</h2>
+            </div>
+            <div class="swiper-container packets-list">
+                <ul class="list swiper-wrapper packets-list__list">
+                    <li class="list__item swiper-slide packets-list__item packets-list__item--yellow">
+                        <p class="packets-list__number">На своем автомобиле</p>
+                        <p class="packets-list__title">Личный А/М</p>
+                        <p class="text text--small-margin packets-list__text">
+                            Покупка смен; гарантированный минимальный заработок; повышающие коэфициенты;Бонусы при оклейке в бренд.
+                        </p>
+                        <ul class="list packets-list__values">
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Процент комисии</p>
+                                <p class="packets-list__values-value">от 23%</p>
+                            </li>
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">График</p>
+                                <p class="packets-list__values-value">Свободный</p>
+                            </li>
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Требования к авто</p>
+                                <p class="packets-list__values-value">Иномарки старше 10 лет</p>
+                            </li>
+                        </ul>
                     </li>
-                </ol>
-                <button class="btn btn--small btn--yellow" type="button">Присоединяйтесь к нам!</button>
+                    <li class="list__item swiper-slide packets-list__item packets-list__item--orange">
+                        <p class="packets-list__number">На своем автомобиле</p>
+                        <p class="packets-list__title">Личный А/М</p>
+                        <p class="text text--small-margin packets-list__text">
+                            Покупка смен; гарантированный минимальный заработок; повышающие коэфициенты;Бонусы при оклейке в бренд.
+                        </p>
+                        <ul class="list packets-list__values">
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Процент комисии</p>
+                                <p class="packets-list__values-value">от 23%</p>
+                            </li>
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">График</p>
+                                <p class="packets-list__values-value">Свободный</p>
+                            </li>
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Требования к авто</p>
+                                <p class="packets-list__values-value">Иномарки старше 10 лет</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list__item swiper-slide packets-list__item packets-list__item--green">
+                        <p class="packets-list__number">На своем автомобиле</p>
+                        <p class="packets-list__title">Личный А/М</p>
+                        <p class="text text--small-margin packets-list__text">
+                            Покупка смен; гарантированный минимальный заработок; повышающие коэфициенты;Бонусы при оклейке в бренд.
+                        </p>
+                        <ul class="list packets-list__values">
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Процент комисии</p>
+                                <p class="packets-list__values-value">от 23%</p>
+                            </li>
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">График</p>
+                                <p class="packets-list__values-value">Свободный</p>
+                            </li>
+                            <li class="packets-list__values-item">
+                                <p class="packets-list__values-title">Требования к авто</p>
+                                <p class="packets-list__values-value">Иномарки старше 10 лет</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="reviews">
             <div class="container">
-                <h2 class="page-title reviews__title">Независимость. Стабильность. Свобода.</h2>
-                <p class="page-subtitle drivers__subtitle">Сколько зарабатывают наши водители?</p>
+                <h2 class="page-subtitle drivers__subtitle">Сколько зарабатывают наши водители?</h2>
                 <ul class="list reviews__list">
                     <li class="list__item reviews__item">
                         <picture class="reviews__photo">
@@ -408,7 +469,6 @@
                         </p>
                     </li>
                 </ul>
-                <button class="btn btn--small btn--yellow reviews__join-us" type="button">Присоединяйтесь к нам!</button>
             </div>
         </section>
         <section class="independence">
@@ -436,18 +496,10 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="form independence__form" action="">
-                        <h2 class="form__title">Оставьте заявку</h2>
-                        <div class="form__group">
-                            <label class="form__label" for="name">Имя (необязательно)</label>
-                            <input id="name" class="form__input" type="text" placeholder="Представьтесь, пожалуйста" name="name">
-                        </div>
-                        <div class="form__group">
-                            <label class="form__label" for="contact">Номер телефона или email</label>
-                            <input id="contact" class="form__input" type="text" placeholder="Удобный способ связи" name="contact">
-                        </div>
-                        <button class="btn btn--small btn--green" type="submit">Отправить заявку</button>
-                    </form>
+                    <button class="btn btn--small btn--green independence__button" type="button">Перезвоните мне</button>
+                    <p class="text independence__text">
+                        Поиск, отбор, представление кандидатов, а также обработку персональной информации, осуществляет специализированное рекрутинговое агентство. Информацию о потенциальных работодателях уточняйте на <a href="https://tfdrivers.ru/" target="_blank">https://tfdrivers.ru/</a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -481,7 +533,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="footer__subcontainer container__subcontainer">
+            <div class="footer__subcontainer container--subcontainer">
                 <div class="footer__main">
                     <div class="menu footer__menu">
                         <ul class="list menu__list">
@@ -621,6 +673,19 @@
             </button>
         </div>
     </footer>
+    <script src="js/swiper.js"></script>
+    <script>
+        var swiper = new Swiper('.packets-list', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            centeredSlides: true,
+            breakpoints: {
+                1024: {
+                    centeredSlides: false,
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

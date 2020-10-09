@@ -465,7 +465,8 @@ text-transform: uppercase;
     padding-top: 1.5em;
 }
 
-.tarif-select__radio {
+.tarif-select__radio,
+.round-tabs__radio {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -526,4 +527,30 @@ text-transform: uppercase;
 
 .tarif-select__sale {
     text-decoration: line-through;
+}
+
+.round-tabs__list {
+    position: relative;
+    height: 10.375rem;
+}
+
+.round-tabs__item {
+    position: absolute;
+    transform: translateX(-2.25rem)
+}
+
+.round-tabs__label {
+    display: inline-block;
+    width: 19.2vw;
+    min-width: 4.5rem;
+    height: 19.2vw;
+    min-height: 4.5rem;
+    background: #F6E459;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+
+.round-tabs__radio:checked+.round-tabs__label {
+    background-color: #fff;
+    box-shadow: 0 .25em .5em rgba(0, 87, 159, .2);
 }

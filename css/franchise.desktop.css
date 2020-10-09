@@ -62,10 +62,6 @@
         width: 21.5625rem;
         margin-right: 8.75em;
     }
-    .packets-list__list {
-        display: flex;
-        justify-content: center;
-    }
     .how-to-become-partner__btn {
         margin-left: 0;
     }
