@@ -442,4 +442,36 @@
         display: flex;
         justify-content: center;
     }
+    .stocks-list__item {
+        width: 18rem;
+        height: 16rem;
+        margin-bottom: 3.25em;
+    }
+    .stocks-list__text-wrapper {
+        width: 100%;
+    }
+    .stocks-list__title {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .stocks-list__title:before {
+        content: '';
+        width: 3em;
+        height: 3em;
+        flex-shrink: 0;
+        background-color: #FBDC00;
+        background-image: url(../svg/calendar-yellow.svg);
+        background-position: center;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        margin-right: .625em;
+    }
+}
+
+@media all and (min-width: 1440px) {
+    .container {
+        max-width: 1406px;
+    }
 }

@@ -30,7 +30,14 @@
 }
 
 .intro__btn {
+    padding-left: 1.75em;
+    padding-right: 1.75em;
     margin-left: 0;
+}
+
+.intro__pult-btn {
+    padding-left: 1.25em;
+    padding-right: 1.25em;
 }
 
 .why-tf {

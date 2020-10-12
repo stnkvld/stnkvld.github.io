@@ -93,6 +93,11 @@ const stocksSlider = new Swiper('.stocks-slider', {
     }
 });
 
+const servicesSlider = new Swiper('.services-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 48,
+});
+
 window.addEventListener('scroll', function() {
     if (qualityControl.getBoundingClientRect().bottom - writeUs.getBoundingClientRect().bottom > -50) {
         writeUs.classList.add('write-us--quality');

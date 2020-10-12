@@ -85,6 +85,21 @@
     .round-tabs {
         display: none;
     }
+    .services-slider {
+        display: block;
+    }
+    .services-slider__slide {
+        width: 15.25rem;
+        text-align: center;
+    }
+    .services-slider__image {
+        height: 6.5625rem;
+    }
+    .services-slider__title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: .8em 0;
+    }
     .footer {
         margin-top: 2.35em;
     }

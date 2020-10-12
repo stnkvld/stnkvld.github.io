@@ -374,6 +374,7 @@ text-transform: uppercase;
     width: 7.5rem;
     height: 11.25rem;
     border-radius: 1.125em;
+    background: linear-gradient(180deg, rgba(80, 184, 72, 0) 0%, #50B848 48.44%);
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -538,7 +539,9 @@ text-transform: uppercase;
 
 .round-tabs {
     position: relative;
+    min-height: 20rem;
     padding-top: 7em;
+    box-sizing: border-box;
 }
 
 .round-tabs__list {
@@ -546,6 +549,10 @@ text-transform: uppercase;
     top: 0;
     width: 100%;
     height: 10.375rem;
+    background-image: url(../svg/arc.svg);
+    background-size: cover;
+    background-position: 0 2.25em;
+    background-repeat: no-repeat;
     z-index: 9;
 }
 
@@ -623,4 +630,8 @@ text-transform: uppercase;
     color: #5EB848;
     margin-top: 1em;
     margin-bottom: 0;
+}
+
+.services-slider {
+    display: none;
 }
