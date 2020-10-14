@@ -746,6 +746,10 @@ p {
     color: #fff;
 }
 
+.header--white .menu__item:hover .menu__title {
+    color: inherit;
+}
+
 .header--white .header__menu {
     background-color: transparent;
 }
@@ -758,19 +762,19 @@ p {
     background-image: url(../svg/dropdown-white.svg);
 }
 
-.header--white .menu__item--passenger .menu__title:before {
+.header--white .menu__item--passenger:not(:hover) .menu__title:before {
     background-image: url(../svg/passenger-white.svg);
 }
 
-.header--white .menu__item--drivers .menu__title:before {
+.header--white .menu__item--drivers:not(:hover) .menu__title:before {
     background-image: url(../svg/driver-white.svg);
 }
 
-.header--white .menu__item--partners .menu__title:before {
+.header--white .menu__item--partners:not(:hover) .menu__title:before {
     background-image: url(../svg/partners-white.svg);
 }
 
-.header--white .menu__item--more .menu__title:before {
+.header--white .menu__item--more:not(:hover) .menu__title:before {
     background-image: url(../svg/more-white.svg);
 }
 
@@ -974,6 +978,10 @@ p {
 
 .section-float {
     box-sizing: border-box;
+}
+
+.section-float__container {
+    width: 100%;
 }
 
 .section-float--left,
@@ -1685,7 +1693,9 @@ p {
 }
 
 .write-us {
+    display: block;
     position: fixed;
+    opacity: 0;
     right: 1em;
     bottom: 1em;
     width: 3.5rem;
@@ -1699,11 +1709,11 @@ p {
     background-repeat: no-repeat;
     box-shadow: 0 .25em .25em rgba(0, 0, 0, .25);
     padding: 0;
+    z-index: 99;
 }
 
-.write-us--quality {
-    position: absolute;
-    bottom: 25.5em;
+.write-us--show {
+    opacity: 1;
 }
 
 .write-us:before {
@@ -1719,7 +1729,15 @@ p {
     background-repeat: no-repeat;
 }
 
-.write-us--quality:before {
+.quality-control__write-us {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin-top: 1.25em;
+    margin-left: auto;
+}
+
+.quality-control__write-us:before {
     content: none;
 }
 
@@ -1732,7 +1750,7 @@ p {
     color: #757575;
 }
 
-.write-us--quality .write-us__text {
+.quality-control__write-us .write-us__text {
     bottom: calc(50% - .5em);
     right: calc(100% + 1.125em);
     font-size: 1rem;
@@ -2065,6 +2083,7 @@ p {
 }
 
 .stocks-list__text-wrapper {
+    width: 100%;
     display: flex;
     align-items: flex-end;
     position: absolute;
@@ -2076,10 +2095,13 @@ p {
 
 .stocks-list__title {
     display: block;
+    width: 100%;
+    font-size: .75rem;
     font-weight: 600;
     text-shadow: 0 0.125em 0 rgba(0, 0, 0, .5);
     color: #fff;
     padding: 0 1em 1em;
+    box-sizing: border-box;
 }
 
 @media screen and (min-width: 641px) {

@@ -38,6 +38,12 @@
     .intro__btn {
         margin-left: 0;
     }
+    .calculator {
+        margin-bottom: 8.875em;
+    }
+    .calculator::after {
+        bottom: -4.5em;
+    }
     .calculator__title,
     .calculator__text {
         text-align: center;
@@ -77,9 +83,6 @@
     }
     .calculator__release-number {
         display: none;
-    }
-    .know-more {
-        padding-top: 2.5em;
     }
     .know-more__title {
         width: 21.5rem;
@@ -171,11 +174,6 @@
     }
     .popup-general-info__title {
         margin-bottom: .215em;
-    }
-    .popup-general-info__list {
-        max-height: 455px;
-        overflow-y: scroll;
-        margin-bottom: 2em;
     }
 }
 

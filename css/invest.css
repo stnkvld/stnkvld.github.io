@@ -111,12 +111,24 @@
 }
 
 .calculator {
-    /* background-image: url(../svg/calculator-bg.svg);
+    position: relative;
+    background-color: #161b43;
+    padding: 1.25em 0 0;
+    margin-bottom: 4em;
+}
+
+.calculator:after {
+    content: '';
+    position: absolute;
+    bottom: -2.25em;
+    left: 0;
+    width: 100%;
+    height: 19.75rem;
+    background-image: url(../svg/invest-calc-bg.svg);
     background-size: 100%;
-    background-position: center;
-    background-repeat: repeat; */
-    background-color: #1C2145;
-    padding: 1.25em 0 3.5em;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 .calculator__title {

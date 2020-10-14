@@ -4,7 +4,49 @@ const roundTabs = document.querySelectorAll('.round-tabs__item');
 let roundTabsFirst = Math.ceil(roundTabs.length / 2) - 1;
 const roundTabsLength = roundTabs.length;
 const qualityControl = document.querySelector('.quality-control');
-const writeUs = document.querySelector('.write-us');
+const qualityWriteUs = qualityControl.querySelector('.write-us');
+const footerWriteUs = document.querySelector('.footer__write-us');
+
+if (document.body.clientWidth < 1024) {
+    var Visible = function(target) {
+        // Все позиции элемента
+        var targetPosition = {
+                top: window.pageYOffset + target.getBoundingClientRect().top,
+                left: window.pageXOffset + target.getBoundingClientRect().left,
+                right: window.pageXOffset + target.getBoundingClientRect().right,
+                bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+            },
+            // Получаем позиции окна
+            windowPosition = {
+                top: window.pageYOffset,
+                left: window.pageXOffset,
+                right: window.pageXOffset + document.documentElement.clientWidth,
+                bottom: window.pageYOffset + document.documentElement.clientHeight
+            };
+
+        if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+            targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+            targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+            targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+            // Если элемент полностью видно, то запускаем следующий код
+            qualityWriteUs.classList.add('write-us--show');
+            if (footerWriteUs.getBoundingClientRect().top >= qualityWriteUs.getBoundingClientRect().top) {
+                qualityWriteUs.classList.remove('write-us--show');
+                footerWriteUs.classList.add('write-us--show');
+            } else {
+                qualityWriteUs.classList.add('write-us--show');
+                footerWriteUs.classList.remove('write-us--show');
+            }
+        }
+    };
+
+    window.addEventListener('scroll', function() {
+        Visible(qualityWriteUs);
+    });
+
+    // А также запустим функцию сразу. А то вдруг, элемент изначально видно
+    Visible(qualityWriteUs);
+}
 
 roundTabs[roundTabsFirst].querySelector('.round-tabs__radio').checked = true;
 roundTabs[roundTabsFirst].style.top = 0;
@@ -96,10 +138,4 @@ const stocksSlider = new Swiper('.stocks-slider', {
 const servicesSlider = new Swiper('.services-slider', {
     slidesPerView: 'auto',
     spaceBetween: 48,
-});
-
-window.addEventListener('scroll', function() {
-    if (qualityControl.getBoundingClientRect().bottom - writeUs.getBoundingClientRect().bottom > -50) {
-        writeUs.classList.add('write-us--quality');
-    }
 });

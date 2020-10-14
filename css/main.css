@@ -337,7 +337,7 @@ text-transform: uppercase;
 
 .quality-control {
     background-color: #5EB848;
-    padding: 1.875em 1.5em 7.5em;
+    padding: 1.875em 1em 2.5em 1.5em;
 }
 
 .quality-control__title {
@@ -632,6 +632,29 @@ text-transform: uppercase;
     margin-bottom: 0;
 }
 
+.services {
+    margin-bottom: 5em;
+}
+
 .services-slider {
     display: none;
+}
+
+.popup-story {
+    padding-top: 0;
+}
+
+.popup-story__container {
+    padding-top: 2.125em;
+}
+
+.popup-story__picture {
+    width: 100%;
+    height: 35.5rem;
+}
+
+.popup-story__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

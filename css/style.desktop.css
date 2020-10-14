@@ -370,7 +370,10 @@
         border-radius: 1.125em;
     }
     .popup__list {
-        margin-bottom: 4.875em;
+        max-height: 31.25rem;
+        overflow-y: scroll;
+        margin-bottom: 2em;
+        /* margin-bottom: 4.875em; */
     }
     .popup__footer-close {
         margin: 0 auto;
@@ -453,6 +456,7 @@
     .stocks-list__title {
         display: flex;
         align-items: center;
+        font-size: 1.25rem;
         width: 100%;
     }
     .stocks-list__title:before {

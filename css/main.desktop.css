@@ -82,6 +82,16 @@
     .quality-control {
         padding: 2.25em 0;
     }
+    .quality-control__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .quality-control__write-us {
+        display: block;
+        opacity: 1;
+        margin: 0;
+    }
     .round-tabs {
         display: none;
     }
