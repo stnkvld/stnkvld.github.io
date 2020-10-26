@@ -6,7 +6,8 @@
         position: relative;
     }
     .single-page__image {
-        width: 50.125rem;
+        width: 57%;
+        max-width: 50.125rem;
         height: 28.875em;
         top: 2em;
         right: 0;

@@ -30,7 +30,7 @@
     .app__slider .slider-items__slide:not(.swiper-slide-active) .slider-items__picture:before {
         content: none;
     }
-    .opportunities {
+    .opportunities__wrapper {
         width: 68%;
         min-width: 59.75rem;
     }

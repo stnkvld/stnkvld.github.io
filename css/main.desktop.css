@@ -19,7 +19,7 @@
     }
     .intro__main-wrapper {
         width: 50%;
-        min-width: 705px;
+        max-width: 705px;
         border-radius: 1.125em;
         box-sizing: border-box;
         padding: 2.375em 2.625em 2.8125em;
@@ -30,10 +30,16 @@
         margin-bottom: .25em;
     }
     .intro__promocode-wrapper {
+        width: 50%;
+        max-width: 705px;
+        right: 0;
+        left: auto;
+    }
+    .promocode__container {
         width: 26.5%;
         min-width: 375px;
-        left: 50%;
         border-radius: 0 0 1.125em 1.125em;
+        margin-left: 0;
     }
     .stocks-slider__slide {
         width: 18rem;

@@ -9,6 +9,9 @@
         width: 97.8%;
         margin: 0 auto;
     }
+    .desktop-container--fix {
+        max-width: 1406px;
+    }
     .container--right-null {
         width: 97.8%;
         /* margin-right: auto; */
@@ -337,8 +340,7 @@
         flex-wrap: wrap;
     }
     .numbered-list__item {
-        width: 23%;
-        min-width: 20.5rem;
+        width: 23.32%;
         padding-top: 4.25em;
     }
     .numbered-list__item:nth-child(even) {
@@ -348,7 +350,7 @@
         padding-left: 0;
     }
     .numbered-list__item:not(:last-child) {
-        margin-right: 2.25%;
+        margin-right: 2.2%;
     }
     .numbered-list__item:before {
         top: 0;
@@ -393,7 +395,12 @@
     .popup-page__back-wrapper {
         display: none;
     }
-    .popup-page__intro,
+    .popup-page__intro-wrapper {
+        position: relative;
+    }
+    .popup-page__title-container {
+        width: 100%;
+    }
     .popup-page__content .text,
     .popup-page__info {
         width: 57%;
@@ -408,23 +415,23 @@
     .popup-page__picture {
         position: absolute;
         width: 40%;
+        height: 20rem;
         top: calc(100% + 5.125em);
         min-width: 35.5rem;
-        left: calc(100% + 2em);
+        right: 0;
     }
     .popup-page__image {
-        height: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         border-radius: 1.125em;
     }
     .popup-page__title {
         display: block;
         position: static;
         height: auto;
-        padding-bottom: 0;
-    }
-    .popup-page__picture+.popup-page__title {
-        color: #5EB848;
         background: none;
+        padding-bottom: 0;
     }
     .popup-page__content {
         background-color: transparent;
@@ -455,14 +462,15 @@
     }
     .stocks-list__title {
         display: flex;
-        align-items: center;
-        font-size: 1.25rem;
+        align-items: flex-end;
         width: 100%;
+        font-size: 1.25rem;
+        line-height: 1.25;
     }
     .stocks-list__title:before {
         content: '';
-        width: 3em;
-        height: 3em;
+        width: 2.4em;
+        height: 2.4em;
         flex-shrink: 0;
         background-color: #FBDC00;
         background-image: url(../svg/calendar-yellow.svg);
@@ -471,6 +479,9 @@
         background-repeat: no-repeat;
         border-radius: 50%;
         margin-right: .625em;
+    }
+    .prices-list__price {
+        margin-right: .5rem;
     }
 }
 

@@ -80,6 +80,8 @@ p {
     padding: 0;
     box-sizing: border-box;
     margin: 0 auto 2.85em;
+    cursor: pointer;
+    outline: none;
 }
 
 .btn--small {
@@ -165,6 +167,8 @@ p {
     text-decoration: underline;
     border: 0;
     background-color: transparent;
+    outline: none;
+    cursor: pointer;
     padding: 0;
 }
 
@@ -1462,6 +1466,12 @@ p {
     padding: 0 1em;
     box-sizing: border-box;
     border-radius: 1.125em;
+    outline: none;
+    transition: border-color .3s ease-in-out;
+}
+
+.form__input:focus {
+    border-color: #5EB848;
 }
 
 ::-webkit-input-placeholder {
@@ -1552,7 +1562,7 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    height: 18.75rem;
+    height: 19.5rem;
     background-color: #E8EBED;
     background-image: url(../svg/news-bg-gray.svg);
     background-size: 94%;
@@ -1580,15 +1590,12 @@ p {
     align-items: flex-end;
     width: 100%;
     height: 96.5%;
-    margin: 0;
-    padding-bottom: 1.25em;
-    box-sizing: border-box;
-    z-index: 9;
-}
-
-.popup-page__picture+.popup-page__title {
     color: #fff;
     background: linear-gradient(180deg, rgba(80, 184, 72, 0) 0%, #50B848 75%);
+    margin: 0;
+    padding-bottom: 1.6em;
+    box-sizing: border-box;
+    z-index: 9;
 }
 
 .popup-page__back-wrapper {
@@ -1614,7 +1621,7 @@ p {
 
 .popup-page__content {
     position: relative;
-    margin-top: 17.8125em;
+    margin-top: 13.25em;
     background-color: #fff;
     border-top-left-radius: 1.125em;
     border-top-right-radius: 1.125em;
@@ -1767,7 +1774,7 @@ p {
     border: .0625em solid #E8EBED;
     border-radius: .5625em;
     box-sizing: border-box;
-    padding: 0 .75em;
+    padding: 0 1em 0 .75em;
     overflow: hidden;
     transition: border-width .1s ease-in-out, border-color .3s ease-in-out;
 }
@@ -1885,6 +1892,8 @@ p {
 .prices-list__info-wrapper {
     display: flex;
     justify-content: space-between;
+    padding-left: .375rem;
+    padding-right: .5rem;
     margin: 0;
 }
 
@@ -1896,6 +1905,8 @@ p {
 .prices-list__inc {
     font-size: .75rem;
     color: #E39E32;
+    padding-left: .375rem;
+    padding-right: .5rem;
     margin: 0;
     margin-bottom: 1.335em;
 }
@@ -2000,7 +2011,7 @@ p {
 .packets-list__item {
     max-width: 296px;
     border-radius: 1.125em;
-    padding: 1.125em 1.125em 3em 1.125em;
+    padding: 1.125em 1.125em 1.25em 1.125em;
     box-sizing: border-box;
 }
 
@@ -2022,6 +2033,10 @@ p {
 
 .packets-list__item--green {
     background-color: #52B885;
+}
+
+.packets-list__item--green .packets-list__values-value {
+    color: #fff;
 }
 
 .packets-list__number {
@@ -2098,7 +2113,7 @@ p {
     width: 100%;
     font-size: .75rem;
     font-weight: 600;
-    text-shadow: 0 0.125em 0 rgba(0, 0, 0, .5);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 0 1em 1em;
     box-sizing: border-box;
