@@ -3,998 +3,295 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Таксовичкоф - Главная</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/swiper.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/style.desktop.css" media="(min-width: 1024px)">
-    <link rel="stylesheet" href="css/main.desktop.css" media="(min-width: 1024px)">
+    <title>Петербургская недвижимость - Тестовое задание</title>
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
-    <header class="header">
-        <div class="container header__container">
-            <a class="logo header__logo" href="/">
-                <picture>
-                    <source media="(min-width: 1024px)" srcset="svg/logo-full.svg" type="image/svg+xml">
-                    <source media="(max-width: 1023px)" srcset="svg/logo-small.svg" type="image/svg+xml">
-                    <!-- TODO: fallback for desktop -->
-                    <img class="logo__image" src="images/mobile/logo-small.png" alt="Логотип">
-                </picture>
-            </a>
-            <div class="city-selector header__city-selector">
-                <div class="city-selector__wrapper">
-                    <button class="city-selector__city" type="button">Санкт-Петербург</button>
-                    <a class="city-selector__phone" href="tel:+78123330000">333-00-00</a>
-                </div>
-                <div class="city-selector__menu">
-                    <div class="container city-selector__container">
-                        <form class="text-input search city-selector__search" method="GET" action="">
-                            <input class="search__input" type="text" placeholder="Поиск">
-                        </form>
-                        <div class="city-selector__lists">
-                            <div class="city-selector__list">
-                                <p class="city-selector__list-title">Страна</p>
-                                <ul class="countries-list">
-                                    <li class="countries-list__item">
-                                        <input class="countries-list__radio" id="country-ru" type="radio" name="country" checked>
-                                        <label class="countries-list__label" for="country-ru">Россия</label>
-                                    </li>
-                                    <li class="countries-list__item">
-                                        <input class="countries-list__radio" id="country-kz" type="radio" name="country">
-                                        <label class="countries-list__label" for="country-kz">Қазақстан</label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="city-selector__list">
-                                <p class="city-selector__list-title">Город</p>
-                                <ul class="letters-list">
-                                    <li class="letters-list__item">
-                                        А
-                                        <ul class="cities-list">
-                                            <li class="cities-list__item">
-                                                <a href="#" class="cities-list__city">Азнакаево</a>
-                                                <p class="cities-list__area">Республика Татарстан</p>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="letters-list__item">
-                                        В
-                                        <ul class="cities-list">
-                                            <li class="cities-list__item">
-                                                <a href="#" class="cities-list__city">Всеволожск</a>
-                                                <p class="cities-list__area">Ленинградская область</p>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="letters-list__item">
-                                        Г
-                                        <ul class="cities-list">
-                                            <li class="cities-list__item">
-                                                <a href="#" class="cities-list__city">Гатчина</a>
-                                                <p class="cities-list__area">Ленинградская область</p>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="letters-list__item">
-                                        К
-                                        <ul class="cities-list">
-                                            <li class="cities-list__item">
-                                                <a href="#" class="cities-list__city">Колпино</a>
-                                                <p class="cities-list__area">Ленинградская область</p>
-                                            </li>
-                                            <li class="cities-list__item">
-                                                <a href="#" class="cities-list__city">Красное село</a>
-                                                <p class="cities-list__area">Ленинградская область</p>
-                                            </li>
-                                            <li class="cities-list__item">
-                                                <a href="#" class="cities-list__city">Кронштадт</a>
-                                                <p class="cities-list__area">Ленинградская область</p>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="letters-list__item">
-                                        М
-                                        <ul class="cities-list">
-                                            <li class="cities-list__item">
-                                                <a href="#" class="cities-list__city">Москва</a>
-                                                <p class="cities-list__area">Москва</p>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="letters-list__item">
-                                        Н
-                                        <ul class="cities-list">
-                                            <li class="cities-list__item">
-                                                <a href="#" class="cities-list__city">Нижнекамск</a>
-                                                <p class="cities-list__area">Республика Татарстан</p>
-                                            </li>
-                                            <li class="cities-list__item">
-                                                <a href="#" class="cities-list__city">Нурлат</a>
-                                                <p class="cities-list__area">Республика Татарстан</p>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="letters-list__item">
-                                        О
-                                        <ul class="cities-list">
-                                            <li class="cities-list__item">
-                                                <a href="#" class="cities-list__city">Омск</a>
-                                                <p class="cities-list__area">Омская область</p>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="letters-list__item">
-                                        П
-                                        <ul class="cities-list">
-                                            <li class="cities-list__item">
-                                                <a href="#" class="cities-list__city">Петергоф</a>
-                                                <p class="cities-list__area">Санкт-Петербург</p>
-                                            </li>
-                                            <li class="cities-list__item">
-                                                <a href="#" class="cities-list__city">Пушкин</a>
-                                                <p class="cities-list__area">Санкт-Петербург</p>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="letters-list__item">
-                                        С
-                                        <ul class="cities-list">
-                                            <li class="cities-list__item">
-                                                <p class="cities-list__city cities-list__city--current">Санкт-Петербург</p>
-                                                <p class="cities-list__area">Санкт-Петербург</p>
-                                            </li>
-                                            <li class="cities-list__item">
-                                                <a href="#" class="cities-list__city">Сосновый Бор</a>
-                                                <p class="cities-list__area">Ленинградская область</p>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="lang-switcher header__lang-switcher lang-switcher--ru">
-                <button class="btn lang-switcher__btn lang-switcher__btn--ru" type="button">RU</button>
-            </div>
-            <button class="btn btn--inner-green btn-cabinet header__btn-cabinet" type="button">Войти</button>
-            <button class="btn-menu header__btn-menu" type="button">
-				<span class="sr-only">Открыть/закрыть меню</span>
-            </button>
-            <button class="city-selector-close">
-                <span class="sr-only">Закрыть выбор города</span>
-            </button>
-            <nav class="menu header__menu">
-                <ul class="list menu__list">
-                    <li class="menu__item menu__item--passenger">
-                        <button class="menu__title" type="button">Пассажирам</button>
-                        <ul class="list menu__submenu">
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Акции</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Тарифы</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Услуги</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Мобильное приложение</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item menu__item--drivers">
-                        <button class="menu__title" type="button">Водителям</button>
-                        <ul class="list menu__submenu">
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Стать водителем</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Таксовичкоф Пульт</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item menu__item--partners">
-                        <button class="menu__title" type="button">Партнерам</button>
-                        <ul class="list menu__submenu">
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Создать совместное предприятие</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Подключить автопарк</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Франшиза</a>
-                            </li>
-                            <li class="menu__submenu-item">
-                                <a class="menu__link" href="#">Для партнеров</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu__item menu__item--more">
-                        <button class="menu__title" type="button">Еще</button>
-                        <ul class="list menu__submenu">
-                            <li class="menu__item menu__item--business">
-                                <button class="menu__title" type="button">Бизнесу</button>
-                                <ul class="list menu__submenu">
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Корпоративным клиентам</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Бизнес-кабинет</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu__item menu__item--about">
-                                <button class="menu__title" type="button">О компании</button>
-                                <ul class="list menu__submenu">
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Новости</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Контакты</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">О нас</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Отзывы</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Вопросы и ответы</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Пресс-кит</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu__item menu__item--without-title">
-                                <ul class="list menu__submenu">
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Вакансии</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Инвесторам</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body class="page">
     <main class="main">
-        <section class="intro">
-            <div class="intro__main-wrapper">
-                <div class="container intro__container">
-                    <p class="intro__title">Добрый день!</p>
-                    <p class="intro__subtitle">Откуда поедете сегодня?</p>
-                    <form class="enter-addr" action="">
-                        <input class="enter-addr__addr-input" type="text" placeholder="Введите адрес отправления">
-                    </form>
+        <div class="container">
+            <form class="form filter">
+                <div class="input search filter__search">
+                    <input class="search__input" type="text" placeholder="Введите ЖК / корпус / № квартиры / № паркинга">
+                    <svg class="search__icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 15L11 11M7 13C3.68629 13 1 10.3137 1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7C13 10.3137 10.3137 13 7 13Z" stroke="#9B9B9B" stroke-width="1.5"/>
+                    </svg>
                 </div>
-            </div>
-            <div class="promocode intro__promocode-wrapper">
-                <div class="container intro__container promocode__container">
-                    <button class="promocode__btn" type="button">Есть промокод</button>
-                </div>
-            </div>
-        </section>
-        <section class="stocks">
-            <div class="container container--right-null">
-                <h2 class="page-title page-title--gray">Акции и события</h2>
-                <div class="swiper-container slider-items stocks-slider">
-                    <ul class="list swiper-wrapper slider-items__wrapper stocks-list">
-                        <li class="swiper-slide slider-items__slide stocks-slider__slide stocks-list__item">
-                            <article class="stocks-list__article">
-                                <a class="stocks-list__link" href="#">
-                                    <figure class="stocks-list__figure">
-                                        <img class="stocks-list__image" src="images/club.jpg" alt="Клуб &laquo;Таксовичкоф&raquo;">
-                                        <figcaption class="stocks-list__text-wrapper">
-                                            <span class="stocks-list__title">Клуб &laquo;Таксовичкоф&raquo;</span>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </article>
-                        </li>
-                        <li class="swiper-slide slider-items__slide stocks-slider__slide stocks-list__item">
-                            <article class="stocks-list__article">
-                                <a class="stocks-list__link" href="#">
-                                    <figure class="stocks-list__figure">
-                                        <img class="stocks-list__image" src="images/gifts.jpg" alt="ТаксовичкоФ дарит призы за поездки в Твери">
-                                        <figcaption class="stocks-list__text-wrapper">
-                                            <span class="stocks-list__title">ТаксовичкоФ дарит призы за поездки в Твери</span>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </article>
-                        </li>
-                        <li class="swiper-slide slider-items__slide stocks-slider__slide stocks-list__item">
-                            <article class="stocks-list__article">
-                                <a class="stocks-list__link" href="#">
-                                    <figure class="stocks-list__figure">
-                                        <img class="stocks-list__image" src="images/drivers.png" alt="Приглашайте водителей в «ТаксовичкоФ">
-                                        <figcaption class="stocks-list__text-wrapper">
-                                            <span class="stocks-list__title">Приглашайте водителей в &laquo;ТаксовичкоФ&raquo</span>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </article>
-                        </li>
-                        <li class="swiper-slide slider-items__slide stocks-slider__slide stocks-list__item">
-                            <article class="stocks-list__article">
-                                <a class="stocks-list__link" href="#">
-                                    <figure class="stocks-list__figure">
-                                        <img class="stocks-list__image" src="images/club.jpg" alt="Клуб &laquo;Таксовичкоф&raquo;">
-                                        <figcaption class="stocks-list__text-wrapper">
-                                            <span class="stocks-list__title">Клуб &laquo;Таксовичкоф&raquo;</span>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </article>
-                        </li>
-                        <li class="swiper-slide slider-items__slide stocks-slider__slide stocks-list__item">
-                            <article class="stocks-list__article">
-                                <a class="stocks-list__link" href="#">
-                                    <figure class="stocks-list__figure">
-                                        <img class="stocks-list__image" src="images/club.jpg" alt="Клуб &laquo;Таксовичкоф&raquo;">
-                                        <figcaption class="stocks-list__text-wrapper">
-                                            <span class="stocks-list__title">Клуб &laquo;Таксовичкоф&raquo;</span>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </article>
-                        </li>
-                        <li class="swiper-slide slider-items__slide stocks-slider__slide stocks-list__item">
-                            <article class="stocks-list__article">
-                                <a class="stocks-list__link" href="#">
-                                    <figure class="stocks-list__figure">
-                                        <img class="stocks-list__image" src="images/gifts.jpg" alt="ТаксовичкоФ дарит призы за поездки в Твери">
-                                        <figcaption class="stocks-list__text-wrapper">
-                                            <span class="stocks-list__title">ТаксовичкоФ дарит призы за поездки в Твери</span>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </article>
-                        </li>
-                        <li class="swiper-slide slider-items__slide stocks-slider__slide stocks-list__item">
-                            <article class="stocks-list__article">
-                                <a class="stocks-list__link" href="#">
-                                    <figure class="stocks-list__figure">
-                                        <img class="stocks-list__image" src="images/drivers.png" alt="Приглашайте водителей в «ТаксовичкоФ">
-                                        <figcaption class="stocks-list__text-wrapper">
-                                            <span class="stocks-list__title">Приглашайте водителей в &laquo;ТаксовичкоФ&raquo</span>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </article>
-                        </li>
-                        <li class="swiper-slide slider-items__slide stocks-slider__slide stocks-list__item">
-                            <article class="stocks-list__article">
-                                <a class="stocks-list__link" href="#">
-                                    <figure class="stocks-list__figure">
-                                        <img class="stocks-list__image" src="images/club.jpg" alt="Клуб &laquo;Таксовичкоф&raquo;">
-                                        <figcaption class="stocks-list__text-wrapper">
-                                            <span class="stocks-list__title">Клуб &laquo;Таксовичкоф&raquo;</span>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </article>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="services">
-            <div class="container">
-                <h2 class="page-title page-title--gray">Наши услуги</h2>
-                <div class="round-tabs">
-                    <ul class="list round-tabs__list">
-                        <li class="round-tabs__item">
-                            <input id="tab-1" data-content-id="content-1" class="round-tabs__radio" type="radio" name="round-tabs">
-                            <label class="round-tabs__label round-tabs__label--garage" for="tab-1">
-                                <span class="sr-only">Вкладка "1"</span>
-                            </label>
-                        </li>
-                        <li class="round-tabs__item">
-                            <input id="tab-2" data-content-id="content-2" class="round-tabs__radio" type="radio" name="round-tabs">
-                            <label class="round-tabs__label round-tabs__label--courier" for="tab-2">
-                                <span class="sr-only">Вкладка "2"</span>
-                            </label>
-                        </li>
-                        <li class="round-tabs__item">
-                            <input id="tab-3" data-content-id="content-3" class="round-tabs__radio" type="radio" name="round-tabs">
-                            <label class="round-tabs__label round-tabs__label--chair" for="tab-3">
-                                <span class="sr-only">Вкладка "3"</span>
-                            </label>
-                        </li>
-                        <li class="round-tabs__item">
-                            <input id="tab-4" data-content-id="content-4" class="round-tabs__radio" type="radio" name="round-tabs">
-                            <label class="round-tabs__label round-tabs__label--payment" for="tab-4">
-                                <span class="sr-only">Вкладка "Любые способы оплаты"</span>
-                            </label>
-                        </li>
-                        <li class="round-tabs__item">
-                            <input id="tab-5" data-content-id="content-5" class="round-tabs__radio" type="radio" name="round-tabs">
-                            <label class="round-tabs__label round-tabs__label--auction" for="tab-5">
-                                <span class="sr-only">Вкладка "5"</span>
-                            </label>
-                        </li>
-                        <li class="round-tabs__item">
-                            <input id="tab-6" data-content-id="content-6" class="round-tabs__radio" type="radio" name="round-tabs">
-                            <label class="round-tabs__label round-tabs__label--percent" for="tab-6">
-                                <span class="sr-only">Вкладка "6"</span>
-                            </label>
-                        </li>
-                        <li class="round-tabs__item">
-                            <input id="tab-7" data-content-id="content-7" class="round-tabs__radio" type="radio" name="round-tabs">
-                            <label class="round-tabs__label round-tabs__label--med" for="tab-7">
-                                <span class="sr-only">Вкладка "7"</span>
-                            </label>
-                        </li>
-                    </ul>
-                    <section id="content-1" class="round-tabs__content">
-                        <object class="round-tabs__image" type="image/svg+xml" data="svg/garage.svg" tabindex="-1">
-                            <img 
-                                src="images/mobile/garage.png" 
-                                srcset="images/mobile/garage@2x.png 2x"
-                                alt="Ежедневный техосмотр ТФ">
-                        </object>
-                        <h3 class="round-tabs__title">Ежедневный техосмотр</h3>
-                        <p class="round-tabs__text">
-                            Все автомобили надежны
-                        </p>
-                    </section>
-                    <section id="content-2" class="round-tabs__content">
-                        <object class="round-tabs__image" type="image/svg+xml" data="svg/courier.svg" tabindex="-1">
-                            <img 
-                                src="images/mobile/courier.png" 
-                                srcset="images/mobile/courier@2x.png 2x"
-                                alt="Доставка ТФ">
-                        </object>
-                        <h3 class="round-tabs__title">Доставка</h3>
-                        <p class="round-tabs__text">
-                            Доставим посылки, продукты, документы
-                        </p>
-                    </section>
-                    <section id="content-3" class="round-tabs__content">
-                        <object class="round-tabs__image" type="image/svg+xml" data="svg/chair.svg" tabindex="-1">
-                            <img 
-                                src="images/mobile/chair.png" 
-                                srcset="images/mobile/chair@2x.png 2x"
-                                alt="Класс &laquo;Детский&raquo; ТФ">
-                        </object>
-                        <h3 class="round-tabs__title">Класс &laquo;Детский&raquo;</h3>
-                        <p class="round-tabs__text">
-                            Предоставим бесплатно одно или несколько детских кресел
-                        </p>
-                    </section>
-                    <section id="content-4" class="round-tabs__content round-tabs__content--show">
-                        <object class="round-tabs__image" type="image/svg+xml" data="svg/payment.svg" tabindex="-1">
-                            <img 
-                                src="images/mobile/payment.png" 
-                                srcset="images/mobile/payment@2x.png 2x"
-                                alt="Оплата ТФ">
-                        </object>
-                        <h3 class="round-tabs__title">Любые способы оплаты</h3>
-                        <p class="round-tabs__text">
-                            Платите как вам удобно
-                        </p>
-                    </section>
-                    <section id="content-5" class="round-tabs__content">
-                        <object class="round-tabs__image" type="image/svg+xml" data="svg/auction.svg" tabindex="-1">
-                            <img 
-                                src="images/mobile/auction.png" 
-                                srcset="images/mobile/auction@2x.png 2x"
-                                alt="Своя цена ТФ">
-                        </object>
-                        <h3 class="round-tabs__title">Своя цена</h3>
-                        <p class="round-tabs__text">
-                            Предлагайте свою цену за поездку
-                        </p>
-                    </section>
-                    <section id="content-6" class="round-tabs__content">
-                        <object class="round-tabs__image" type="image/svg+xml" data="svg/percent.svg" tabindex="-1">
-                            <img 
-                                src="images/mobile/percent.png" 
-                                srcset="images/mobile/percent@2x.png 2x"
-                                alt="Скидки в приложении ТФ">
-                        </object>
-                        <h3 class="round-tabs__title">Скидки в приложении</h3>
-                        <p class="round-tabs__text">
-                            Платите как вам удобно
-                        </p>
-                    </section>
-                    <section id="content-7" class="round-tabs__content">
-                        <object class="round-tabs__image" type="image/svg+xml" data="svg/med.svg" tabindex="-1">
-                                <img 
-                                    src="images/mobile/med.png" 
-                                    srcset="images/mobile/med@2x.png 2x"
-                                    alt="Ежедневный медосмотр ТФ">
-                        </object>
-                        <h3 class="round-tabs__title">Ежедневный медосмотр</h3>
-                        <p class="round-tabs__text">
-                            С нами безопасно
-                        </p>
-                    </section>
-                </div>
-                <div class="swiper-container slider-items services-slider">
-                    <ul class="list swiper-wrapper slider-items__wrapper">
-                        <li class="swiper-slide slider-items__slide services-slider__slide">
-                            <img class="services-slider__image" src="svg/courier.svg" alt="Доставка ТФ">
-                            <h3 class="services-slider__title">Доставка</h3>
-                            <p class="text services-slider__text">
-                                Доставим посылки, продукты, документы
-                            </p>
-                        </li>
-                        <li class="swiper-slide slider-items__slide services-slider__slide">
-                            <img class="services-slider__image" src="svg/chair.svg" alt="Класс &laquo;Детский&raquo; ТФ">
-                            <h3 class="services-slider__title">Класс &laquo;Детский&raquo;</h3>
-                            <p class="text services-slider__text">
-                                Предоставим бесплатно одно или несколько детских кресел
-                            </p>
-                        </li>
-                        <li class="swiper-slide slider-items__slide services-slider__slide">
-                            <img class="services-slider__image" src="svg/payment.svg" alt="Любые способы оплаты ТФ">
-                            <h3 class="services-slider__title">Любые способы оплаты</h3>
-                            <p class="text services-slider__text">
-                                Платите как вам удобно
-                            </p>
-                        </li>
-                        <li class="swiper-slide slider-items__slide services-slider__slide">
-                            <img class="services-slider__image" src="svg/auction.svg" alt="Своя цена ТФ">
-                            <h3 class="services-slider__title">Своя цена</h3>
-                            <p class="text services-slider__text">
-                                Предлагайте свою цену за поездку
-                            </p>
-                        </li>
-                        <li class="swiper-slide slider-items__slide services-slider__slide">
-                            <img class="services-slider__image" src="svg/percent.svg" alt="Скидки в приложении ТФ">
-                            <h3 class="services-slider__title">Скидки в приложении</h3>
-                            <p class="text services-slider__text">
-                                Устанавливайте приложение. В нем дешевле.
-                            </p>
-                        </li>
-                        <li class="swiper-slide slider-items__slide services-slider__slide">
-                            <img class="services-slider__image" src="svg/garage.svg" alt="Ежедневный техосмотр ТФ">
-                            <h3 class="services-slider__title">Ежедневный техосмотр</h3>
-                            <p class="text services-slider__text">
-                                Все автомобили надежны
-                            </p>
-                        </li>
-                        <li class="swiper-slide slider-items__slide services-slider__slide">
-                            <img class="services-slider__image" src="svg/med.svg" alt="Ежедневный медосмотр ТФ">
-                            <h3 class="services-slider__title">Ежедневный медосмотр</h3>
-                            <p class="text services-slider__text">
-                                С нами безопасно
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="why-tf">
-            <div class="container why-tf__container">
-                <div class="container why-tf__main">
-                    <h2 class="page-title page-title--gray">Почему мы?</h2>
-                    <ul class="why-tf__list">
-                        <li class="why-tf__list-item why-tf__list-item--new">
-                            <h3 class="why-tf__list-title">Туда и обратно</h3>
-                            <p class="why-tf__list-text">Скидка 30% на вторую поездку в день</p>
-                            <a href="#" class="why-tf__list-link">Заказать такси</a>
-                        </li>
-                        <li class="why-tf__list-item">
-                            <h3 class="why-tf__list-title">Доставка</h3>
-                            <p class="why-tf__list-text">Привезем быстро и оставим у двери</p>
-                            <a href="#" class="why-tf__list-link">Оформить доставку</a>
-                        </li>
-                        <li class="why-tf__list-item">
-                            <h3 class="why-tf__list-title">Бизнесу</h3>
-                            <p class="why-tf__list-text">Такси для владельцев бизнеса</p>
-                            <a href="#" class="why-tf__list-link">Стать бизнес-клиентом</a>
-                        </li>
-                        <li class="why-tf__list-item">
-                            <h3 class="why-tf__list-title">Семья</h3>
-                            <p class="why-tf__list-text">Семейный счёт — выгодные поездки для всей семьи</p>
-                            <a href="#" class="why-tf__list-link">Узнать больше</a>
-                        </li>
-                        <li class="why-tf__list-item">
-                            <h3 class="why-tf__list-title">Мои правила</h3>
-                            <p class="why-tf__list-text">Устанавливайте свою цену на поездки</p>
-                            <a href="#" class="why-tf__list-link">Установить приложение</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="why-tf__addition">
-                    <section class="section-float section-float--right become-driver">
-                        <h2 class="become-driver__title">Стать водителем</h2>
-                        <p class="become-driver__text">
-                            Присоединяйтесь к нашей команде
-                        </p>
-                    </section>
-                    <section class="section-float section-float--right download-pult">
-                        <h2 class="download-pult__title">Скачать &laquo;Пульт&raquo;</h2>
-                    </section>
-                </div>
-            </div>
-        </section>
-        <section class="section-float section-float--left news">
-            <div class="container news__container section-float__container">
-                <h2 class="news__title">Новости</h2>
-                <article class="news__card">
-                    <p class="news__text">
-                        «Таксовичкоф» и «ULTAXI» создают совместное предприятие в Ульяновске<br>
-                        <time class="news__date" datetime="2020-06-08">8 июня 2020 в 10:54</time>
-                    </p>
-                </article>
-                <a class="link news__all-link" href="#">Читайте все новости</a>
-            </div>
-        </section>
-        <section class="section-float section-float--right quality-control">
-            <div class="container container--subcontainer section-float__container quality-control__container">
-                <div class="quality-control__wrapper">
-                    <h2 class="quality-control__title">Контроль качества</h2>
-                    <a class="quality-control__phone" href="tel:+78123300004">
-                        +7 (812) 330-00-04<br>
-                        <span class="quality-control__phone-caption">нажмите, чтобы позвонить</span>
-                    </a>
-                    <a class="quality-control__email" href="mailto:okk@taxovichkof.ru">okk@taxovichkof.ru</a>
-                </div>
-                <div class="quality-control__wrapper">
-                    <button class="write-us quality-control__write-us">
-                        <span class="write-us__text">Напишите нам</span>
-                    </button>
-                </div>
-            </div>
-        </section>
-        <section class="popup popup-order">
-            <form class="form order-form" method="GET" action="">
-                <div class="container">
-                    <div class="order-form__addresses">
-                        <label class="order-form__label order-form__label--from">
-                            от
-                            <input class="order-form__input" type="text" placeholder="Нажмите, чтобы ввести">
-                        </label>
-                        <label class="order-form__label order-form__label--to">
-                            до
-                            <input class="order-form__input" type="text" placeholder="Нажмите, чтобы ввести">
-                        </label>
+                <div class="input status-select">
+                    <input id="status-select-0" class="visually-hidden status-select__check" type="checkbox">
+                    <label class="status-select__value" for="status-select-0">Все статусы</label>
+                    <div class="status-select__options">
+                        <ul class="status-list status-select__list">
+                            <li class="status-list__item">
+                                <div class="check-group">
+                                    <input id="status-0" class="visually-hidden check-group__input" type="checkbox" name="status" value="0">
+                                    <label class="check-group__label" for="status-0">Забронировано</label>
+                                </div>
+                            </li>
+                            <li class="status-list__item">
+                                <div class="check-group">
+                                    <input id="status-1" class="visually-hidden check-group__input" type="checkbox" name="status" value="1">
+                                    <label class="check-group__label" for="status-1">Продано</label>
+                                </div>
+                            </li>
+                            <li class="status-list__item">
+                                <div class="check-group">
+                                    <input id="status-2" class="visually-hidden check-group__input" type="checkbox" name="status" value="2">
+                                    <label class="check-group__label" for="status-2">Активно</label>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <ul class="list popup-order__list">
-                    <li class="list__item popup-order__list-item">
-                        <p class="popup-order__address">пр. Литейный</p>
-                        <p class="popup-order__city">г. Санкт-Петербург</p>
+                <button class="btn filter__clear" type="button">
+                    Очистить корзину
+                    <svg class="btn__icon" aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L13 13M1 13L13 1" stroke="black"/>
+                    </svg>
+                </button>
+                <ul class="actions">
+                    <li class="actions__item">
+                        <div class="check-group">
+                            <input id="all" class="visually-hidden check-group__input" type="checkbox" name="all">
+                            <label class="check-group__label check-group__label--short" for="all">все</label>
+                        </div>
                     </li>
-                    <li class="list__item popup-order__list-item">
-                        <p class="popup-order__address">Литейный мост</p>
-                        <p class="popup-order__city">г. Санкт-Петербург</p>
+                    <li class="actions__item">
+                        <button class="btn" type="button">
+                            Сохранить
+                            <svg class="btn__icon btn__icon--fill" aria-hidden="true" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 7V6.5H1.5V7H2ZM6 7V6.5H5.5V7H6ZM6 11H5.5V11.5H6V11ZM13 4H13.5V3.79289L13.3536 3.64645L13 4ZM10 1L10.3536 0.646447L10.2071 0.5H10V1ZM2 7.5H3V6.5H2V7.5ZM2.5 11.5V9H1.5V11.5H2.5ZM2.5 9V7H1.5V9H2.5ZM3 8.5H2V9.5H3V8.5ZM3.5 8C3.5 8.27614 3.27614 8.5 3 8.5V9.5C3.82843 9.5 4.5 8.82843 4.5 8H3.5ZM3 7.5C3.27614 7.5 3.5 7.72386 3.5 8H4.5C4.5 7.17157 3.82843 6.5 3 6.5V7.5ZM5.5 7V11H6.5V7H5.5ZM6 11.5H7V10.5H6V11.5ZM8.5 10V8H7.5V10H8.5ZM7 6.5H6V7.5H7V6.5ZM8.5 8C8.5 7.17157 7.82843 6.5 7 6.5V7.5C7.27614 7.5 7.5 7.72386 7.5 8H8.5ZM7 11.5C7.82843 11.5 8.5 10.8284 8.5 10H7.5C7.5 10.2761 7.27614 10.5 7 10.5V11.5ZM9.5 6.5V11.5H10.5V6.5H9.5ZM10 7.5H12.5V6.5H10V7.5ZM10 9.5H11.5V8.5H10V9.5ZM1.5 5.5V2H0.5V5.5H1.5ZM12.5 4V5.5H13.5V4H12.5ZM2 1.5H10V0.5H2V1.5ZM9.64645 1.35355L12.6464 4.35355L13.3536 3.64645L10.3536 0.646447L9.64645 1.35355ZM1.5 2C1.5 1.72386 1.72386 1.5 2 1.5V0.5C1.17157 0.5 0.5 1.17157 0.5 2H1.5ZM0.5 12.5V14H1.5V12.5H0.5ZM2 15.5H12V14.5H2V15.5ZM13.5 14V12.5H12.5V14H13.5ZM12 15.5C12.8284 15.5 13.5 14.8284 13.5 14H12.5C12.5 14.2761 12.2761 14.5 12 14.5V15.5ZM0.5 14C0.5 14.8284 1.17157 15.5 2 15.5V14.5C1.72386 14.5 1.5 14.2761 1.5 14H0.5Z" fill="black"/>
+                            </svg>
+                        </button>
                     </li>
-                    <li class="list__item popup-order__list-item">
-                        <p class="popup-order__address">ул. Литераторов</p>
-                        <p class="popup-order__city">г. Колпино</p>
+                    <li class="actions__item">
+                        <button class="btn" type="button">
+                            Отправить
+                            <svg class="btn__icon btn__icon--fill" aria-hidden="true" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 1L14.4596 1.19696C14.5401 1.00904 14.4981 0.791016 14.3536 0.646447C14.209 0.501877 13.991 0.45989 13.803 0.540427L14 1ZM1 6.57143L0.80304 6.11186C0.630457 6.18582 0.513861 6.35024 0.501148 6.53757C0.488434 6.72491 0.581745 6.90357 0.742752 7.00017L1 6.57143ZM8.42857 14L7.99982 14.2572C8.09643 14.4183 8.27509 14.5116 8.46243 14.4989C8.64976 14.4861 8.81418 14.3695 8.88814 14.197L8.42857 14ZM13.803 0.540427L0.80304 6.11186L1.19696 7.031L14.197 1.45957L13.803 0.540427ZM0.742752 7.00017L5.38561 9.78589L5.9001 8.9284L1.25725 6.14268L0.742752 7.00017ZM5.21411 9.61439L7.99982 14.2572L8.85732 13.7428L6.0716 9.09989L5.21411 9.61439ZM8.88814 14.197L14.4596 1.19696L13.5404 0.80304L7.969 13.803L8.88814 14.197ZM13.6464 0.646447L5.2893 9.00359L5.99641 9.7107L14.3536 1.35355L13.6464 0.646447Z" fill="black"/>
+                            </svg>
+                        </button>
                     </li>
-                    <li class="list__item popup-order__list-item">
-                        <p class="popup-order__address">Театр на Литейном</p>
-                        <p class="popup-order__city">г. Колпино</p>
+                    <li class="actions__item">
+                        <button class="btn" type="button">
+                            Удалить
+                            <svg class="btn__icon" aria-hidden="true" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.6 3.5V2C3.6 1.44772 3.95817 1 4.4 1H7.6C8.04183 1 8.4 1.44772 8.4 2V3.5M0 4H12M1.2 4V14C1.2 14.5523 1.55817 15 2 15H10C10.4418 15 10.8 14.5523 10.8 14V4M6 7.5V12.5M3.6 9.5V12.5M8.4 9.5V12.5" stroke="black"/>
+                            </svg>
+                        </button>
                     </li>
                 </ul>
-                <div class="popup-order__info">
-                    <div class="container">
-                        <div class="tabs popup-order__tarifs">
-                            <ul class="list tabs__list tabs__list--underline">
-                                <li class="tabs__item">
-                                    <input id="class-standart" class="tabs__radio" type="radio" name="auto-class" value="0">
-                                    <label class="tabs__label" for="class-standart">Детский</label>
-                                </li>
-                                <li class="tabs__item">
-                                    <input id="class-comfort" class="tabs__radio" type="radio" name="auto-class" value="1" checked>
-                                    <label class="tabs__label" for="class-comfort">На каждый день</label>
-                                </li>
-                                <li class="tabs__item">
-                                    <input id="class-comfort-plus" class="tabs__radio" type="radio" name="auto-class" value="2">
-                                    <label class="tabs__label" for="class-comfort-plus">Курьерчикоф</label>
-                                </li>
-                                <li class="tabs__item">
-                                    <input id="class-luks" class="tabs__radio" type="radio" name="auto-class" value="3">
-                                    <label class="tabs__label" for="class-luks">Люкс</label>
-                                </li>
-                            </ul>
-                            <div class="tabs__content tabs__content--show" data-tab="0">
-                                <ul class="list tarif-select">
-                                    <li class="tarif-select__item tarif-select__item--standart">
-                                        <input id="tarif-0" class="tarif-select__radio" type="radio" name="tarif" value="0" checked>
-                                        <label for="tarif-0" class="tarif-select__label">
-                                            <p class="tarif-select__name-wait">
-                                                <span class="tarif-select__name">Стандарт</span><br>
-                                                <span class="tarif-select__wait">4 мин</span>
-                                            </p>
-                                            <p class="tarif-select__price-sale">
-                                                <span class="tarif-select__price">210 Р</span><br>
-                                                <span class="tarif-select__sale">300 Р</span>
-                                            </p>
-                                        </label>
-                                    </li>
-                                    <li class="tarif-select__item tarif-select__item--comfort">
-                                        <input id="tarif-1" class="tarif-select__radio" type="radio" name="tarif" value="1">
-                                        <label for="tarif-1" class="tarif-select__label">
-                                            <p class="tarif-select__name-wait">
-                                                <span class="tarif-select__name">Комфорт</span><br>
-                                                <span class="tarif-select__wait">4 мин</span>
-                                            </p>
-                                            <p class="tarif-select__price-sale">
-                                                <span class="tarif-select__price">350 Р</span><br>
-                                                <span class="tarif-select__sale">400 Р</span>
-                                            </p>
-                                        </label>
-                                    </li>
-                                    <li class="tarif-select__item tarif-select__item--comfort-plus">
-                                        <input id="tarif-2" class="tarif-select__radio" type="radio" name="tarif" value="2">
-                                        <label for="tarif-2" class="tarif-select__label">
-                                            <p class="tarif-select__name-wait">
-                                                <span class="tarif-select__name">Комфорт+</span><br>
-                                                <span class="tarif-select__wait">4 мин</span>
-                                            </p>
-                                            <p class="tarif-select__price-sale">
-                                                <span class="tarif-select__price">410 Р</span><br>
-                                                <span class="tarif-select__sale">400 Р</span>
-                                            </p>
-                                        </label>
-                                    </li>
-                                    <li class="tarif-select__item tarif-select__item--business">
-                                        <input id="tarif-3" class="tarif-select__radio" type="radio" name="tarif" value="3">
-                                        <label for="tarif-3" class="tarif-select__label">
-                                            <p class="tarif-select__name-wait">
-                                                <span class="tarif-select__name">Бизнес</span><br>
-                                                <span class="tarif-select__wait">4 мин</span>
-                                            </p>
-                                            <p class="tarif-select__price-sale">
-                                                <span class="tarif-select__price">410 Р</span><br>
-                                                <span class="tarif-select__sale">400 Р</span>
-                                            </p>
-                                        </label>
-                                    </li>
-                                    <li class="tarif-select__item tarif-select__item--minivan-6">
-                                        <input id="tarif-4" class="tarif-select__radio" type="radio" name="tarif" value="4">
-                                        <label for="tarif-4" class="tarif-select__label">
-                                            <p class="tarif-select__name-wait">
-                                                <span class="tarif-select__name">Минивэн 6</span><br>
-                                                <span class="tarif-select__wait">4 мин</span>
-                                            </p>
-                                            <p class="tarif-select__price-sale">
-                                                <span class="tarif-select__price">410 Р</span><br>
-                                                <span class="tarif-select__sale">400 Р</span>
-                                            </p>
-                                        </label>
-                                    </li>
-                                    <li class="tarif-select__item tarif-select__item--minivan-8">
-                                        <input id="tarif-5" class="tarif-select__radio" type="radio" name="tarif" value="5">
-                                        <label for="tarif-5" class="tarif-select__label">
-                                            <p class="tarif-select__name-wait">
-                                                <span class="tarif-select__name">Минивэн 8</span><br>
-                                                <span class="tarif-select__wait">4 мин</span>
-                                            </p>
-                                            <p class="tarif-select__price-sale">
-                                                <span class="tarif-select__price">410 Р</span><br>
-                                                <span class="tarif-select__sale">400 Р</span>
-                                            </p>
-                                        </label>
-                                    </li>
-                                </ul>
+            </form>
+            <ul class="flat-list">
+                <li class="flat-list__item">
+                    <article class="flat-card">
+                        <div class="flat-card__main-wrapper">
+                            <div class="check-group flat-card__check-group">
+                                <input id="flat-1" class="visually-hidden check-group__input" type="checkbox" name="flat-check">
+                                <label class="check-group__label check-group__label--empty" for="flat-1">
+                                    <span class="visually-hidden">Выбрать квартиру 62 в ЖК Чистое Небо, корпус 10, III кв. 2022 г.</span>
+                                </label>
+                            </div>
+                            <div class="flat-card__main">
+                                <p class="flat-card__price">
+                                    7 733 300 руб.
+                                    <span class="tooltip">
+                                        <a class="tooltip__link" href="#tooltip-flat-1">Квартира</a>
+                                        <span id="tooltip-flat-1"  class="tooltip__text">
+                                            Подземная встроенно-пристроенная
+                                        </span>
+                                    </span>
+                                </p>
+                                <h2 class="flat-card__title">
+                                    Чистое Небо, <span class="flat-card__annotation">корпус 10, III кв. 2022 г.</span>
+                                </h2>
+                                <table class="flat-info-table flat-card__info">
+                                    <tbody>
+                                        <tr>
+                                            <td class="flat-info-table__cell">кв. 62</td>
+                                            <td class="flat-info-table__cell">234.38 м<sup class="sup">2</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="flat-info-table__cell">1 комн. кв.</td>
+                                            <td class="flat-info-table__cell">7 этаж</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="flat-card__address">
+                                    Лен. область, Всеволожский район, д. Кудрово, ул. Столичная, д. 5, к. 1
+                                </p>
                             </div>
                         </div>
-                        <div class="popup-order__pay-req">
-                            <div class="popup-order__payment-select"></div>
+                        <div class="flat-card__another">
+                            <p class="flat-card__addition flat-card__addition--red">
+                                Уступка от юр. лица
+                            </p>
+                            <picture>
+                                <source srcset="assets/images/dest/flat-1.webp, assets/images/dest/flat-1@2x.webp 2x" type="image/webp">
+                                <img class="flat-card__image" width="127" height="98" srcset="assets/images/dest/flat-1.jpg" src="assets/images/dest/flat-1@2x.jpg" alt="Петербургская недвижимость - Схема 1-комнатной квартиры в ЖК Чистое Небо">
+                            </picture>
+                            <p class="flat-card__time">
+                                Добавлено <time datetime="2020-11-21">21/11/2020</time>
+                            </p>
                         </div>
-                    </div>
-                </div>
-            </form>
-        </section>
-        <section class="popup popup-story">
-            <picture class="popup-story__picture">
-                <source srcset="images/mobile/stock-1.webp, images/mobile/stock-1@2x.webp 2x" type="image/webp">
-                <source srcset="images/desktop/stock-1.webp, images/desktop/stock-1@2x.webp 2x" media="(min-width: 1024px)" type="image/webp">
-                <source srcset="images/desktop/stock-1.jpg, images/desktop/stock-1@2x.jpg 2x" media="(min-width: 1024px)" type="image/jpeg">
-                <img class="popup-story__image" src="images/desktop/stock-1.jpg" srcset="images/desktop/stock-1@2x.jpg 2x" alt="Скриншот 1">
-            </picture>
-            <div class="container popup__container popup-story__container">
-                <h2 class="popup__title">-30% на 2-ю поездку в день</h2>
-                <p class="text text--small-margin">
-                    Если вам нужно отправиться по делам, быстрее и безопаснее будет - на такси. Для вашего удобства предоставляем скидку 30% на вторую и последующие поездки до конца дня. Новая стоимость будет рассчитана автоматически при оформлении заказа.
-                </p>
-                <p class="text text--small-margin">
-                    <b>Как воспользоваться скидкой:</b>
-                </p>
-                <p class="text text--small-margin">
-                    Совершите поездку по городу
-                </p>
-                <p class="text text--small-margin">
-                    При заказе второй (и последующих) поездок цена со скидкой 30% будет рассчитана автоматически в приложении, на сайте или при заказе у оператора.
-                </p>
-                <p class="text text--small-margin">
-                    <b>Срок действия акции:</b><br> 01.06.2020-30.06.2020
-                </p>
-                <a class="link" href="#">Полные условия акции</a>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container footer__container">
-            <ul class="list social-list footer__social-list">
-                <li class="social-list__item">
-                    <a class="social-list__link social-list__link--vk" href="#" target="_blank" rel="noopener nofollow" title="Наш Вконтакте">
-                        <span class="sr-only">Наша группа в ВК</span>
-                    </a>
+                    </article>
                 </li>
-                <li class="social-list__item">
-                    <a class="social-list__link social-list__link--instagram" href="#" target="_blank" rel="noopener nofollow" title="Наш Instagram">
-                        <span class="sr-only">Наша группа в Instagram</span>
-                    </a>
+                <li class="flat-list__item">
+                    <article class="flat-card">
+                        <div class="flat-card__main-wrapper">
+                            <div class="check-group flat-card__check-group">
+                                <input id="flat-2" class="visually-hidden check-group__input" type="checkbox" name="flat-check">
+                                <label class="check-group__label check-group__label--empty" for="flat-2">
+                                    <span class="visually-hidden">Выбрать квартиру 62 в Зеленый квартал на Пулковских высотах, корпус 10, III кв. 2022 г.</span>
+                                </label>
+                            </div>
+                            <div class="flat-card__main">
+                                <p class="flat-card__price">
+                                    7 733 300 руб. <span class="tooltip">
+                                        <a class="tooltip__link" href="#tooltip-flat-2">Квартира</a>
+                                        <span id="tooltip-flat-2" class="tooltip__text">
+                                            Подземная встроенно-пристроенная
+                                        </span>
+                                    </span>
+                                </p>
+                                <h2 class="flat-card__title">
+                                    Зеленый квартал на Пулковских высотах, <span class="flat-card__annotation">корпус 10, III кв. 2022 г.</span>
+                                </h2>
+                                <table class="flat-info-table flat-card__info">
+                                    <tbody>
+                                        <tr>
+                                            <td class="flat-info-table__cell">кв. 62</td>
+                                            <td class="flat-info-table__cell">234.38 м<sup class="sup">2</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="flat-info-table__cell">1 комн. кв.</td>
+                                            <td class="flat-info-table__cell">7 этаж</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="flat-card__address">
+                                    Комендантский пр., уч. 1 Каменка
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flat-card__another">
+                            <p class="flat-card__addition flat-card__addition--blue">
+                                Уступка от физ. лица
+                            </p>
+                            <picture>
+                                <source srcset="assets/images/dest/flat-1.webp, assets/images/dest/flat-1@2x.webp 2x" type="image/webp">
+                                <img class="flat-card__image" width="127" height="98" srcset="assets/images/dest/flat-1.jpg" src="assets/images/dest/flat-1@2x.jpg" alt="Петербургская недвижимость - Схема 1-комнатной квартиры в ЖК Чистое Небо">
+                            </picture>
+                            <p class="flat-card__time">
+                                Добавлено <time datetime="2020-11-21">21/11/2020</time>
+                            </p>
+                        </div>
+                    </article>
                 </li>
-                <li class="social-list__item">
-                    <a class="social-list__link social-list__link--facebook" href="#" target="_blank" rel="noopener nofollow" title="Наш Facebook">
-                        <span class="sr-only">Наша группа в Facebook</span>
-                    </a>
+                <li class="flat-list__item">
+                    <article class="flat-card">
+                        <div class="flat-card__main-wrapper">
+                            <div class="check-group flat-card__check-group">
+                                <input id="flat-3" class="visually-hidden check-group__input" type="checkbox" name="flat-check">
+                                <label class="check-group__label check-group__label--empty" for="flat-3">
+                                    <span class="visually-hidden">Выбрать квартиру 62 в Зеленый квартал на Пулковских высотах, корпус 10, III кв. 2022 г.</span>
+                                </label>
+                            </div>
+                            <div class="flat-card__main">
+                                <p class="flat-card__price">
+                                    800 300 руб.
+                                    <span class="tooltip tooltip--car">
+                                        <a class="tooltip__link" href="#tooltip-parking-1">Паркинг</a>
+                                        <span id="tooltip-parking-1" class="tooltip__text">
+                                            Подземная встроенно-пристроенная
+                                        </span>
+                                    </span>
+                                </p>
+                                <h2 class="flat-card__title">
+                                    Зеленый квартал на Пулковских высотах, <span class="flat-card__annotation">корпус 10, III кв. 2022 г.</span>
+                                </h2>
+                                <table class="flat-info-table flat-card__info">
+                                    <tbody>
+                                        <tr>
+                                            <td class="flat-info-table__cell">№ 7-10-2 (ПИБ №68)</td>
+                                            <td class="flat-info-table__cell">15 м<sup class="sup">2</sup></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="flat-card__address">
+                                    Ленинградская область, Всеволожский район, д. Кудрово, ул. Столичная, д. 5, к. 1
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flat-card__another">
+                            <p class="flat-card__addition">
+                                Забронировано
+                            </p>
+                            <picture>
+                                <source srcset="assets/images/dest/flat-1.webp, assets/images/dest/flat-1@2x.webp 2x" type="image/webp">
+                                <img class="flat-card__image" width="127" height="98" srcset="assets/images/dest/flat-1.jpg" src="assets/images/dest/flat-1@2x.jpg" alt="Петербургская недвижимость - Схема 1-комнатной квартиры в ЖК Чистое Небо">
+                            </picture>
+                            <p class="flat-card__time">
+                                Добавлено <time datetime="2020-11-21">21/11/2020</time>
+                            </p>
+                        </div>
+                    </article>
                 </li>
-                <li class="social-list__item">
-                    <a class="social-list__link social-list__link--twitter" href="#" target="_blank" rel="noopener nofollow" title="Наш Twitter">
-                        <span class="sr-only">Наша группа в Twitter</span>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link social-list__link--odnoklassniki" href="#" target="_blank" rel="noopener nofollow" title="Наши Одноклассники">
-                        <span class="sr-only">Наша группа в Одноклассниках</span>
-                    </a>
+                <li class="flat-list__item">
+                    <article class="flat-card">
+                        <div class="flat-card__main-wrapper">
+                            <div class="check-group flat-card__check-group">
+                                <input id="flat-4" class="visually-hidden check-group__input" type="checkbox" name="flat-check">
+                                <label class="check-group__label check-group__label--empty" for="flat-4">
+                                    <span class="visually-hidden">Выбрать квартиру 62 в Зеленый квартал на Пулковских высотах, корпус 10, III кв. 2022 г.</span>
+                                </label>
+                            </div>
+                            <div class="flat-card__main">
+                                <p class="flat-card__price">
+                                    800 300 руб.
+                                    <span class="tooltip tooltip--car">
+                                        <a class="tooltip__link" href="#tooltip-parking-2">Паркинг</a>
+                                        <span id="tooltip-parking-2" class="tooltip__text">
+                                            Подземная встроенно-пристроенная
+                                        </span>
+                                    </span>
+                                </p>
+                                <h2 class="flat-card__title">
+                                    Зеленый квартал на Пулковских высотах, <span class="flat-card__annotation">корпус 10, III кв. 2022 г.</span>
+                                </h2>
+                                <table class="flat-info-table flat-card__info">
+                                    <tbody>
+                                        <tr>
+                                            <td class="flat-info-table__cell">№ 7-10-2 (ПИБ №68)</td>
+                                            <td class="flat-info-table__cell">15 м<sup class="sup">2</sup></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="flat-card__address">
+                                    Лен. область, Всеволожский район, д. Кудрово, ул. Столичная, д. 5, к. 1
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flat-card__another">
+                            <p class="flat-card__addition flat-card__addition--dark-gray">
+                                Продано
+                            </p>
+                            <picture>
+                                <source srcset="assets/images/dest/flat-1.webp, assets/images/dest/flat-1@2x.webp 2x" type="image/webp">
+                                <img class="flat-card__image" width="127" height="98" srcset="assets/images/dest/flat-1.jpg" src="assets/images/dest/flat-1@2x.jpg" alt="Петербургская недвижимость - Схема 1-комнатной квартиры в ЖК Чистое Небо">
+                            </picture>
+                            <p class="flat-card__time">
+                                Добавлено <time datetime="2020-11-21">21/11/2020</time>
+                            </p>
+                        </div>
+                    </article>
                 </li>
             </ul>
-            <div class="footer__subcontainer container--subcontainer">
-                <div class="footer__main">
-                    <div class="menu footer__menu">
-                        <ul class="list menu__list">
-                            <li class="menu__item menu__item--passenger">
-                                <button class="menu__title" type="button">Пассажирам</button>
-                                <ul class="list menu__submenu">
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Акции</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Тарифы</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Услуги</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Мобильное приложение</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu__item menu__item--drivers">
-                                <button class="menu__title" type="button">Водителям</button>
-                                <ul class="list menu__submenu">
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Стать водителем</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Таксовичкоф Пульт</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu__item menu__item--business">
-                                <button class="menu__title" type="button">Бизнесу</button>
-                                <ul class="list menu__submenu">
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Корпоративным клиентам</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Бизнес-кабинет</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu__item menu__item--partners">
-                                <button class="menu__title" type="button">Партнерам</button>
-                                <ul class="list menu__submenu">
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Создать совместное предприятие</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Подключить автопарк</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Франшиза</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Для партнеров</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu__item menu__item--about">
-                                <button class="menu__title" type="button">О компании</button>
-                                <ul class="list menu__submenu">
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Новости</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Контакты</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">О нас</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Отзывы</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Вопросы и ответы</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Пресс-кит</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu__item menu__item--without-title">
-                                <ul class="list menu__submenu">
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Вакансии</a>
-                                    </li>
-                                    <li class="menu__submenu-item">
-                                        <a class="menu__link" href="#">Инвесторам</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <ul class="list apps-list footer__apps">
-                        <li class="apps-list__item">
-                            <a class="apps-list__link apps-list__link--appstore" href="#">
-                                <span class="sr-only">Загрузите в App Store</span>
-                            </a>
-                        </li>
-                        <li class="apps-list__item">
-                            <a class="apps-list__link apps-list__link--gplay" href="#">
-                                <span class="sr-only">Загрузите в Google Play</span>
-                            </a>
-                        </li>
-                        <li class="apps-list__item">
-                            <a class="apps-list__link apps-list__link--appgallery" href="#">
-                                <span class="sr-only">Загрузите в App Gallery</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer__bottom">
-                    <div class="footer__text-wrapper">
-                        <p class="footer__text">
-                            Россия, 192019, г. Санкт-Петербург, наб. Обводного канала, д 24Д , БЦ Амилен Бесплатный автобус от ст. метро «Ал.Невского»<br>
-                            <a class="link" href="#">Пользовательское соглашение на использование сервисов «Таксовичкоф»</a><br> Адрес раскрытия информации: <a class="link" href="#" target="_blank" rel="nofollow">e-disclosure.ru</a>
-                        </p>
-                        <a class="link footer__link footer__taxi-pools" href="#">Таксопарки партнеры</a>
-                    </div>
-                    <a href="#" class="footer__support footer__support--skolkovo" target="__blank" rel="nofollow noopener">
-                        <div class="sr-only">При поддержке Сколково</div>
-                    </a>
-                </div>
-            </div>
-            <div class="download-app-info footer__download-app-info">
-                <button class="download-app-info__close" type="button">
-                    <span class="sr-only">Закрыть</span>
-                </button>
-                <span class="download-app-info__title">Возьми с собой Таксовичкоф</span>
-                <a class="download-app-info__link download-app-info__link--appstore" href="#" rel="nofollow">
-                    <span class="sr-only">Загрузите в App Store</span>
-                </a>
-            </div>
-            <button class="write-us footer__write-us">
-                <span class="write-us__text">Напишите нам</span>
-            </button>
         </div>
-    </footer>
-    <script src="js/swiper.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/index.js"></script>
+    </main>
+    <script src="js/script.min.js"></script>
 </body>
 
 </html>
